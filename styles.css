@@ -16,4 +16,6 @@ body {
 h1 {
     color: white;
     font-size: 24px;
+    /* Dark gray sharp drop shadow */
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
 }

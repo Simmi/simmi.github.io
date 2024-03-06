@@ -1,4 +1,4 @@
-var personsTree_2 = {
+var personsTree = {
     tree : [
         { // family root
             name: 'Þórey Jónsdóttir',
@@ -14,7 +14,7 @@ var personsTree_2 = {
                     tree: [
                       {
                         name: 'Guðjón Guðmundsson',
-                        link: 'child',
+                        link: 'spouse',
                         born: '1942-10-29',
                         addr: 'Akranes',
                       },
@@ -109,7 +109,7 @@ var personsTree_2 = {
                     addr: 'Akranes',
                     tree: [
                       {
-                        name: 'Ólöf Vala Schram',
+                        name: 'Ólafur Valur Schram',
                         link: 'child',
                         born: '1989-05-19',
                         addr: 'Akranes',
@@ -128,7 +128,7 @@ var personsTree_2 = {
                             addr: 'Akranes',
                           },
                         ],
-                      }, // end Ólöf Vala
+                      }, // end Óli Valur
                     ]
                 },// end Dadda
                 {
@@ -178,10 +178,10 @@ var personsTree_2 = {
                         addr: 'Reykjavík',
                         tree: [
                           {
-                            name: 'Guðrún Þorsteinsdóttir',
+                            name: 'Vera Hjördís Matsdóttir',
                             link: 'spouse',
-                            born: '1992-03-02',
-                            addr: 'London',
+                            born: '1995-12-11',
+                            addr: 'Reykjavík',
                           },
                         ],
                       },

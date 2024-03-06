@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <script>
+        var config = {
+          // currentDay :  '0108',
+          // currentYear : '2021'
+        };
+        // the date can be manually set for testing purposes
+        // config.currentDay = '0107'; config.currentYear = '2021';
+    </script>
+
+    <script src="js/lib/lodash.js"></script>
+    <!-- <script src="personData.js"></script> -->
+    <script src="js/personsTree.js"></script>
+    <script src="js/personsLogic.js"></script>
+
+    <script>
+        Aunt.init();
+        Aunt.logArray(mArray, 'Marriages');
+        // Aunt.logArray(anniversArray, 'Anniversaries');
+        // Aunt.logArray(personsArray, 'Persons');
+        // Aunt.findNextAnniversaries(5, 'all', 2);
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+  <title>JS Aunt</title>
+
+</head>
+<body>
+<h1>Rafræn Ragnheiður</h1>
+
+<h2>Available functions</h2>
+<h3>Persons and relations (family, marriages...)</h3>
+<ul>
+  <li>Build an array of persons from JSON family tree.
+    <button onClick="Aunt.logArray( personsArray, 'All persons' )">Log all persons to console: <code>personsArray</code></button>
+  </li>
+  <li>Create an array of marriages based on wedding date entries.
+    <button onClick="Aunt.logArray( mArray, 'All marriages' )">Log all marriages to console: <code>mArray</code></button>
+  </li>
+</ul>
+<h3>Anniversaries (birthdays and weddings)</h3>
+<ul>
+  <li>Build an array of all anniversaries.
+    <button onClick="Aunt.logArray( anniversArray, 'All anniversaries' )">Log all anniversaries to console: <code>anniversArray</code></button>
+  </li>
+<li>Birthdays coming up, at least the requested number (if possible).
+  <button onClick="Aunt.logArray( Aunt.findNextAnniversaries(5, 'person'), 'Birthdays' )">Log 5 birthdays to console: <code>findNextAnniversaries(5, 'person')</code></button>
+</li>
+<li>Birthdays coming up, multiples of a number (e.g. 10 or 2).
+  <button onClick="Aunt.logArray( Aunt.findNextAnniversaries(5, 'person', 2), 'Birthdays' )">Log birthdays w. even number of years: <code>findNextAnniversaries(5, 'person', 2)</code>.</button>
+  <button onClick="Aunt.logArray( Aunt.findNextAnniversaries(5, 'person', 5), 'Birthdays' )">Log birthdays multiple of 5: <code>findNextAnniversaries(5, 'person', 5)</code>.</button>
+</li>
+<li>Marriage anniversaries coming up.
+  <button onClick="Aunt.logArray( Aunt.findNextAnniversaries(5, 'marriage'), 'Anniversaries' )">Log 5 anniversaries to console: <code>findNextAnniversaries(5, 'marriage')</code></button>
+</li>
+<li>All anniversaries coming up.
+  <button onClick="Aunt.logArray( Aunt.findNextAnniversaries(5, 'all', 5), 'Major Anniversaries' )">Log 5 anniversaries to console: <code>findNextAnniversaries(5, 'all', 5)</code></button>
+</li>
+
+</ul>
+
+<h2>The front page should show</h2>
+<ul>
+  <li>Upcoming birthdays (linking to family tree)</li>
+  <li>Possibly recent birthdays?</li>
+  <li>Upcoming big anniversaries (5 or 10 multiples)</li>
+</ul>
+
+<h2>The family tree should be</h2>
+<ul>
+  <li><a href="tree.html">A collapsible tree (using html-checkboxes)</a></li>
+  <li>Color coded (hue showing branch, lightness showing depth)</li>
+  <li><a href="tree.html#t-1-3-1">Allowing for a url pointing directly to a person</a></li>
+</ul>
+
+<h2>Nice to haves</h2>
+<ul>
+  <li>A list of months with a count of corresponding birthdays (expandable to show persons within month)</li>
+  <li>An age-distribution graph, grouping persons by age (expandable)</li>
+  <li>An analysis of name-popularity</li>
+</ul>
+
+
+</body>
+</html>

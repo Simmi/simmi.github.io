@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script>
+        var config = {
+            currentYear : null,
+            currentDay :  null
+        };
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+<title>Rafræn Ragnheiður</title>
+</head>
+<body>
+    <h1>Rafræn Ragnheiður (frumgerð)</h1>
+    <h2 class="title">Afkomendur Sigrúnar og Þórarins</h2>
+
+    <h2>Framundan</h2>
+
+    <div class="tablewrapper">
+    <div class="tableshrink upcoming">
+      <table id="birthdays" class="upcoming">
+          <thead>
+              <tr><th colspan="2"></th></tr>
+          </thead>
+          <tbody>
+          </tbody>
+      </table>
+    </div>
+    <div class="tableshrink upcoming">
+      <table id="majors" class="upcoming">
+          <thead>
+              <tr><th colspan="2"></th></tr>
+          </thead>
+          <tbody>
+          </tbody>
+      </table>
+    </div>
+  </div>
+
+  <h2 id="treeheading">Fjölskyldutré</h2>
+
+  <div class="tablewrapper">
+    <div class="tableshrink fullwidth">
+      <table id="recentadditions">
+        <thead>
+          <tr><th colspan="2"></th></tr>
+        </div>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div id="treeDiv" class="persons-tree"></div>
+
+<h2>Smá tölfræði</h2>
+
+  <div class="tablewrapper">
+    <div class="tableshrink demographics">
+      <table id="agegroups" class="demographics">
+          <thead>
+              <tr><th colspan="2"></th></tr>
+          </thead>
+          <tbody>
+          </tbody>
+      </table>
+    </div>
+
+    <div class="tableshrink demographics">
+      <table id="bymonths" class="demographics">
+          <thead>
+              <tr><th colspan="2"></th></tr>
+          </thead>
+          <tbody>
+          </tbody>
+      </table>
+    </div>
+
+    <div class="tableshrink demographics">
+      <table id="residence" class="demographics">
+          <thead>
+              <tr><th colspan="2"></th></tr>
+          </thead>
+          <tbody>
+          </tbody>
+      </table>
+    </div>
+  </div>
+<hr />
+  <p>Smíðað af Dóa og Sigmari. Sendið nýskráningar, leiðréttingar eða tæknilegar ábendingar til Dóa (<a href="mailto:thorarinn@thorarinn.com">thorarinn@thorarinn.com</a>).</p>
+  <p>Sniðmát til að fylla í má finna sem <a href="https://docs.google.com/document/d/1pMyGrOOqIdFXKc7puAfzVGRAQU3827aYUavDhDsb1Rg/edit?fbclid=IwAR2pAo3uUdBcnW9R75m3A6dMo5dpdacI5Nr2C8-Oc_bv-CaTFFD5LEz9w0w">Google Docs skjal</a>. Sendið gjarnan skráningar annað hvort sem tengil á Google Docs afrit eða vistið sem Word skjal og sendið sem viðhengi með pósti.</p>
+</body>
+
+<script src="js/lib/lodash.js"></script>
+<script src="js/personsLogic.js"></script>
+<script src="js/personsTree.js?v=1.1"></script>
+<script src='js/tree.js'></script>
+<script>
+  Aunt.init();
+  var treeDiv = document.getElementById("treeDiv");
+  makeTree(treeDiv);
+  jumpTo('t'); //Expanding the root element to display 2nd level right away (it's prettier)
+
+  var personBookmark = location.hash.substr(1);
+  jumpTo(personBookmark);
+  </script>
+  <script src="js/anniversaries.js"></script>
+</html>

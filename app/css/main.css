@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+body {
+  font-family: Roboto, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  padding: 0.5em;
+  background-color: #fff;
+}
+body * {
+  box-sizing: border-box;
+}
+@media screen and (max-width: 700px) {
+  body {
+    padding: 0;
+  }
+}
+h1 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 1em;
+}
+h2 {
+  font-size: 1.5em;
+  margin: 1em 0 1em 0.333333333333333em;
+}
+h2.title {
+  text-align: center;
+  margin-top: -1em;
+}
+hr {
+  margin: 2em 0;
+  border: 1px solid #ddd;
+}
+@media screen and (max-width: 700px) {
+  #treeDiv {
+    overflow-x: scroll;
+  }
+}
+label + ul {
+  display: none;
+}
+input[type=checkbox]:checked + label + ul {
+  display: block;
+}
+input[type=checkbox] + label::before {
+  display: inline-block;
+  margin-left: -36px;
+  margin-right: 16px;
+  font-size: 20px;
+  width: 20px;
+  line-height: 20px;
+  content: '+';
+  color: #000;
+  text-align: center;
+  font-weight: 700;
+}
+input[type=checkbox]:checked + label::before {
+  content: '-';
+  font-size: 22px;
+}
+input[type=checkbox] {
+  display: none;
+}
+ul {
+  padding-left: 2em;
+}
+li {
+  list-style: none;
+}
+ul.root {
+  padding-left: 4em;
+}
+.persons-tree li.level0 {
+  color: #fff;
+}
+.persons-tree li.level2 {
+  color: #000;
+}
+.persons-tree label {
+  display: block;
+  position: relative;
+  min-width: 370px;
+  max-width: 370px;
+  padding: 0 10px;
+  border: 1px solid #fff;
+  font-size: 16px;
+  white-space: nowrap;
+}
+.persons-tree label::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 6px;
+  background: #464646;
+}
+.persons-tree label > span {
+  display: inline-block;
+  line-height: 40px;
+}
+.persons-tree label .meta {
+  display: block;
+  line-height: 1em;
+  font-size: 14px;
+  margin: -4px 0 12px 6px;
+  background-color: inherit;
+}
+.persons-tree label .birth {
+  display: inline-block;
+  padding-right: 12px;
+  border-right: 1px solid rgba(255,255,255,0.5);
+}
+.persons-tree .level2 label .birth {
+  border-color: rgba(0,0,0,0.5);
+}
+.persons-tree label .address {
+  display: inline-block;
+  padding-left: 12px;
+}
+.persons-tree input[type=checkbox]:not(:checked) + label > .meta {
+  display: none;
+}
+.persons-tree .nickname {
+  font-style: italic;
+}
+.persons-tree .nickname::before {
+  content: '–';
+  display: inline-block;
+  margin-right: 0.5em;
+}
+.persons-tree li.spouse {
+  margin-top: -1px;
+}
+.persons-tree li.spouse label {
+  margin-left: -2em;
+  border-top-color: rgba(255,255,255,0.4);
+}
+.persons-tree li.spouse .wed {
+  border: 1px solid rgba(255,255,255,0.4);
+  padding: 2px 3px;
+  line-height: 1em;
+  position: absolute;
+  top: -10px;
+  right: 12px;
+  background-color: inherit;
+}
+.persons-tree .level2 li.spouse label {
+  border-top-color: rgba(255,255,255,0.6);
+}
+.persons-tree .level2 li.spouse label .wed {
+  border-color: rgba(255,255,255,0.6);
+}
+.t label {
+  background-color: #464646;
+}
+.t-1 label {
+  background-color: #7732bb;
+}
+.t-1 label::after {
+  background-color: #9753e1;
+}
+.t-1x1 label {
+  background-color: #d2b5f0;
+}
+.t-1x2 label {
+  background-color: #e2d2f4;
+}
+.t-1x3 label {
+  background-color: $i15-5;
+}
+.t-2 label {
+  background-color: #3151b7;
+}
+.t-2 label::after {
+  background-color: #3c6df0;
+}
+.t-2x1 label {
+  background-color: #b0bef3;
+}
+.t-2x2 label {
+  background-color: #d1d7f4;
+}
+.t-2x3 label {
+  background-color: #e8ebf9;
+}
+.t-3 label {
+  background-color: #175d8d;
+}
+.t-3 label::after {
+  background-color: #047cc0;
+}
+.t-3x1 label {
+  background-color: #95c4f3;
+}
+.t-3x2 label {
+  background-color: #c2dbf4;
+}
+.t-3x3 label {
+  background-color: #e0edf9;
+}
+.t-4 label {
+  background-color: #006456;
+}
+.t-4 label::after {
+  background-color: #008673;
+}
+.t-4x1 label {
+  background-color: #40d5bb;
+}
+.t-4x2 label {
+  background-color: #8ee9d4;
+}
+.t-4x3 label {
+  background-color: #c6f4e9;
+}
+.t-5 label {
+  background-color: #426200;
+}
+.t-5 label::after {
+  background-color: #5b8121;
+}
+.t-5x1 label {
+  background-color: #95d13c;
+}
+.t-5x2 label {
+  background-color: #b4e876;
+}
+.t-5x3 label {
+  background-color: #d9f3ba;
+}
+.t-6 label {
+  background-color: #74521b;
+}
+.t-6 label::after {
+  background-color: #9c6d1e;
+}
+.t-6x1 label {
+  background-color: #ffb000;
+}
+.t-6x2 label {
+  background-color: #ffd191;
+}
+.t-6x3 label {
+  background-color: $i09-5;
+}
+.t-7 label {
+  background-color: #993a1d;
+}
+.t-7 label::after {
+  background-color: #c45433;
+}
+.t-7x1 label {
+  background-color: #faad96;
+}
+.t-7x2 label {
+  background-color: #f8d0c3;
+}
+.t-7x3 label {
+  background-color: $i11-5;
+}
+.t-8 label {
+  background-color: #a91560;
+}
+.t-8 label::after {
+  background-color: #dc267f;
+}
+.t-8x1 label {
+  background-color: #f7aac3;
+}
+.t-8x2 label {
+  background-color: #f5cedb;
+}
+.t-8x3 label {
+  background-color: $i13-5;
+}
+.tablewrapper {
+  margin-bottom: 1em;
+  display: flex;
+}
+.tablewrapper .tableshrink {
+  margin: 0.5em 0.5em 0;
+}
+table {
+  width: 100%;
+  padding: 1em;
+  border-spacing: 0;
+  border-radius: 0.5em;
+  border: 1px solid #ddd;
+  position: relative;
+}
+table th {
+  text-align: left;
+  border-bottom: none;
+  background: #fff;
+}
+table th > span {
+  position: absolute;
+  background: #fff;
+  padding: 0 0.5em;
+  top: -0.7em;
+  left: 1em;
+}
+table tr:nth-child(2n-1) {
+  background: #f3f3fa;
+}
+table tbody {
+  font-size: 0.875em;
+  line-height: 1.428571428571429;
+}
+table td {
+  vertical-align: top;
+  padding: 0.5em 0.5em;
+}
+table td:first-child {
+  white-space: nowrap;
+}
+.tableshrink.upcoming {
+  width: 50%;
+}
+.tableshrink.fullwidth {
+  width: 100%;
+}
+.tableshrink.demographics {
+  width: 33.3%;
+  flex-basis: 1;
+}
+.tableshrink.demographics td {
+  min-width: 50%;
+}
+@media screen and (max-width: 700px) {
+  .tablewrapper {
+    flex-direction: column;
+  }
+  .tableshrink.upcoming,
+  .tableshrink.demographics,
+  .tableshrink.fullwidth {
+    width: auto;
+    margin-bottom: 1em;
+  }
+  table#recentadditions td:first-child {
+    white-space: normal;
+  }
+  table {
+    padding: 0.5em;
+    padding-top: 1em;
+  }
+}

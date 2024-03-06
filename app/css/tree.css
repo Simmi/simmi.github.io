@@ -1,0 +1,254 @@
+@media screen and (max-width: 700px) {
+  #treeDiv {
+    overflow-x: scroll;
+  }
+}
+/*  toggling logic ****************************************** */
+label + ul {
+  display: none;
+}
+input[type=checkbox]:checked + label + ul {
+  display: block;
+}
+input[type=checkbox] + label::before {
+  display: inline-block;
+  margin-left: -36px;
+  margin-right: 16px;
+  font-size: 20px;
+  width: 20px;
+  line-height: 20px;
+  content: '+';
+  color: #000;
+  text-align: center;
+  font-weight: 700;
+}
+input[type=checkbox]:checked + label::before {
+  content: '-';
+  font-size: 22px;
+}
+input[type=checkbox] {
+  display: none;
+}
+ul {
+  padding-left: 2em;
+}
+li {
+  list-style: none;
+}
+ul.root {
+  padding-left: 4em;
+}
+/* persons in a tree ****************************************** */
+.persons-tree li.level0 {
+  color: #fff;
+}
+.persons-tree li.level2 {
+  color: #000;
+}
+.persons-tree label {
+  display: block;
+  position: relative;
+  min-width: 370px;
+  max-width: 370px;
+  padding: 0 10px;
+  border: 1px solid #fff;
+  font-size: 16px;
+  white-space: nowrap;
+}
+.persons-tree label::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 6px;
+  background: $i00-70;
+}
+.persons-tree label > span {
+  display: inline-block;
+  line-height: 40px;
+}
+.persons-tree label .meta {
+  display: block;
+  line-height: 1em;
+  font-size: 14px;
+  margin: -4px 0 12px 6px;
+  background-color: inherit;
+}
+.persons-tree label .birth {
+  display: inline-block;
+  padding-right: 12px;
+  border-right: 1px solid rgba(255,255,255,0.5);
+}
+.persons-tree .level2 label .birth {
+  border-color: rgba(0,0,0,0.5);
+}
+.persons-tree label .address {
+  display: inline-block;
+  padding-left: 12px;
+}
+.persons-tree input[type=checkbox]:not(:checked) + label > .meta {
+  display: none;
+}
+.persons-tree .nickname {
+  font-style: italic;
+}
+.persons-tree .nickname::before {
+  content: '–';
+  display: inline-block;
+  margin-right: 0.5em;
+}
+.persons-tree li.spouse {
+  margin-top: -1px;
+}
+.persons-tree li.spouse label {
+  margin-left: -2em;
+  border-top-color: rgba(255,255,255,0.4);
+}
+.persons-tree li.spouse .wed {
+  border: 1px solid rgba(255,255,255,0.4);
+  padding: 2px 3px;
+  line-height: 1em;
+  position: absolute;
+  top: -10px;
+  right: 12px;
+  background-color: inherit;
+}
+.persons-tree .level2 li.spouse label {
+  border-top-color: rgba(255,255,255,0.6);
+}
+.persons-tree .level2 li.spouse label .wed {
+  border-color: rgba(255,255,255,0.6);
+}
+/* gray */
+.t label {
+  background-color: $i00-70;
+}
+/* violet */
+.t-1 label {
+  background-color: $i15-60;
+}
+.t-1 label::after {
+  background-color: $i15-50;
+}
+.t-1x1 label {
+  background-color: $i15-20;
+}
+.t-1x2 label {
+  background-color: $i15-10;
+}
+.t-1x3 label {
+  background-color: $i15-5;
+}
+/* ultramarine */
+.t-2 label {
+  background-color: $i01-60;
+}
+.t-2 label::after {
+  background-color: $i01-50;
+}
+.t-2x1 label {
+  background-color: $i01-20;
+}
+.t-2x2 label {
+  background-color: $i01-10;
+}
+.t-2x3 label {
+  background-color: $i01-5;
+}
+/* ceurelan */
+.t-3 label {
+  background-color: $i03-60;
+}
+.t-3 label::after {
+  background-color: $i03-50;
+}
+.t-3x1 label {
+  background-color: $i03-20;
+}
+.t-3x2 label {
+  background-color: $i03-10;
+}
+.t-3x3 label {
+  background-color: $i03-5;
+}
+/* teal */
+.t-4 label {
+  background-color: $i05-60;
+}
+.t-4 label::after {
+  background-color: $i05-50;
+}
+.t-4x1 label {
+  background-color: $i05-20;
+}
+.t-4x2 label {
+  background-color: $i05-10;
+}
+.t-4x3 label {
+  background-color: $i05-5;
+}
+/* lime */
+.t-5 label {
+  background-color: $i07-60;
+}
+.t-5 label::after {
+  background-color: $i07-50;
+}
+.t-5x1 label {
+  background-color: $i07-20;
+}
+.t-5x2 label {
+  background-color: $i07-10;
+}
+.t-5x3 label {
+  background-color: $i07-5;
+}
+/* gold */
+.t-6 label {
+  background-color: $i09-60;
+}
+.t-6 label::after {
+  background-color: $i09-50;
+}
+.t-6x1 label {
+  background-color: $i09-20;
+}
+.t-6x2 label {
+  background-color: $i09-10;
+}
+.t-6x3 label {
+  background-color: $i09-5;
+}
+/* peach */
+.t-7 label {
+  background-color: $i11-60;
+}
+.t-7 label::after {
+  background-color: $i11-50;
+}
+.t-7x1 label {
+  background-color: $i11-20;
+}
+.t-7x2 label {
+  background-color: $i11-10;
+}
+.t-7x3 label {
+  background-color: $i11-5;
+}
+/* magenta */
+.t-8 label {
+  background-color: $i13-60;
+}
+.t-8 label::after {
+  background-color: $i13-50;
+}
+.t-8x1 label {
+  background-color: $i13-20;
+}
+.t-8x2 label {
+  background-color: $i13-10;
+}
+.t-8x3 label {
+  background-color: $i13-5;
+}

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+  <title>Litaskema</title>
+
+  <!-- https://github.com/cray0000/ibm-dl-colors -->
+
+  <style type="text/css">
+    td { padding: 0.5em 1em; }
+    /* ultramarine */
+    .i01-10 { background-color: #d1d7f4; color: #000; }
+    .i01-20 { background-color: #b0bef3; color: #000; }
+    .i01-30 { background-color: #89a2f6; color: #000; }
+    .i01-40 { background-color: #648fff; color: #000; }
+    .i01-50 { background-color: #3c6df0; color: #fff; }
+    .i01-60 { background-color: #3151b7; color: #fff; }
+    .i01-70 { background-color: #2e3f8f; color: #fff; }
+
+  /* blue */
+    .i02-10 { background-color: #c8daf4; color: #000; }
+    .i02-20 { background-color: #a8c0f3; color: #000; }
+    .i02-30 { background-color: #79a6f6; color: #000; }
+    .i02-40 { background-color: #5392ff; color: #000; }
+    .i02-50 { background-color: #2d74da; color: #fff; }
+    .i02-60 { background-color: #1f57a4; color: #fff; }
+    .i02-70 { background-color: #25467a; color: #fff; }
+
+  /* cerulean */
+    .i03-10 { background-color: #c2dbf4; color: #000; }
+    .i03-20 { background-color: #95c4f3; color: #000; }
+    .i03-30 { background-color: #56acf2; color: #000; }
+    .i03-40 { background-color: #009bef; color: #000; }
+    .i03-50 { background-color: #047cc0; color: #fff; }
+    .i03-60 { background-color: #175d8d; color: #fff; }
+    .i03-70 { background-color: #1c496d; color: #fff; }
+
+  /* aqua */
+    .i04-10 { background-color: #a0e3f0; color: #000; }
+    .i04-20 { background-color: #71cddd; color: #000; }
+    .i04-30 { background-color: #00b6cb; color: #000; }
+    .i04-40 { background-color: #12a3b4; color: #000; }
+    .i04-50 { background-color: #188291; color: #fff; }
+    .i04-60 { background-color: #17616b; color: #fff; }
+    .i04-70 { background-color: #164d56; color: #fff; }
+
+  /* teal */
+    .i05-10 { background-color: #8ee9d4; color: #000; }
+    .i05-20 { background-color: #40d5bb; color: #000; }
+    .i05-30 { background-color: #00baa1; color: #000; }
+    .i05-40 { background-color: #00a78f; color: #000; }
+    .i05-50 { background-color: #008673; color: #fff; }
+    .i05-60 { background-color: #006456; color: #fff; }
+    .i05-70 { background-color: #124f44; color: #fff; }
+
+  /* green */
+    .i06-10 { background-color: #89eda0; color: #000; }
+    .i06-20 { background-color: #57d785; color: #000; }
+    .i06-30 { background-color: #34bc6e; color: #000; }
+    .i06-40 { background-color: #00aa5e; color: #000; }
+    .i06-50 { background-color: #00884b; color: #fff; }
+    .i06-60 { background-color: #116639; color: #fff; }
+    .i06-70 { background-color: #12512e; color: #fff; }
+
+  /* lime */
+    .i07-10 { background-color: #b4e876; color: #000; }
+    .i07-20 { background-color: #95d13c; color: #000; }
+    .i07-30 { background-color: #81b532; color: #000; }
+    .i07-40 { background-color: #73a22c; color: #000; }
+    .i07-50 { background-color: #5b8121; color: #fff; }
+    .i07-60 { background-color: #426200; color: #fff; }
+    .i07-70 { background-color: #374c1a; color: #fff; }
+
+  /* yellow */
+    .i08-10 { background-color: #fed500; color: #000; }
+    .i08-20 { background-color: #e3bc13; color: #000; }
+    .i08-30 { background-color: #c6a21a; color: #000; }
+    .i08-40 { background-color: #b3901f; color: #000; }
+    .i08-50 { background-color: #91721f; color: #fff; }
+    .i08-60 { background-color: #70541b; color: #fff; }
+    .i08-70 { background-color: #5b421a; color: #fff; }
+
+  /* gold */
+    .i09-10 { background-color: #ffd191; color: #000; }
+    .i09-20 { background-color: #ffb000; color: #000; }
+    .i09-30 { background-color: #e39d14; color: #000; }
+    .i09-40 { background-color: #c4881c; color: #000; }
+    .i09-50 { background-color: #9c6d1e; color: #fff; }
+    .i09-60 { background-color: #74521b; color: #fff; }
+    .i09-70 { background-color: #5b421c; color: #fff; }
+
+  /* orange */
+    .i10-10 { background-color: #fdcfad; color: #000; }
+    .i10-20 { background-color: #fcaf6d; color: #000; }
+    .i10-30 { background-color: #fe8500; color: #000; }
+    .i10-40 { background-color: #db7c00; color: #000; }
+    .i10-50 { background-color: #ad6418; color: #fff; }
+    .i10-60 { background-color: #814b19; color: #fff; }
+    .i10-70 { background-color: #653d1b; color: #fff; }
+
+  /* peach */
+    .i11-10 { background-color: #f8d0c3; color: #000; }
+    .i11-20 { background-color: #faad96; color: #000; }
+    .i11-30 { background-color: #fc835c; color: #000; }
+    .i11-40 { background-color: #fe6100; color: #000; }
+    .i11-50 { background-color: #c45433; color: #fff; }
+    .i11-60 { background-color: #993a1d; color: #fff; }
+    .i11-70 { background-color: #782f1c; color: #fff; }
+
+  /* red */
+    .i12-10 { background-color: #fccec7; color: #000; }
+    .i12-20 { background-color: #ffaa9d; color: #000; }
+    .i12-30 { background-color: #ff806c; color: #000; }
+    .i12-40 { background-color: #ff5c49; color: #000; }
+    .i12-50 { background-color: #e62325; color: #fff; }
+    .i12-60 { background-color: #aa231f; color: #fff; }
+    .i12-70 { background-color: #83231e; color: #fff; }
+
+  /* magenta */
+    .i13-10 { background-color: #f5cedb; color: #000; }
+    .i13-20 { background-color: #f7aac3; color: #000; }
+    .i13-30 { background-color: #f87eac; color: #000; }
+    .i13-40 { background-color: #ff509e; color: #000; }
+    .i13-50 { background-color: #dc267f; color: #fff; }
+    .i13-60 { background-color: #a91560; color: #fff; }
+    .i13-70 { background-color: #831b4c; color: #fff; }
+
+  /* purple */
+    .i14-10 { background-color: #efcef3; color: #000; }
+    .i14-20 { background-color: #e4adea; color: #000; }
+    .i14-30 { background-color: #d68adf; color: #000; }
+    .i14-40 { background-color: #cb71d7; color: #000; }
+    .i14-50 { background-color: #c22dd5; color: #fff; }
+    .i14-60 { background-color: #9320a2; color: #fff; }
+    .i14-70 { background-color: #71237c; color: #fff; }
+
+  /* violet */
+    .i15-10 { background-color: #e2d2f4; color: #000; }
+    .i15-20 { background-color: #d2b5f0; color: #000; }
+    .i15-30 { background-color: #bf93eb; color: #000; }
+    .i15-40 { background-color: #b07ce8; color: #000; }
+    .i15-50 { background-color: #9753e1; color: #fff; }
+    .i15-60 { background-color: #7732bb; color: #fff; }
+    .i15-70 { background-color: #602797; color: #fff; }
+
+  /* indigo */
+    .i16-10 { background-color: #dcd4f7; color: #000; }
+    .i16-20 { background-color: #c7b6f7; color: #000; }
+    .i16-30 { background-color: #ae97f4; color: #000; }
+    .i16-40 { background-color: #9b82f3; color: #000; }
+    .i16-50 { background-color: #785ef0; color: #fff; }
+    .i16-60 { background-color: #5a3ec8; color: #fff; }
+    .i16-70 { background-color: #473793; color: #fff; }
+
+  /* gray */
+    .i00-10 { background-color: #d8d8d8; color: #000; }
+    .i00-20 { background-color: #c0bfc0; color: #000; }
+    .i00-30 { background-color: #a6a5a6; color: #000; }
+    .i00-40 { background-color: #949394; color: #000; }
+    .i00-50 { background-color: #777677; color: #fff; }
+    .i00-60 { background-color: #595859; color: #fff; }
+    .i00-70 { background-color: #464646; color: #fff; }
+
+  </style>
+
+</head>
+<body>
+
+  <h2>Litaskema 1</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>col</th>
+        <th>60</th>
+        <th>50</th>
+        <th>40</th>
+        <th>30</th>
+        <th>20</th>
+        <th>10</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>00</td>
+        <td class="i00-60">Afi og amma</td>
+        <td class="i00-50"> </td>
+        <td class="i00-40"> </td>
+        <td class="i00-30"> </td>
+        <td class="i00-20"> </td>
+        <td class="i00-10"> </td>
+      </tr>
+      <tr>
+        <td>01</td>
+        <td class="i01-60">Ingibjörg</td>
+        <td class="i01-50">Sigrún</td>
+        <td class="i01-40">Ingibjörg</td>
+        <td class="i01-30">Fimmti</td>
+        <td class="i01-20">Sjötti</td>
+        <td class="i01-10">Sjöundi</td>
+      </tr>
+      <tr>
+        <td>03</td>
+        <td class="i03-60">Lalli</td>
+        <td class="i03-50">Þórarinn Alvar</td>
+        <td class="i03-40">Þóra Laufey</td>
+        <td class="i03-30">Fimmti</td>
+        <td class="i03-20">Sjötti</td>
+        <td class="i03-10">Sjöundi</td>
+      </tr>
+      <tr>
+        <td>05</td>
+        <td class="i05-60">Imba</td>
+        <td class="i05-50">Dodda</td>
+        <td class="i05-40">NN</td>
+        <td class="i05-30">MM</td>
+        <td class="i05-20">Sjötti</td>
+        <td class="i05-10">Sjöundi</td>
+      </tr>
+      <tr>
+        <td>07</td>
+        <td class="i07-60">Stebbi</td>
+        <td class="i07-50">Þórarinn</td>
+        <td class="i07-40">Patrekur</td>
+        <td class="i07-30">Fimmti</td>
+        <td class="i07-20">Sjötti</td>
+        <td class="i07-10">Sjöundi</td>
+      </tr>
+      <tr>
+        <td>09</td>
+        <td class="i09-60">Siggi</td>
+        <td class="i09-50">Jón Þór</td>
+        <td class="i09-40">Margrét Kolka</td>
+        <td class="i09-30">Fimmti</td>
+        <td class="i09-20">Sjötti</td>
+        <td class="i09-10">Sjöundi</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td class="i11-60">Ragnheiður</td>
+        <td class="i11-50">Helga</td>
+        <td class="i11-40">Ragnheiður</td>
+        <td class="i11-30">Fimmti</td>
+        <td class="i11-20">Sjötti</td>
+        <td class="i11-10">Sjöundi</td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td class="i13-60">Hjölli</td>
+        <td class="i13-50">Þóra</td>
+        <td class="i13-40">Guðbjörg Zelda</td>
+        <td class="i13-30">Fimmti</td>
+        <td class="i13-20">Sjötti</td>
+        <td class="i13-10">Sjöundi</td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td class="i15-60">Halldór</td>
+        <td class="i15-50">James Bond</td>
+        <td class="i15-40">James Bond</td>
+        <td class="i15-30">Fimmti</td>
+        <td class="i15-20">Sjötti</td>
+        <td class="i15-10">Sjöundi</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Litaskema 2</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>col</th>
+        <th>70</th>
+        <th>60</th>
+        <th>40</th>
+        <th>20</th>
+        <th>10</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>00</td>
+        <td class="i00-70">Afi og amma</td>
+        <td class="i00-60"> </td>
+        <td class="i00-40"> </td>
+        <td class="i00-20"> </td>
+        <td class="i00-10"> </td>
+      </tr>
+      <tr>
+        <td>01</td>
+        <td></td>
+        <td class="i01-60">Ingibjörg</td>
+        <td class="i01-40">Sigrún</td>
+        <td class="i01-20">Ingibjörg</td>
+        <td class="i01-10">Fimmti</td>
+      </tr>
+      <tr>
+        <td>03</td>
+        <td></td>
+        <td class="i03-60">Lalli</td>
+        <td class="i03-40">Þórarinn Alvar</td>
+        <td class="i03-20">Þóra Laufey</td>
+        <td class="i03-10">Fimmti</td>
+      </tr>
+      <tr>
+        <td>05</td>
+        <td></td>
+        <td class="i05-60">Imba</td>
+        <td class="i05-40">Dodda</td>
+        <td class="i05-20">Elsta Doddu</td>
+        <td class="i05-10">Langömmubörn</td>
+      </tr>
+      <tr>
+        <td>07</td>
+        <td></td>
+        <td class="i07-60">Stebbi</td>
+        <td class="i07-40">Þórarinn</td>
+        <td class="i07-20">Patrekur</td>
+        <td class="i07-10">Sjöundi</td>
+      </tr>
+      <tr>
+        <td>09</td>
+        <td></td>
+        <td class="i09-60">Siggi</td>
+        <td class="i09-40">Jón Þór</td>
+        <td class="i09-30">Margrét Kolka</td>
+        <td class="i09-10">Fimmti</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td></td>
+        <td class="i11-60">Ragnheiður</td>
+        <td class="i11-40">Helga</td>
+        <td class="i11-20">Ragnheiður</td>
+        <td class="i11-10">Fimmti</td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td></td>
+        <td class="i13-60">Hjölli</td>
+        <td class="i13-40">Þóra</td>
+        <td class="i13-20">Guðbjörg Zelda</td>
+        <td class="i13-10">Fimmti</td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td></td>
+        <td class="i15-60">Halldór</td>
+        <td class="i15-40">Hannes Þór</td>
+        <td class="i15-20">Man ekki</td>
+        <td class="i15-10">Fimmti</td>
+      </tr>
+    </tbody>
+  </table>
+
+<h2>Full spectrum (00 - 16) </h2>
+
+  <table>
+      <thead>
+        <tr>
+          <th>col</th>
+          <th>60</th>
+          <th>50</th>
+          <th>40</th>
+          <th>30</th>
+          <th>20</th>
+          <th>10</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>00</td>
+          <td class="i00-60">James Bond</td>
+          <td class="i00-50">James Bond</td>
+          <td class="i00-40">James Bond</td>
+          <td class="i00-30">James Bond</td>
+          <td class="i00-20">James Bond</td>
+          <td class="i00-10">James Bond</td>
+        </tr>
+        <tr>
+          <td>01</td>
+          <td class="i01-60">James Bond</td>
+          <td class="i01-50">James Bond</td>
+          <td class="i01-40">James Bond</td>
+          <td class="i01-30">James Bond</td>
+          <td class="i01-20">James Bond</td>
+          <td class="i01-10">James Bond</td>
+        </tr>
+        <tr>
+          <td>02</td>
+          <td class="i02-60">James Bond</td>
+          <td class="i02-50">James Bond</td>
+          <td class="i02-40">James Bond</td>
+          <td class="i02-30">James Bond</td>
+          <td class="i02-20">James Bond</td>
+          <td class="i02-10">James Bond</td>
+        </tr>
+        <tr>
+          <td>03</td>
+          <td class="i03-60">James Bond</td>
+          <td class="i03-50">James Bond</td>
+          <td class="i03-40">James Bond</td>
+          <td class="i03-30">James Bond</td>
+          <td class="i03-20">James Bond</td>
+          <td class="i03-10">James Bond</td>
+        </tr>
+        <tr>
+          <td>04</td>
+          <td class="i04-60">James Bond</td>
+          <td class="i04-50">James Bond</td>
+          <td class="i04-40">James Bond</td>
+          <td class="i04-30">James Bond</td>
+          <td class="i04-20">James Bond</td>
+          <td class="i04-10">James Bond</td>
+        </tr>
+        <tr>
+          <td>05</td>
+          <td class="i05-60">James Bond</td>
+          <td class="i05-50">James Bond</td>
+          <td class="i05-40">James Bond</td>
+          <td class="i05-30">James Bond</td>
+          <td class="i05-20">James Bond</td>
+          <td class="i05-10">James Bond</td>
+        </tr>
+        <tr>
+          <td>06</td>
+          <td class="i06-60">James Bond</td>
+          <td class="i06-50">James Bond</td>
+          <td class="i06-40">James Bond</td>
+          <td class="i06-30">James Bond</td>
+          <td class="i06-20">James Bond</td>
+          <td class="i06-10">James Bond</td>
+        </tr>
+        <tr>
+          <td>07</td>
+          <td class="i07-60">James Bond</td>
+          <td class="i07-50">James Bond</td>
+          <td class="i07-40">James Bond</td>
+          <td class="i07-30">James Bond</td>
+          <td class="i07-20">James Bond</td>
+          <td class="i07-10">James Bond</td>
+        </tr>
+        <tr>
+          <td>08</td>
+          <td class="i08-60">James Bond</td>
+          <td class="i08-50">James Bond</td>
+          <td class="i08-40">James Bond</td>
+          <td class="i08-30">James Bond</td>
+          <td class="i08-20">James Bond</td>
+          <td class="i08-10">James Bond</td>
+        </tr>
+        <tr>
+          <td>09</td>
+          <td class="i09-60">James Bond</td>
+          <td class="i09-50">James Bond</td>
+          <td class="i09-40">James Bond</td>
+          <td class="i09-30">James Bond</td>
+          <td class="i09-20">James Bond</td>
+          <td class="i09-10">James Bond</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td class="i10-60">James Bond</td>
+          <td class="i10-50">James Bond</td>
+          <td class="i10-40">James Bond</td>
+          <td class="i10-30">James Bond</td>
+          <td class="i10-20">James Bond</td>
+          <td class="i10-10">James Bond</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td class="i11-60">James Bond</td>
+          <td class="i11-50">James Bond</td>
+          <td class="i11-40">James Bond</td>
+          <td class="i11-30">James Bond</td>
+          <td class="i11-20">James Bond</td>
+          <td class="i11-10">James Bond</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td class="i12-60">James Bond</td>
+          <td class="i12-50">James Bond</td>
+          <td class="i12-40">James Bond</td>
+          <td class="i12-30">James Bond</td>
+          <td class="i12-20">James Bond</td>
+          <td class="i12-10">James Bond</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td class="i13-60">James Bond</td>
+          <td class="i13-50">James Bond</td>
+          <td class="i13-40">James Bond</td>
+          <td class="i13-30">James Bond</td>
+          <td class="i13-20">James Bond</td>
+          <td class="i13-10">James Bond</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td class="i14-60">James Bond</td>
+          <td class="i14-50">James Bond</td>
+          <td class="i14-40">James Bond</td>
+          <td class="i14-30">James Bond</td>
+          <td class="i14-20">James Bond</td>
+          <td class="i14-10">James Bond</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td class="i15-60">James Bond</td>
+          <td class="i15-50">James Bond</td>
+          <td class="i15-40">James Bond</td>
+          <td class="i15-30">James Bond</td>
+          <td class="i15-20">James Bond</td>
+          <td class="i15-10">James Bond</td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td class="i16-60">James Bond</td>
+          <td class="i16-50">James Bond</td>
+          <td class="i16-40">James Bond</td>
+          <td class="i16-30">James Bond</td>
+          <td class="i16-20">James Bond</td>
+          <td class="i16-10">James Bond</td>
+        </tr>
+      </tbody>
+    </table>
+
+</body>
+</html>

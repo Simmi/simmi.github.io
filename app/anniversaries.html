@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <script>
+        var config = {
+            currentYear : null,
+            currentDay :  null
+        };
+        // the date can be manually set for testing purposes
+        // config.currentDay = '0107'; config.currentYear = '2015';
+    </script>
+
+    <script src="js/lib/lodash.js"></script>
+
+    <script src="js/personsTree.js"></script>
+    <script src="js/personsLogic.js"></script>
+
+
+    <script>
+        Aunt.init();
+        // Aunt.logArray(mArray, 'Marriages');
+        // Aunt.logArray(anniversArray, 'Anniversaries');
+        // Aunt.logArray(personsArray, 'Persons');
+        // Aunt.findNextAnniversaries(5, 'all', 2);
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+<title>Anniversaries</title>
+</head>
+<body>
+  <h1>Outputs</h1>
+
+  <div class="tablewrapper">
+    <table id="birthdays" class="upcoming">
+        <thead>
+            <tr><th colspan="2"></th></tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <table id="majors" class="upcoming">
+        <thead>
+            <tr><th colspan="2"></th></tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+  </div>
+
+  <h2>Demographics</h2>
+
+    <table id="recent" class="upcoming fullwidth">
+      <thead>
+        <tr><th colspan="2"></th></tr>
+      </div>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+
+    <div class="tablewrapper">
+    <table id="agegroups" class="demographics">
+        <thead>
+            <tr><th colspan="2"></th></tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <table id="bymonths" class="demographics">
+        <thead>
+            <tr><th colspan="2"></th></tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <table id="residence" class="demographics">
+        <thead>
+            <tr><th colspan="2"></th></tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+  </div>
+
+    <script src="js/anniversaries.js"></script>
+</body>
+</html>

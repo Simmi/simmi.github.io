@@ -1,0 +1,72 @@
+.tablewrapper {
+  margin-bottom: 1em;
+  display: flex;
+}
+.tablewrapper .tableshrink {
+  margin: 0.5em 0.5em 0;
+}
+table {
+  width: 100%;
+  padding: 1em;
+  border-spacing: 0;
+  border-radius: 0.5em;
+  border: 1px solid #ddd;
+  position: relative;
+}
+table th {
+  text-align: left;
+  border-bottom: none;
+  background: #fff;
+}
+table th > span {
+  position: absolute;
+  background: #fff;
+  padding: 0 0.5em;
+  top: -0.7em;
+  left: 1em;
+}
+table tr:nth-child(2n-1) {
+  background: #f3f3fa;
+}
+table tbody {
+  font-size: 0.875em;
+  line-height: 1.428571428571429;
+}
+table td {
+  vertical-align: top;
+  padding: 0.5em 0.5em;
+}
+table td:first-child {
+  white-space: nowrap;
+}
+.tableshrink.upcoming {
+  width: 50%;
+}
+.tableshrink.fullwidth {
+  width: 100%;
+}
+.tableshrink.demographics {
+  width: 33.3%;
+  flex-basis: 1;
+}
+.tableshrink.demographics td {
+  min-width: 50%;
+}
+@media screen and (max-width: 700px) {
+  .tablewrapper {
+    flex-direction: column;
+  }
+  .tableshrink.upcoming,
+  .tableshrink.demographics,
+  .tableshrink.fullwidth {
+    width: auto;
+    margin-bottom: 1em;
+  }
+  table#recentadditions td:first-child {
+    white-space: normal;
+  }
+  table {
+    padding: 0.5em;
+    padding-top: 1em;
+  }
+}

@@ -7,10 +7,6 @@ var personsTree = {
             addr: 'Akranes',
             tree: [
                 {
-                    name: 'Ólafur',
-                    link: 'spouse',
-                },
-                {
                     name: 'Guðný Jóna Ólafsdóttir',
                     link: 'child',
                     born: '1957-02-03',

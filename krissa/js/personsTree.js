@@ -192,10 +192,6 @@ var personsTree = {
                     ]// end Þorsteinn
                 },// end Erla
                 {
-                    name: 'Gilbert',
-                    link: 'spouse',
-                },
-                {
                     name: 'Eygló Peta Gilbertsdóttir',
                     link: 'child',
                     born: '1972-05-30',

@@ -1,19 +1,39 @@
 {
   "brawlstars": {
     "displayName": "Brawl Stars",
-    "typeQuizTitle": "Brawl Stars: Skrifaðu nafnið",
-    "mcQuizTitle": "Hver er þetta?",
+    "typeQuizTitle": "Skrifaðu nafnið",
+    "mcQuizTitle": "Hvaða heitir þessi 'Brawler'?",
+    "selectImageQuizTitle": "Hvaða Brawler er ...",
     "inputPlaceholder": "Sláðu inn nafn brawlers",
     "imgAlt": "Brawler mynd",
-    "backLink": "Til baka í val á spurningakeppni"
+    "backLink": "Til baka í val á spurningakeppni",
+    "key": "brawlstars",
+    "themeColor": "#9614ff",
+    "logoImg": "images/brawlstars/logo.png"
   },
   "dogs": {
     "displayName": "Hundar",
-    "typeQuizTitle": "Hundar: Skrifaðu nafnið",
-    "mcQuizTitle": "Hvaða hundur er þetta?",
+    "typeQuizTitle": "Skrifaðu nafnið",
+    "mcQuizTitle": "Hvaða heitir þessi hundur?",
+    "selectImageQuizTitle": "Hvaða hundur er ...",
     "inputPlaceholder": "Sláðu inn nafn hundsins",
     "imgAlt": "Mynd af hundi",
-    "backLink": "Til baka í val á spurningakeppni"
+    "backLink": "Til baka í val á spurningakeppni",
+    "key": "dogs",
+    "themeColor": "#008800",
+    "logoImg": "\uD83D\uDC36"
+  },
+  "flags": {
+    "displayName": "Fánar ríkja",
+    "typeQuizTitle": "Skrifaðu nafnið á landinu",
+    "mcQuizTitle": "Hvaða land á þennan fána?",
+    "selectImageQuizTitle": "Hvaða fána á ...",
+    "inputPlaceholder": "Sláðu inn nafn landsins",
+    "imgAlt": "Mynd af fána",
+    "backLink": "Til baka í val á spurningakeppni",
+    "key": "flags",
+    "themeColor": "#666666",
+    "logoImg_old": "\uD83C\uDFF4",
+    "logoImg": "\uD83C\uDFF3\uFE0F\u200D\uD83C\uDF08"
   }
 }
-

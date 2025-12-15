@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flokkur</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f7f7f7; margin: 0; padding: 0; }
+    .container { max-width: 500px; margin: 40px auto; background: #fff; padding: 24px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; }
+    .category-title { font-size: 2rem; margin-bottom: 16px; }
+    .quiz-type-btn {
+      display: block;
+      margin: 20px auto;
+      padding: 20px;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      background: #0074d9;
+      color: #fff;
+      text-decoration: none;
+      width: 80%;
+      max-width: 320px;
+      transition: background 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+    .quiz-type-btn:hover { filter: brightness(0.92); }
+    .category-logo { max-width: 120px; margin-bottom: 16px; }
+  </style>
+</head>
+<body>
+  <div class="container" id="category-container">
+    <div id="category-content">...</div>
+  </div>
+  <script>
+    function getCategoryFromUrl() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get('category') || '';
+    }
+    const categoryKey = getCategoryFromUrl();
+    fetch('categories.json')
+      .then(response => response.json())
+      .then(categories => {
+        let category = categories[categoryKey];
+        if (!category) {
+          // fallback to first category if not found
+          const firstKey = Object.keys(categories)[0];
+          category = categories[firstKey];
+        }
+        // Optional: logo and theme color
+        let html = '';
+        // Show logo as image or emoji/text
+        if (category.logo) {
+          const isImg = /\.(png|jpg|jpeg|svg|gif)$/.test(category.logo) || category.logo.startsWith('/') || category.logo.startsWith('http');
+          if (isImg) {
+            html += `<img src="${category.logo}" alt="${category.displayName} logo" class="category-logo" />`;
+          } else {
+            html += `<span class="category-logo-emoji" style="font-size:64px;display:block;margin-bottom:16px;">${category.logo}</span>`;
+          }
+        }
+        html += `<div class="category-title" style="color:${category.themeColor||'#0074d9'}">${category.displayName}</div>`;
+        const btnStyle = category.themeColor ? `style="background:${category.themeColor};"` : '';
+        html += `<button class="quiz-type-btn" ${btnStyle} onclick="location.href='type-quiz.html?category=${category.key}'">${category.typeQuizTitle}</button>`;
+        html += `<button class="quiz-type-btn" ${btnStyle} onclick="location.href='multiple-choice.html?category=${category.key}'">${category.mcQuizTitle}</button>`;
+        html += `<button class="quiz-type-btn" ${btnStyle} onclick="location.href='select-image.html?category=${category.key}'">${category.selectImageQuizTitle}</button>`;
+        html += `<a href='index.html' style='display:block;margin-top:32px;'>← Til baka</a>`;
+        document.getElementById('category-content').innerHTML = html.replace(/\\"/g, '"');
+      });
+  </script>
+</body>
+</html>

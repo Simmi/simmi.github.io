@@ -1,1753 +1,1753 @@
 [
   {
     "name": "Affenpinscher",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Affenpinscher-running-outdoors-400x267.jpg",
+    "img": "images/dogs/affenpinscher.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Afghan Hound",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Afghan-Hound-standing-in-a-garden-400x267.jpg",
+    "img": "images/dogs/afghan_hound.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Airedale Terrier",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Airedale-Terrier-standing-stacked-outdoors-400x267.jpg",
+    "img": "images/dogs/airedale_terrier.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Akita",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Akita-standing-outdoors-in-the-summer-400x267.jpg",
+    "img": "images/dogs/akita.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Alaskan Klee Kai",
-    "img": "https://www.akc.org/wp-content/uploads/2021/01/Alaskan-Klee-Kai-standing-in-the-snow-attached-to-a-harness1-400x267.jpg",
+    "img": "images/dogs/alaskan_klee_kai.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Alaskan Malamute",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Alaskan-Malamute-standing-in-the-grass1-400x267.jpg",
+    "img": "images/dogs/alaskan_malamute.jpg",
     "difficulty": 2,
     "difficulty_smart": 2
   },
   {
     "name": "American Bulldog",
-    "img": "https://www.akc.org/wp-content/uploads/2020/01/American-Bulldog-standing-in-three-quarter-view-400x267.jpg",
+    "img": "images/dogs/american_bulldog.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "American English Coonhound",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/American-English-Coonhound-howling-in-a-field1-400x267.jpg",
+    "img": "images/dogs/american_english_coonhound.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "American Eskimo Dog",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/American-Eskimo-Dog-standing-in-the-grass-in-bright-sunlight-400x267.jpg",
+    "img": "images/dogs/american_eskimo_dog.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "American Foxhound",
-    "img": "https://www.akc.org/wp-content/uploads/2020/05/american-foxhound-pair-looking-up-400x267.jpg",
+    "img": "images/dogs/american_foxhound.jpg",
     "difficulty": 2,
     "difficulty_smart": 2
   },
   {
     "name": "American Hairless Terrier",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/American-Hairless-Terrier-standing-in-the-grass-on-lead-400x267.jpg",
+    "img": "images/dogs/american_hairless_terrier.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "American Leopard Hound",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/American-Leopard-Hound-On-White-01-400x267.jpg",
+    "img": "images/dogs/american_leopard_hound.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "American Staffordshire Terrier",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/AmStaff.01-400x267.jpg",
+    "img": "images/dogs/american_staffordshire_terrier.jpg",
     "difficulty": 3,
     "difficulty_smart": 3
   },
   {
     "name": "American Water Spaniel",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/American-Water-Spaniel.1-400x267.jpg",
+    "img": "images/dogs/american_water_spaniel.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Anatolian Shepherd Dog",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Anatolian-Shepherd-Dog-On-White-01-400x267.jpg",
+    "img": "images/dogs/anatolian_shepherd_dog.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Appenzeller Sennenhund",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/AdobeStock_11176134-400x267.jpg",
+    "img": "images/dogs/appenzeller_sennenhund.jpg",
     "difficulty": 2,
     "difficulty_smart": 2
   },
   {
     "name": "Australian Cattle Dog",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Australian-Cattle-Dog-laying-down-in-the-grass-400x267.jpg",
+    "img": "images/dogs/australian_cattle_dog.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Australian Kelpie",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Australian-Kelpie-herding-sheep-400x267.jpg",
+    "img": "images/dogs/australian_kelpie.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Australian Shepherd",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Australian-Shepherd.1-400x267.jpg",
+    "img": "images/dogs/australian_shepherd.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Australian Stumpy Tail Cattle Dog",
-    "img": "https://www.akc.org/wp-content/uploads/2018/07/GettyImages-454288321-400x267.jpg",
+    "img": "images/dogs/australian_stumpy_tail_cattle_dog.jpg",
     "difficulty": 3,
     "difficulty_smart": 3
   },
   {
     "name": "Australian Terrier",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Australian-Terrier-standing-in-the-garden-400x267.jpg",
+    "img": "images/dogs/australian_terrier.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Azawakh",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Azawakh_178091272-400x267.jpg",
+    "img": "images/dogs/azawakh.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Barbado da Terceira",
-    "img": "https://www.akc.org/wp-content/uploads/2021/02/Barbado-da-Terceira-standing-backyard-400x267.jpg",
+    "img": "images/dogs/barbado_da_terceira.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Barbet",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Barbet-standing-in-the-snow-400x267.jpg",
+    "img": "images/dogs/barbet.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Basenji",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Basenji-running-through-a-field-400x267.jpg",
+    "img": "images/dogs/basenji.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Basset Fauve de Bretagne",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/AdobeStock_23183632-400x267.jpg",
+    "img": "images/dogs/basset_fauve_de_bretagne.jpg",
     "difficulty": 3,
     "difficulty_smart": 3
   },
   {
     "name": "Basset Hound",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Basset-Hound-standing-in-the-garden-400x267.jpg",
+    "img": "images/dogs/basset_hound.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Bavarian Mountain Scent Hound",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Bavarian.190758538-400x267.jpg",
+    "img": "images/dogs/bavarian_mountain_scent_hound.jpg",
     "difficulty": 3,
     "difficulty_smart": 3
   },
   {
     "name": "Beagle",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Beagles-standing-in-a-frosty-field-on-a-cold-morning-400x267.jpg",
+    "img": "images/dogs/beagle.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Bearded Collie",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Bearded-Collie-standing-in-the-grass-400x267.jpg",
+    "img": "images/dogs/bearded_collie.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Beauceron",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Beauceron-On-White-03-400x267.jpg",
+    "img": "images/dogs/beauceron.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Bedlington Terrier",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Bedlington-Terrier-standing-outdoors-400x267.jpg",
+    "img": "images/dogs/bedlington_terrier.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Belgian Laekenois",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Belgian-Laekenois-standing-in-profile-in-a-field-400x267.jpg",
+    "img": "images/dogs/belgian_laekenois.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Belgian Malinois",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Belgian-Malinois-On-White-01-400x267.jpg",
+    "img": "images/dogs/belgian_malinois.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Belgian Sheepdog",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Belgian-Sheepdog-standing-in-a-field-400x267.jpg",
+    "img": "images/dogs/belgian_sheepdog.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Belgian Tervuren",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Belgian-Tervuren.3-400x267.jpg",
+    "img": "images/dogs/belgian_tervuren.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Bergamasco Sheepdog",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Bergamasco-Sheepdog-standing-in-a-field-in-the-mountains-400x267.jpg",
+    "img": "images/dogs/bergamasco_sheepdog.jpg",
     "difficulty": 2,
     "difficulty_smart": 2
   },
   {
     "name": "Berger Picard",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Berger-Picard-standing-in-a-field-400x267.jpg",
+    "img": "images/dogs/berger_picard.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Bernese Mountain Dog",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Bernese-Mountain-Dog-On-White-01-400x267.jpg",
+    "img": "images/dogs/bernese_mountain_dog.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Bichon Frise",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Bichon-Frise-On-White-03-400x267.jpg",
+    "img": "images/dogs/bichon_frise.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Biewer Terrier",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Biewer-Terrier-standing-on-a-white-background1-400x267.jpg",
+    "img": "images/dogs/biewer_terrier.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Black and Tan Coonhound",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Black-and-Tan-Coonhound-On-White-031-400x267.jpg",
+    "img": "images/dogs/black_and_tan_coonhound.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Black Russian Terrier",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Black-Russian-Terrier-standing-outdoors-400x267.jpg",
+    "img": "images/dogs/black_russian_terrier.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Bloodhound",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Bloodhound-on-a-scent-in-the-woods-400x267.jpg",
+    "img": "images/dogs/bloodhound.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Blue Picardy Spaniel",
-    "img": "https://www.akc.org/wp-content/uploads/2024/07/Blue-Picardy-Spaniel-standing-outdoors-400x267.jpg",
+    "img": "images/dogs/blue_picardy_spaniel.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Bluetick Coonhound",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Bluetick-Coonhound-400x267.jpg",
+    "img": "images/dogs/bluetick_coonhound.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Boerboel",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Boerboel-On-White-01-400x267.jpg",
+    "img": "images/dogs/boerboel.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Bohemian Shepherd",
-    "img": "https://www.akc.org/wp-content/uploads/2019/06/Bohemian-Shepherd-standing-in-profile-in-a-field-of-tall-brown-grasses-400x267.jpg",
+    "img": "images/dogs/bohemian_shepherd.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Bolognese",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Bolognese-standing-in-profile-outdoors-400x267.jpg",
+    "img": "images/dogs/bolognese.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Border Collie",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Border-Collie-On-White-01-400x267.jpg",
+    "img": "images/dogs/border_collie.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Border Terrier",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Border-Terrier-On-White-03-400x267.jpg",
+    "img": "images/dogs/border_terrier.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Borzoi",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Borzoi-running-outdoors-400x267.jpg",
+    "img": "images/dogs/borzoi.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Boston Terrier",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Boston-Terrier-head-portrait-outdoors1-400x267.jpg",
+    "img": "images/dogs/boston_terrier.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Bouvier des Ardennes",
-    "img": "https://www.akc.org/wp-content/uploads/2024/07/Bouvier-des-Ardennes_standing_outdoors1-400x267.jpg",
+    "img": "images/dogs/bouvier_des_ardennes.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Bouvier des Flandres",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Bouvier-des-Flandres-standing-atop-a-hill-400x267.jpg",
+    "img": "images/dogs/bouvier_des_flandres.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Boxer",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Boxer.1-400x267.jpg",
+    "img": "images/dogs/boxer.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Boykin Spaniel",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Boykin-Spaniel-holding-a-dummy-toy-400x267.jpg",
+    "img": "images/dogs/boykin_spaniel.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Bracco Italiano",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Bracco.7-400x267.jpg",
+    "img": "images/dogs/bracco_italiano.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Braque du Bourbonnais",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Bourbonnais-400x267.jpg",
+    "img": "images/dogs/braque_du_bourbonnais.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Braque Francais Pyrenean",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Braque-Francais-Pyrenean-400x267.jpg",
+    "img": "images/dogs/braque_francais_pyrenean.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Braque Saint-Germain",
-    "img": "https://www.akc.org/wp-content/uploads/2023/07/Braque-Saint-Germain-standing-profile-outdoors-400x267.jpg",
+    "img": "images/dogs/braque_saint_germain.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Brazilian Terrier",
-    "img": "https://www.akc.org/wp-content/uploads/2023/07/Brazilian-Terrier-standing-in-the-yard-outdoors-400x267.jpg",
+    "img": "images/dogs/brazilian_terrier.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Briard",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Briard-standing-in-the-grass-400x267.jpg",
+    "img": "images/dogs/briard.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Brittany",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Brittany-1-400x267.jpg",
+    "img": "images/dogs/brittany.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Broholmer",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Broholmer-laying-down-in-the-park-400x267.jpg",
+    "img": "images/dogs/broholmer.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Brussels Griffon",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Brussels-Griffon-sitting-outdoors-400x267.jpg",
+    "img": "images/dogs/brussels_griffon.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Bull Terrier",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/bull-terrier-on-white-10-400x267.jpg",
+    "img": "images/dogs/bull_terrier.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Bulldog",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Bulldog-standing-in-the-grass-400x267.jpg",
+    "img": "images/dogs/bulldog.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Bullmastiff",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Bullmastiff-standing-in-a-field-400x267.jpg",
+    "img": "images/dogs/bullmastiff.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Cairn Terrier",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Cairn-Terrier-sitting-in-the-grass-400x267.jpg",
+    "img": "images/dogs/cairn_terrier.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Calupoh",
-    "img": "https://www.akc.org/wp-content/uploads/2025/02/Calupoh-standing-outdoors-400x267.jpg",
+    "img": "images/dogs/calupoh.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Canaan Dog",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Canaan-Dog-On-White-01-400x267.jpg",
+    "img": "images/dogs/canaan_dog.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Canadian Eskimo Dog",
-    "img": "https://www.akc.org/wp-content/uploads/2025/01/Canadian-Eskimo-Dog-playing-yard-400x267.jpg",
+    "img": "images/dogs/canadian_eskimo_dog.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Cane Corso",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Cane-Corso-AKC-121516-296-400x267.jpg",
+    "img": "images/dogs/cane_corso.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Cardigan Welsh Corgi",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Cardigan-Welsh-Corgi-on-White-111-400x267.jpg",
+    "img": "images/dogs/cardigan_welsh_corgi.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Carolina Dog",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Carolina-Dog-standing-outdoors-400x267.jpg",
+    "img": "images/dogs/carolina_dog.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Catahoula Leopard Dog",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Catahoula-Leopard-Dog-on-White-02-400x267.jpg",
+    "img": "images/dogs/catahoula_leopard_dog.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Caucasian Shepherd Dog",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/GettyImages-1095398138-400x267.jpg",
+    "img": "images/dogs/caucasian_shepherd_dog.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Cavalier King Charles Spaniel",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Cavalier-King-Charles-Spaniel-standing-in-the-grass-400x267.jpg",
+    "img": "images/dogs/cavalier_king_charles_spaniel.jpg",
     "difficulty": 3,
     "difficulty_smart": 3
   },
   {
     "name": "Central Asian Shepherd Dog",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Central-Asian-Shepherd-Dog-on-White-02-400x267.jpg",
+    "img": "images/dogs/central_asian_shepherd_dog.jpg",
     "difficulty": 3,
     "difficulty_smart": 3
   },
   {
     "name": "Cesky Terrier",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Cesky-Terrier-on-White-011-400x267.jpg",
+    "img": "images/dogs/cesky_terrier.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Chesapeake Bay Retriever",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Chesapeake-Bay-Retriever-hunting-400x267.jpg",
+    "img": "images/dogs/chesapeake_bay_retriever.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Chihuahua",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Chihuahua-standing-in-three-quarter-view-400x267.jpg",
+    "img": "images/dogs/chihuahua.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Chinese Crested",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Chinese-Crested-On-White-01-400x267.jpg",
+    "img": "images/dogs/chinese_crested.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Chinese Shar-Pei",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Chinese-Shar-Pei-standing-on-the-sidewalk-400x267.jpg",
+    "img": "images/dogs/chinese_shar_pei.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Chinook",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Chinook-On-White-03-400x267.jpg",
+    "img": "images/dogs/chinook.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Chow Chow",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Chow-Chow-On-White-01-400x267.jpg",
+    "img": "images/dogs/chow_chow.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Cirneco dell’Etna",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Cirneco-dellEtna-hunting-400x267.jpg",
+    "img": "images/dogs/cirneco_dell_etna.jpg",
     "difficulty": 2,
     "difficulty_smart": 2
   },
   {
     "name": "Clumber Spaniel",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Clumber-Spaniel-On-White-011-400x267.jpg",
+    "img": "images/dogs/clumber_spaniel.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Cocker Spaniel",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Cocker-Spaniel-running-in-the-yard-400x267.jpg",
+    "img": "images/dogs/cocker_spaniel.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Collie",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Collie-standing-in-a-field-400x267.jpg",
+    "img": "images/dogs/collie.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Coton de Tulear",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Coton-de-Tulear-standing-in-the-grass-400x267.jpg",
+    "img": "images/dogs/coton_de_tulear.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Croatian Sheepdog",
-    "img": "https://www.akc.org/wp-content/uploads/2018/05/Croatian-Sheepdog-400x267.jpg",
+    "img": "images/dogs/croatian_sheepdog.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Curly-Coated Retriever",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Curly-Coated-Retriever-standing-stacked-in-a-field-at-sunset.20200418030641387-400x267.jpg",
+    "img": "images/dogs/curly_coated_retriever.jpg",
     "difficulty": 2,
     "difficulty_smart": 2
   },
   {
     "name": "Czechoslovakian Vlciak",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Czechoslovakian-Vlcak.179296809-400x267.jpg",
+    "img": "images/dogs/czechoslovakian_vlciak.jpg",
     "difficulty": 2,
     "difficulty_smart": 2
   },
   {
     "name": "Dachshund",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Longhaired-Dachshund-standing-outdoors-400x267.jpg",
+    "img": "images/dogs/dachshund.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Dalmatian",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Dalmatian-On-White-01-400x267.jpg",
+    "img": "images/dogs/dalmatian.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Dandie Dinmont Terrier",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Dandie-Dinmont-Terrier-slide-6-400x267.jpg",
+    "img": "images/dogs/dandie_dinmont_terrier.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Danish-Swedish Farmdog",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Danish-Swedish-Farmdog-standing-outdoors-at-dusk-400x267.jpg",
+    "img": "images/dogs/danish_swedish_farmdog.jpg",
     "difficulty": 2,
     "difficulty_smart": 2
   },
   {
     "name": "Deutscher Wachtelhund",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/AdobeStock_1083293871-400x267.jpg",
+    "img": "images/dogs/deutscher_wachtelhund.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Doberman Pinscher",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Doberman-Pinscher-standing-outdoors-400x267.jpg",
+    "img": "images/dogs/doberman_pinscher.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Dogo Argentino",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Dogo-Argentino-400x267.jpg",
+    "img": "images/dogs/dogo_argentino.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Dogue de Bordeaux",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Dogue-de-Bordeaux-On-White-03-400x267.jpg",
+    "img": "images/dogs/dogue_de_bordeaux.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Drentsche Patrijshond",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Drentsche-Patrijshond-standing-in-a-field-400x267.jpg",
+    "img": "images/dogs/drentsche_patrijshond.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Drever",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Drever-face-400x267.jpg",
+    "img": "images/dogs/drever.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Dutch Shepherd",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Dutch-Shepherd-in-a-field-400x267.jpg",
+    "img": "images/dogs/dutch_shepherd.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "English Cocker Spaniel",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/English-Cocker-Spaniel-Slide03-400x267.jpg",
+    "img": "images/dogs/english_cocker_spaniel.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "English Foxhound",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/English-Foxhound-standing-in-a-field-400x267.jpg",
+    "img": "images/dogs/english_foxhound.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "English Setter",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/English-Setter-standing-in-a-field-400x267.jpg",
+    "img": "images/dogs/english_setter.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "English Springer Spaniel",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/English-Springer-Spaniel-On-White-011-400x267.jpg",
+    "img": "images/dogs/english_springer_spaniel.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "English Toy Spaniel",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/English-Toy-Spaniel-On-White-01-400x267.jpg",
+    "img": "images/dogs/english_toy_spaniel.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Entlebucher Mountain Dog",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Entlebucher-Mountain-Dog-outdoors-standing-in-a-field-400x267.jpg",
+    "img": "images/dogs/entlebucher_mountain_dog.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Estrela Mountain Dog",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Beau-400x267.jpg",
+    "img": "images/dogs/estrela_mountain_dog.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Eurasier",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Eurasier.1-400x267.jpg",
+    "img": "images/dogs/eurasier.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Field Spaniel",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Field-Spaniels-of-different-colors-sitting-together-outdoors-400x267.jpg",
+    "img": "images/dogs/field_spaniel.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Finnish Lapphund",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Finnish-Lapphund-lying-on-a-snow-covered-road-400x267.jpg",
+    "img": "images/dogs/finnish_lapphund.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Finnish Spitz",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Finnish-Spitz-On-White-01-400x267.jpg",
+    "img": "images/dogs/finnish_spitz.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Flat-Coated Retriever",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Flat-Coated-Retrievers-sitting-outdoors-400x267.jpg",
+    "img": "images/dogs/flat_coated_retriever.jpg",
     "difficulty": 2,
     "difficulty_smart": 2
   },
   {
     "name": "French Bulldog",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/French-Bulldog-standing-outdoors-400x267.jpg",
+    "img": "images/dogs/french_bulldog.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "French Spaniel",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/French-Spaniel-Gallery-01-400x267.jpg",
+    "img": "images/dogs/french_spaniel.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "German Longhaired Pointer",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/German-Longhaired-Pointer-on-White-01-400x267.jpg",
+    "img": "images/dogs/german_longhaired_pointer.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "German Pinscher",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/German-Pinscher-standing-near-a-lake-400x267.jpg",
+    "img": "images/dogs/german_pinscher.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "German Shepherd Dog",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/German-Shepherd-on-White-00-400x267.jpg",
+    "img": "images/dogs/german_shepherd_dog.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "German Shorthaired Pointer",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/German-Shorthaired-Pointer-On-White-07-400x267.jpg",
+    "img": "images/dogs/german_shorthaired_pointer.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "German Spitz",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/German-Spitz-standing-in-profile-outdoors-400x267.jpg",
+    "img": "images/dogs/german_spitz.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "German Wirehaired Pointer",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/German-Wirehaired-Pointer-standing-in-a-green-grassy-field-400x267.jpg",
+    "img": "images/dogs/german_wirehaired_pointer.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Giant Schnauzer",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Giant-Schanuzer-standing-in-a-field-400x267.jpg",
+    "img": "images/dogs/giant_schnauzer.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Glen of Imaal Terrier",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Glen-of-Imaal-Terrier-On-White-01-400x267.jpg",
+    "img": "images/dogs/glen_of_imaal_terrier.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Golden Retriever",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Golden-Retriever-wading-into-a-lake-400x267.jpg",
+    "img": "images/dogs/golden_retriever.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Gordon Setter",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Gordon-Setter.3-400x267.jpg",
+    "img": "images/dogs/gordon_setter.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Grand Basset Griffon Vendéen",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/GBGV.2-400x267.jpg",
+    "img": "images/dogs/grand_basset_griffon_vend_en.jpg",
     "difficulty": 3,
     "difficulty_smart": 3
   },
   {
     "name": "Great Dane",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Great-Dane-standing-in-profile-outdoors1-400x267.jpg",
+    "img": "images/dogs/great_dane.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Great Pyrenees",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Great-Pyrenees-on-White-04-400x267.jpg",
+    "img": "images/dogs/great_pyrenees.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Greater Swiss Mountain Dog",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Greater-Swiss-Mountain-Dog-laying-down-in-the-grass-400x267.jpg",
+    "img": "images/dogs/greater_swiss_mountain_dog.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Greyhound",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Greyhound-running-400x267.jpg",
+    "img": "images/dogs/greyhound.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Hamiltonstovare",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Hamiltonstovare-on-White-011-400x267.jpg",
+    "img": "images/dogs/hamiltonstovare.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Hanoverian Scenthound",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Hanoverian-Scenthound.1-400x267.jpg",
+    "img": "images/dogs/hanoverian_scenthound.jpg",
     "difficulty": 2,
     "difficulty_smart": 2
   },
   {
     "name": "Harrier",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Harrier3-400x267.jpg",
+    "img": "images/dogs/harrier.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Havanese",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Havanese-standing-outdoors-400x267.jpg",
+    "img": "images/dogs/havanese.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Hokkaido",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Hokkaido.1-400x267.jpg",
+    "img": "images/dogs/hokkaido.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Hovawart",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Hovawart.10-400x267.jpg",
+    "img": "images/dogs/hovawart.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Ibizan Hound",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Ibizan-Hound-sitting-in-profile-in-the-desert-400x267.jpg",
+    "img": "images/dogs/ibizan_hound.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Icelandic Sheepdog",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Icelandic-Sitting-400x267.jpg",
+    "img": "images/dogs/icelandic_sheepdog.jpg",
     "difficulty": 2,
     "difficulty_smart": 2
   },
   {
     "name": "Irish Red and White Setter",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Irish-Red-and-White-Setter-stalking-in-a-field-400x267.jpg",
+    "img": "images/dogs/irish_red_and_white_setter.jpg",
     "difficulty": 3,
     "difficulty_smart": 3
   },
   {
     "name": "Irish Setter",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Irish-Setter-on-point-in-a-field-400x267.jpg",
+    "img": "images/dogs/irish_setter.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Irish Terrier",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Irish-Terriers-sitting-together-400x267.jpg",
+    "img": "images/dogs/irish_terrier.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Irish Water Spaniel",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Irish-Water-Spaniel-On-White-01-400x267.jpg",
+    "img": "images/dogs/irish_water_spaniel.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Irish Wolfhound",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Irish-Wolfhound-standing-in-a-field-400x267.jpg",
+    "img": "images/dogs/irish_wolfhound.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Italian Greyhound",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Two-Italian-Greyhounds-400x267.jpg",
+    "img": "images/dogs/italian_greyhound.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Jagdterrier",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Jagdterrier.4-400x267.jpg",
+    "img": "images/dogs/jagdterrier.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Japanese Akitainu",
-    "img": "https://www.akc.org/wp-content/uploads/2020/11/Japanese-Akitainu-standing-in-the-forest-400x267.jpg",
+    "img": "images/dogs/japanese_akitainu.jpg",
     "difficulty": 2,
     "difficulty_smart": 2
   },
   {
     "name": "Japanese Chin",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Japanese-Chin-standing-outdoors-400x267.jpg",
+    "img": "images/dogs/japanese_chin.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Japanese Spitz",
-    "img": "https://www.akc.org/wp-content/uploads/2019/06/Japanese-Spitz.4-400x267.jpg",
+    "img": "images/dogs/japanese_spitz.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Japanese Terrier",
-    "img": "https://www.akc.org/wp-content/uploads/2020/12/Japanese-Terrier-standing-outdoors-400x267.jpg",
+    "img": "images/dogs/japanese_terrier.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Kai Ken",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Kai-Ken-standing-in-profile-outdoors-400x267.jpg",
+    "img": "images/dogs/kai_ken.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Karelian Bear Dog",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Karelian-Bear-Dog-400x267.jpg",
+    "img": "images/dogs/karelian_bear_dog.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Keeshond",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Keeshond-exploring-in-the-backyard-400x267.jpg",
+    "img": "images/dogs/keeshond.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Kerry Blue Terrier",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Kerry-Blue-Terrier-standing-stacked-outdoors-400x267.jpg",
+    "img": "images/dogs/kerry_blue_terrier.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Kishu Ken",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Kishu-Ken-standing-in-the-brush-at-sunset-400x267.jpg",
+    "img": "images/dogs/kishu_ken.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Komondor",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Komondor-standing-in-the-park-400x267.jpg",
+    "img": "images/dogs/komondor.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Korean Jindo Dog",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Jindo-standing-in-the-yard-400x267.jpg",
+    "img": "images/dogs/korean_jindo_dog.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Kromfohrlander",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Kromfohrlander.6-400x267.jpg",
+    "img": "images/dogs/kromfohrlander.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Kuvasz",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Kuvasz-standing-outdoors-400x267.jpg",
+    "img": "images/dogs/kuvasz.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Labrador Retriever",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Labrador-Retrievers-three-colors-400x267.jpg",
+    "img": "images/dogs/labrador_retriever.jpg",
     "difficulty": 2,
     "difficulty_smart": 2
   },
   {
     "name": "Lagotto Romagnolo",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Lagotto-Romagnolo-standing-by-a-pond-400x267.jpg",
+    "img": "images/dogs/lagotto_romagnolo.jpg",
     "difficulty": 2,
     "difficulty_smart": 2
   },
   {
     "name": "Lakeland Terrier",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Lakeland-Terrier-standing-stacked-outdoors-400x267.jpg",
+    "img": "images/dogs/lakeland_terrier.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Lancashire Heeler",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Lancashire-heeler.1-400x267.jpg",
+    "img": "images/dogs/lancashire_heeler.jpg",
     "difficulty": 2,
     "difficulty_smart": 2
   },
   {
     "name": "Lapponian Herder",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Lapponian-Herders-standing-together-in-the-shallows-400x267.jpg",
+    "img": "images/dogs/lapponian_herder.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Large Munsterlander",
-    "img": "https://www.akc.org/wp-content/uploads/2023/08/Large-Munsterlander-standing-outdoors-400x267.jpg",
+    "img": "images/dogs/large_munsterlander.jpg",
     "difficulty": 2,
     "difficulty_smart": 2
   },
   {
     "name": "Leonberger",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Leonberger-standing-in-a-field-400x267.jpg",
+    "img": "images/dogs/leonberger.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Lhasa Apso",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Lhasa-Apso-On-White-01-400x267.jpg",
+    "img": "images/dogs/lhasa_apso.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Löwchen",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Lowchen-at-the-AKC-National-Championship-presented-by-Royal-Canin-400x267.jpg",
+    "img": "images/dogs/l_wchen.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Maltese",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Maltese-laying-down-in-a-chair-400x267.jpg",
+    "img": "images/dogs/maltese.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Manchester Terrier (Standard)",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Manchester-Terrier-Standard-on-White-08-400x267.jpg",
+    "img": "images/dogs/manchester_terrier_standard.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Manchester Terrier (Toy)",
-    "img": "https://www.akc.org/wp-content/uploads/2018/04/Manchester-Terrier-Slide-01-400x267.jpg",
+    "img": "images/dogs/manchester_terrier_toy.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Mastiff",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Mastiff-On-White-03-400x267.jpg",
+    "img": "images/dogs/mastiff.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Miniature American Shepherd",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Miniature-American-Shepherd-On-White-01-400x267.jpg",
+    "img": "images/dogs/miniature_american_shepherd.jpg",
     "difficulty": 3,
     "difficulty_smart": 3
   },
   {
     "name": "Miniature Bull Terrier",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Miniature-Bull-Terrier-standing-outdoors-400x267.jpg",
+    "img": "images/dogs/miniature_bull_terrier.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Miniature Pinscher",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Miniature-Pinscher-standing-in-three-quarter-view-400x267.jpg",
+    "img": "images/dogs/miniature_pinscher.jpg",
     "difficulty": 2,
     "difficulty_smart": 2
   },
   {
     "name": "Miniature Schnauzer",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Miniature-Schnauzer-On-White-01-400x267.jpg",
+    "img": "images/dogs/miniature_schnauzer.jpg",
     "difficulty": 2,
     "difficulty_smart": 2
   },
   {
     "name": "Mountain Cur",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Mountain-Cur-MP-400x267.jpg",
+    "img": "images/dogs/mountain_cur.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Mudi",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Mudi-sitting-outdoors-400x267.jpg",
+    "img": "images/dogs/mudi.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Neapolitan Mastiff",
-    "img": "https://www.akc.org/wp-content/uploads/2009/01/Neapolitan-Mastiff-on-lead-standing-in-the-grass-outdoors.20190813025752970-400x267.jpg",
+    "img": "images/dogs/neapolitan_mastiff.jpg",
     "difficulty": 2,
     "difficulty_smart": 2
   },
   {
     "name": "Nederlandse Kooikerhondje",
-    "img": "https://www.akc.org/wp-content/uploads/2018/01/Nederlandse-Kooikerhondje-Field-400x267.jpg",
+    "img": "images/dogs/nederlandse_kooikerhondje.jpg",
     "difficulty": 2,
     "difficulty_smart": 2
   },
   {
     "name": "Newfoundland",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Newfoundland-standing-outdoors-400x267.jpg",
+    "img": "images/dogs/newfoundland.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Norfolk Terrier",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Norfolk-Terrier-sitting-in-the-grass.1-400x267.jpg",
+    "img": "images/dogs/norfolk_terrier.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Norrbottenspets",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Norrbottenspets-On-White-01-400x267.jpg",
+    "img": "images/dogs/norrbottenspets.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Norwegian Buhund",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Norwegian-Buhund-On-White-01-400x267.jpg",
+    "img": "images/dogs/norwegian_buhund.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Norwegian Elkhound",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Norwegian-Elkhound-sitting-in-the-snow-looking-back-over-its-shoulder-400x267.jpg",
+    "img": "images/dogs/norwegian_elkhound.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Norwegian Lundehund",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Norwegian-Lundehund-standing-in-the-grass-400x267.jpg",
+    "img": "images/dogs/norwegian_lundehund.jpg",
     "difficulty": 2,
     "difficulty_smart": 2
   },
   {
     "name": "Norwich Terrier",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Norwich-Terrier-standing-outdoors-400x267.jpg",
+    "img": "images/dogs/norwich_terrier.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Nova Scotia Duck Tolling Retriever",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Nova-Scotia-Duck-Tolling-Retriever-wading-in-water-400x267.jpg",
+    "img": "images/dogs/nova_scotia_duck_tolling_retriever.jpg",
     "difficulty": 3,
     "difficulty_smart": 4
   },
   {
     "name": "Old English Sheepdog",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Old-English-Sheepdogs-on-white-02-400x267.jpg",
+    "img": "images/dogs/old_english_sheepdog.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Otterhound",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Otterhound-On-White-03-400x267.jpg",
+    "img": "images/dogs/otterhound.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Papillon",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Papillon-On-White-01-400x267.jpg",
+    "img": "images/dogs/papillon.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Parson Russell Terrier",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Parson-Russell-Terrier-standing-in-three-quarter-view-on-a-white-background-400x267.jpg",
+    "img": "images/dogs/parson_russell_terrier.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Pekingese",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Pekingese_standing_portrait-400x267.jpg",
+    "img": "images/dogs/pekingese.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Pembroke Welsh Corgi",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Pembroke-Welsh-Corgi-standing-outdoors-in-the-fall-400x267.jpg",
+    "img": "images/dogs/pembroke_welsh_corgi.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Peruvian Inca Orchid",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Peruvian-Inca-Orchid-04-400x267.jpg",
+    "img": "images/dogs/peruvian_inca_orchid.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Petit Basset Griffon Vendéen",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Petit-Basset-Griffon-Vendeen-On-White-03-400x267.jpg",
+    "img": "images/dogs/petit_basset_griffon_vend_en.jpg",
     "difficulty": 3,
     "difficulty_smart": 3
   },
   {
     "name": "Pharaoh Hound",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Pharaoh-Hound-laying-down-in-profile-400x267.jpg",
+    "img": "images/dogs/pharaoh_hound.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Plott Hound",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/IMG_8947-400x267.jpg",
+    "img": "images/dogs/plott_hound.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Pointer",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Pointer.4-400x267.jpg",
+    "img": "images/dogs/pointer.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Polish Lowland Sheepdog",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Polish-Lowland-Sheepdog-On-White-02-400x267.jpg",
+    "img": "images/dogs/polish_lowland_sheepdog.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Pomeranian",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Pomeranian-On-White-01-400x267.jpg",
+    "img": "images/dogs/pomeranian.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Pont-Audemer Spaniel",
-    "img": "https://www.akc.org/wp-content/uploads/2023/07/Pont-Audemer-Spaniel-on-point-outdoors-while-hunting.1-400x267.jpg",
+    "img": "images/dogs/pont_audemer_spaniel.jpg",
     "difficulty": 2,
     "difficulty_smart": 2
   },
   {
     "name": "Poodle (Miniature)",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Poodle-On-White-01-400x267.jpg",
+    "img": "images/dogs/poodle_miniature.jpg",
     "difficulty": 2,
     "difficulty_smart": 2
   },
   {
     "name": "Poodle (Standard)",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Standard-Poodle-standing-outdoors-at-the-beach-400x267.jpg",
+    "img": "images/dogs/poodle_standard.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Poodle (Toy)",
-    "img": "https://www.akc.org/wp-content/uploads/2018/04/Toy-Poodle-on-White-02-400x267.jpg",
+    "img": "images/dogs/poodle_toy.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Porcelaine",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Porcelaine.4-400x267.jpg",
+    "img": "images/dogs/porcelaine.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Portuguese Podengo",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Portuguese-Podengo-standing-in-three-quarter-view-400x267.jpg",
+    "img": "images/dogs/portuguese_podengo.jpg",
     "difficulty": 2,
     "difficulty_smart": 2
   },
   {
     "name": "Portuguese Podengo Pequeno",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/PPP-on-white-400x267.jpg",
+    "img": "images/dogs/portuguese_podengo_pequeno.jpg",
     "difficulty": 3,
     "difficulty_smart": 3
   },
   {
     "name": "Portuguese Pointer",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Portuguese-Pointer-on-White-01-1-400x267.jpg",
+    "img": "images/dogs/portuguese_pointer.jpg",
     "difficulty": 2,
     "difficulty_smart": 2
   },
   {
     "name": "Portuguese Sheepdog",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Black-Portuguese-Sheepdog-standing-outdoors-in-the-grass-400x267.jpg",
+    "img": "images/dogs/portuguese_sheepdog.jpg",
     "difficulty": 2,
     "difficulty_smart": 2
   },
   {
     "name": "Portuguese Water Dog",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Portuguese-Water-Dog-standing-in-profile-outdoors-400x267.jpg",
+    "img": "images/dogs/portuguese_water_dog.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Presa Canario",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Perro-de-Presa-Canario.1-400x267.jpg",
+    "img": "images/dogs/presa_canario.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Pudelpointer",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Pudelpointer-standing-in-a-field-400x267.jpg",
+    "img": "images/dogs/pudelpointer.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Pug",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Pug-On-White-01-400x267.jpg",
+    "img": "images/dogs/pug.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Puli",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Puli-sitting-in-a-field-400x267.jpg",
+    "img": "images/dogs/puli.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Pumi",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Pumi-standing-outdoors-in-the-countryside-400x267.jpg",
+    "img": "images/dogs/pumi.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Pyrenean Mastiff",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Pyrenean-Mastiff-On-White-01-400x267.jpg",
+    "img": "images/dogs/pyrenean_mastiff.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Pyrenean Shepherd",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Pyrenean-Shepherd-standing-in-profile-in-a-field-400x267.jpg",
+    "img": "images/dogs/pyrenean_shepherd.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Rafeiro do Alentejo",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Rafeiro-do-Alentejo-standing-outdoors-in-a-field-1-400x267.jpg",
+    "img": "images/dogs/rafeiro_do_alentejo.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Rat Terrier",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Rat-Terrier-On-White-01-400x267.jpg",
+    "img": "images/dogs/rat_terrier.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Redbone Coonhound",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Redbone-Coonhound-400x267.jpg",
+    "img": "images/dogs/redbone_coonhound.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Rhodesian Ridgeback",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Rhodesian-Ridgeback-standing-in-profile-outdoors-400x267.jpg",
+    "img": "images/dogs/rhodesian_ridgeback.jpg",
     "difficulty": 2,
     "difficulty_smart": 2
   },
   {
     "name": "Romanian Carpathian Shepherd",
-    "img": "https://www.akc.org/wp-content/uploads/2022/01/Romanian-Carpathian-Shepherd-standing-with-a-shepherd-in-a-field-copy-400x267.jpg",
+    "img": "images/dogs/romanian_carpathian_shepherd.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Romanian Mioritic Shepherd Dog",
-    "img": "https://www.akc.org/wp-content/uploads/2018/07/Romanian-Mioritic-Shepherd-Dog-laying-in-a-field-in-a-mountainous-landscape-400x267.jpg",
+    "img": "images/dogs/romanian_mioritic_shepherd_dog.jpg",
     "difficulty": 3,
     "difficulty_smart": 3
   },
   {
     "name": "Rottweiler",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Rottweiler-On-White-10-400x267.jpg",
+    "img": "images/dogs/rottweiler.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Russell Terrier",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Russell-Terrier-On-White-03-400x267.jpg",
+    "img": "images/dogs/russell_terrier.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Russian Toy",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Russian-Toy.4-400x267.jpg",
+    "img": "images/dogs/russian_toy.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Russian Tsvetnaya Bolonka",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Russian-Tsvetnaya-Bolonka-standing-on-a-white-background-400x267.jpg",
+    "img": "images/dogs/russian_tsvetnaya_bolonka.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Saint Bernard",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Saint-Bernard-standing-in-profile-outdoors-400x267.jpg",
+    "img": "images/dogs/saint_bernard.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Saluki",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/AKC-121716-139-400x267.jpg",
+    "img": "images/dogs/saluki.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Samoyed",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Samoyed-standing-in-the-forest-400x267.jpg",
+    "img": "images/dogs/samoyed.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Schapendoes",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Schapendoes-On-White-01-400x267.jpg",
+    "img": "images/dogs/schapendoes.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Schipperke",
-    "img": "https://www.akc.org/wp-content/uploads/2022/11/Schipperke-standing-in-a-field-400x267.jpg",
+    "img": "images/dogs/schipperke.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Scottish Deerhound",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Scottish-Deerhound-standing-in-the-woods-400x267.jpg",
+    "img": "images/dogs/scottish_deerhound.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Scottish Terrier",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Scottish-Terrier-On-White-02-400x267.jpg",
+    "img": "images/dogs/scottish_terrier.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Sealyham Terrier",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Sealyham-Terrier-standing-in-three-quarter-view.1-400x267.jpg",
+    "img": "images/dogs/sealyham_terrier.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Segugio Italiano",
-    "img": "https://www.akc.org/wp-content/uploads/2018/08/Segugio-Italiano-slideshow-08-400x267.jpg",
+    "img": "images/dogs/segugio_italiano.jpg",
     "difficulty": 2,
     "difficulty_smart": 2
   },
   {
     "name": "Shetland Sheepdog",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Shetland-Sheepdog-On-White-01-400x267.jpg",
+    "img": "images/dogs/shetland_sheepdog.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Shiba Inu",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Shiba-Inu-standing-in-profile-outdoors-400x267.jpg",
+    "img": "images/dogs/shiba_inu.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Shih Tzu",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Shih-Tzu-On-White-01-400x267.jpg",
+    "img": "images/dogs/shih_tzu.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Shikoku Ken",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Shikoku-standing-outdoors-400x267.jpg",
+    "img": "images/dogs/shikoku_ken.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Siberian Husky",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Siberian-Husky-standing-outdoors-in-the-winter-400x267.jpg",
+    "img": "images/dogs/siberian_husky.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Silky Terrier",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Silky-Terrier-On-White-01-400x267.jpg",
+    "img": "images/dogs/silky_terrier.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Skye Terrier",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Skye-Terrier-standing-outdoors-in-profile-400x267.jpg",
+    "img": "images/dogs/skye_terrier.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Sloughi",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Sloughi-in-the-desert-400x267.jpg",
+    "img": "images/dogs/sloughi.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Slovakian Wirehaired Pointer",
-    "img": "https://www.akc.org/wp-content/uploads/2018/07/Slovakian-Wirehaired-Pointer-laying-down-outdoors-400x267.jpg",
+    "img": "images/dogs/slovakian_wirehaired_pointer.jpg",
     "difficulty": 3,
     "difficulty_smart": 3
   },
   {
     "name": "Slovensky Cuvac",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Slovensky-Cuvac-standing-outdoors-400x267.jpg",
+    "img": "images/dogs/slovensky_cuvac.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Slovensky Kopov",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Slovensky-Kopov-On-White-01-400x267.jpg",
+    "img": "images/dogs/slovensky_kopov.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Small Munsterlander",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Munsterlander.5-400x267.jpg",
+    "img": "images/dogs/small_munsterlander.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Smooth Fox Terrier",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Smooth-Fox-Terrier-standing-in-a-field-in-winter-400x267.jpg",
+    "img": "images/dogs/smooth_fox_terrier.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Soft Coated Wheaten Terrier",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Soft-Coated-Wheaten-Terrier-sitting-in-a-field-of-wildflowers-400x267.jpg",
+    "img": "images/dogs/soft_coated_wheaten_terrier.jpg",
     "difficulty": 3,
     "difficulty_smart": 3
   },
   {
     "name": "Spanish Mastiff",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Spanish-Mastiff-400x267.jpg",
+    "img": "images/dogs/spanish_mastiff.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Spanish Water Dog",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Spanish-Water-Dog-400x267.jpg",
+    "img": "images/dogs/spanish_water_dog.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Spinone Italiano",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Spinone-Italiano-On-White-03-400x267.jpg",
+    "img": "images/dogs/spinone_italiano.jpg",
     "difficulty": 2,
     "difficulty_smart": 2
   },
   {
     "name": "Stabyhoun",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/AdobeStock_62619970-400x267.jpg",
+    "img": "images/dogs/stabyhoun.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Staffordshire Bull Terrier",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Staffordshire-Bull-Terrier-On-White-01-400x267.jpg",
+    "img": "images/dogs/staffordshire_bull_terrier.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Standard Schnauzer",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Standard-Schnauzer-standing-outdoors-400x267.jpg",
+    "img": "images/dogs/standard_schnauzer.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Sussex Spaniel",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Sussex-Spaniel-On-White-01-400x267.jpg",
+    "img": "images/dogs/sussex_spaniel.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Swedish Lapphund",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Swedish-Lapphund-On-White-01-400x267.jpg",
+    "img": "images/dogs/swedish_lapphund.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Swedish Vallhund",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Swedish-Vallhund-running-in-the-grass-400x267.jpg",
+    "img": "images/dogs/swedish_vallhund.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Taiwan Dog",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Taiwan-Dog-sitting-in-the-park-400x267.jpg",
+    "img": "images/dogs/taiwan_dog.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Teddy Roosevelt Terrier",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/TRT-walk-yard-400x267.jpg",
+    "img": "images/dogs/teddy_roosevelt_terrier.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Thai Bangkaew",
-    "img": "https://www.akc.org/wp-content/uploads/2023/08/Thai-Bangkaew-standing-in-profile-outdoors.1-400x267.jpg",
+    "img": "images/dogs/thai_bangkaew.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Thai Ridgeback",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Thai-Ridgeback.4-400x267.jpg",
+    "img": "images/dogs/thai_ridgeback.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Tibetan Mastiff",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Tibetan-Mastiff-laying-down-outdoors-400x267.jpg",
+    "img": "images/dogs/tibetan_mastiff.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Tibetan Spaniel",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Tibetan-Spaniel-laying-down-outdoors-400x267.jpg",
+    "img": "images/dogs/tibetan_spaniel.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Tibetan Terrier",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Tibetan-Terrier-On-White-01-400x267.jpg",
+    "img": "images/dogs/tibetan_terrier.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Tornjak",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Tornjak-standing-in-the-woods-400x267.jpg",
+    "img": "images/dogs/tornjak.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Tosa",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Tosa-on-White-01-400x267.jpg",
+    "img": "images/dogs/tosa.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Toy Fox Terrier",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Toy-Fox-Terrier-standing-portrait-400x267.jpg",
+    "img": "images/dogs/toy_fox_terrier.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Transylvanian Hound",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Transylvanian-Hound-On-White-01-400x267.jpg",
+    "img": "images/dogs/transylvanian_hound.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Treeing Tennessee Brindle",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Treeing-Tennessee-Brindle-on-White-01-400x267.jpg",
+    "img": "images/dogs/treeing_tennessee_brindle.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Treeing Walker Coonhound",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Treeing-Walker-Coonhound-400x267.jpg",
+    "img": "images/dogs/treeing_walker_coonhound.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Vizsla",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Vizsla-On-White-01-400x267.jpg",
+    "img": "images/dogs/vizsla.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Volpino Italiano",
-    "img": "https://www.akc.org/wp-content/uploads/2021/03/Volpino-Italiano-standing-in-profile-in-the-grass-400x267.jpg",
+    "img": "images/dogs/volpino_italiano.jpg",
     "difficulty": 2,
     "difficulty_smart": 2
   },
   {
     "name": "Weimaraner",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Weimaraner-running-into-water-400x267.jpg",
+    "img": "images/dogs/weimaraner.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Welsh Springer Spaniel",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Welsh-Springer-Spaniel-head-portrait-outdoors-400x267.jpg",
+    "img": "images/dogs/welsh_springer_spaniel.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Welsh Terrier",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Welsh-Terrier-standing-stacked-in-the-grass-400x267.jpg",
+    "img": "images/dogs/welsh_terrier.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "West Highland White Terrier",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/West-Highland-White-Terrier-laying-down-in-the-grass-400x267.jpg",
+    "img": "images/dogs/west_highland_white_terrier.jpg",
     "difficulty": 3,
     "difficulty_smart": 3
   },
   {
     "name": "Wetterhoun",
-    "img": "https://www.akc.org/wp-content/uploads/2020/01/Wetterhoun-black-400x267.jpg",
+    "img": "images/dogs/wetterhoun.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Whippet",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Whippet-On-White-01-400x267.jpg",
+    "img": "images/dogs/whippet.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Wire Fox Terrier",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Wire-Fox-Terrier.1-400x267.jpg",
+    "img": "images/dogs/wire_fox_terrier.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Wirehaired Pointing Griffon",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Wirehaired-Pointing-Griffon-laying-in-a-field-400x267.jpg",
+    "img": "images/dogs/wirehaired_pointing_griffon.jpg",
     "difficulty": 3,
     "difficulty_smart": 2
   },
   {
     "name": "Wirehaired Vizsla",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Wirehaired-Vizsla-wading-into-a-lake-400x267.jpg",
+    "img": "images/dogs/wirehaired_vizsla.jpg",
     "difficulty": 2,
     "difficulty_smart": 2
   },
   {
     "name": "Working Kelpie",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Working-Kelpie.2-400x267.jpg",
+    "img": "images/dogs/working_kelpie.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Xoloitzcuintli",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Xoloitzcuintli-On-White-01-400x267.jpg",
+    "img": "images/dogs/xoloitzcuintli.jpg",
     "difficulty": 1,
     "difficulty_smart": 1
   },
   {
     "name": "Yakutian Laika",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Yakutian-Laika1-400x267.jpg",
+    "img": "images/dogs/yakutian_laika.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   },
   {
     "name": "Yorkshire Terrier",
-    "img": "https://www.akc.org/wp-content/uploads/2017/11/Yorkshire-Terrier-standing-outdoors-on-a-sunny-day-400x267.jpg",
+    "img": "images/dogs/yorkshire_terrier.jpg",
     "difficulty": 2,
     "difficulty_smart": 1
   }

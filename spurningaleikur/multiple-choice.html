@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Brawl Stars Fjölvalsspurningakeppni</title>
-  <style>
+  <style id="dynamic-theme-style">
     body { font-family: Arial, sans-serif; background: #f7f7f7; margin: 0; padding: 0; }
     .container { max-width: 500px; margin: 40px auto; background: #fff; padding: 24px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
     img { max-width: 200px; display: block; margin: 0 auto 16px; }
@@ -24,7 +24,7 @@
     <span class="counter" id="counter"></span>
     <h1 id="quiz-title">...</h1>
     <div id="quiz-area">
-      <img id="brawler-img" src="" alt="" />
+      <img id="quiz-img" src="" alt="" />
       <div class="choices" id="choices"></div>
       <div class="result" id="result"></div>
     </div>
@@ -34,12 +34,18 @@
     let brawlers = [];
     let current = 0;
     let correctIndex = 0;
-    const QUESTION_COUNT = 5;
+    const QUESTION_COUNT = 10;
     let questionOrder = [];
     let questionNumber = 1;
     let score = 0;
     let categoryConfig = {};
     let category = 'brawlstars';
+
+    function applyThemeColor(themeColor) {
+      if (!themeColor) return;
+      const style = document.getElementById('dynamic-theme-style');
+      style.innerHTML = style.innerHTML.replace(/#0074d9/g, themeColor).replace(/#005fa3/g, themeColor);
+    }
 
     function getCategoryFromUrl() {
       const params = new URLSearchParams(window.location.search);
@@ -75,8 +81,8 @@
       if (brawlers.length === 0) return;
       showCounter();
       document.getElementById('result').textContent = '';
-      document.getElementById('brawler-img').src = brawlers[questionOrder[questionNumber-1]].img;
-      document.getElementById('brawler-img').alt = categoryConfig.imgAlt || '';
+      document.getElementById('quiz-img').src = brawlers[questionOrder[questionNumber-1]].img;
+      document.getElementById('quiz-img').alt = categoryConfig.imgAlt || '';
       const choices = getRandomChoices(questionOrder[questionNumber-1]);
       const choicesDiv = document.getElementById('choices');
       choicesDiv.innerHTML = '';
@@ -91,7 +97,7 @@
 
     function showSummary() {
       document.getElementById('quiz-area').innerHTML =
-        `<div style='text-align:center;'>\n<h2>Keppni lokið!</h2>\n<p>Þú fékkst <strong>${score}</strong> af <strong>${QUESTION_COUNT}</strong> rétt.</p>\n<button onclick='restartQuiz()' style='padding:12px 24px;font-size:1.1rem;border-radius:8px;background:#0074d9;color:#fff;border:none;cursor:pointer;'>Byrja aftur</button>\n</div>`;
+        `<div style='text-align:center;'>\n<h2>Keppni lokin!</h2>\n<p>Þú fékkst <strong>${score}</strong> af <strong>${QUESTION_COUNT}</strong> rétt.</p>\n<button onclick='restartQuiz()' style='padding:12px 24px;font-size:1.1rem;border-radius:8px;background:#0074d9;color:#fff;border:none;cursor:pointer;'>Byrja aftur</button>\n</div>`;
       document.getElementById('counter').textContent = '';
     }
 
@@ -119,7 +125,7 @@
         } else {
           showBrawler();
         }
-      }, 1000);
+      }, 3000);
     }
 
     function restartQuiz() {
@@ -127,7 +133,7 @@
       questionNumber = 1;
       score = 0;
       document.getElementById('quiz-area').innerHTML =
-        `<img id="brawler-img" src="" alt="Brawler" />\n<div class="choices" id="choices"></div>\n<div class="result" id="result"></div>`;
+        `<img id="quiz-img" src="" alt="Brawler" />\n<div class="choices" id="choices"></div>\n<div class="result" id="result"></div>`;
       showBrawler();
     }
 
@@ -136,17 +142,24 @@
       fetch('categories.json')
         .then(response => response.json())
         .then(categories => {
-          categoryConfig = categories[category] || categories['brawlstars'];
+          categoryConfig = categories[category] || {};
+          if (categoryConfig.themeColor) {
+            applyThemeColor(categoryConfig.themeColor);
+          }
           document.getElementById('quiz-title').textContent = categoryConfig.mcQuizTitle;
-          document.getElementById('brawler-img').alt = categoryConfig.imgAlt;
-          document.getElementById('back-link').textContent = '← ' + (categoryConfig.backLink || 'Til baka í val á spurningakeppni');
+          document.getElementById('quiz-img').alt = categoryConfig.imgAlt;
+          document.getElementById('back-link').textContent = '\u2190 ' + (categoryConfig.backLink || 'Til baka í val á spurningakeppni');
           document.getElementById('back-link').href = 'index.html';
-          // Now fetch brawlers for the category
-          fetch((category === 'dogs' ? 'dogs.json' : 'brawlers.json'))
+          // Use the key to determine the data file
+          let dataFile = category + '.json';
+          fetch(dataFile)
             .then(response => response.json())
             .then(data => {
-              brawlers = data;
-              restartQuiz();
+              brawlers = shuffle(data);
+              questionOrder = shuffle([...Array(brawlers.length).keys()]).slice(0, QUESTION_COUNT);
+              questionNumber = 1;
+              score = 0;
+              showBrawler();
             })
             .catch(err => {
               document.getElementById('quiz-area').innerHTML = '<p>Tókst ekki að hlaða inn gögnum fyrir keppni.</p>';

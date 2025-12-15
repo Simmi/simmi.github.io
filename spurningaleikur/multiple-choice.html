@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brawl Stars Fjölvalsspurningakeppni</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f7f7f7; margin: 0; padding: 0; }
+    .container { max-width: 500px; margin: 40px auto; background: #fff; padding: 24px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    img { max-width: 200px; display: block; margin: 0 auto 16px; }
+    .choices { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+    .choice-btn { padding: 24px 8px; font-size: 1.2rem; border-radius: 8px; border: none; background: #0074d9; color: #fff; cursor: pointer; transition: background 0.2s; }
+    .choice-btn:hover { background: #005fa3; }
+    .choice-btn.correct { background: #2ecc40 !important; }
+    .choice-btn.incorrect { background: #ff4136 !important; }
+    .choice-btn:disabled { opacity: 0.7; cursor: not-allowed; }
+    .result { font-weight: bold; margin-top: 16px; text-align: center; }
+    .back-link { display: block; margin-top: 24px; text-align: center; }
+    .counter { position: absolute; top: 24px; right: 32px; font-size: 1.1rem; color: #555; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div class="container" style="position:relative;">
+    <span class="counter" id="counter"></span>
+    <h1 id="quiz-title">...</h1>
+    <div id="quiz-area">
+      <img id="brawler-img" src="" alt="" />
+      <div class="choices" id="choices"></div>
+      <div class="result" id="result"></div>
+    </div>
+    <a class="back-link" id="back-link" href="index.html"></a>
+  </div>
+  <script>
+    let brawlers = [];
+    let current = 0;
+    let correctIndex = 0;
+    const QUESTION_COUNT = 5;
+    let questionOrder = [];
+    let questionNumber = 1;
+    let score = 0;
+    let categoryConfig = {};
+    let category = 'brawlstars';
+
+    function getCategoryFromUrl() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get('category') || 'brawlstars';
+    }
+
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    function getRandomChoices(correctIdx) {
+      const choices = [brawlers[correctIdx]];
+      const used = new Set([correctIdx]);
+      while (choices.length < 4) {
+        const idx = Math.floor(Math.random() * brawlers.length);
+        if (!used.has(idx)) {
+          choices.push(brawlers[idx]);
+          used.add(idx);
+        }
+      }
+      return shuffle(choices);
+    }
+
+    function showCounter() {
+      document.getElementById('counter').textContent = questionNumber + '/' + QUESTION_COUNT;
+    }
+
+    function showBrawler() {
+      if (brawlers.length === 0) return;
+      showCounter();
+      document.getElementById('result').textContent = '';
+      document.getElementById('brawler-img').src = brawlers[questionOrder[questionNumber-1]].img;
+      document.getElementById('brawler-img').alt = categoryConfig.imgAlt || '';
+      const choices = getRandomChoices(questionOrder[questionNumber-1]);
+      const choicesDiv = document.getElementById('choices');
+      choicesDiv.innerHTML = '';
+      choices.forEach(choice => {
+        const btn = document.createElement('button');
+        btn.className = 'choice-btn';
+        btn.textContent = choice.name;
+        btn.onclick = () => checkAnswer(choice.name, btn, choicesDiv);
+        choicesDiv.appendChild(btn);
+      });
+    }
+
+    function showSummary() {
+      document.getElementById('quiz-area').innerHTML =
+        `<div style='text-align:center;'>\n<h2>Keppni lokið!</h2>\n<p>Þú fékkst <strong>${score}</strong> af <strong>${QUESTION_COUNT}</strong> rétt.</p>\n<button onclick='restartQuiz()' style='padding:12px 24px;font-size:1.1rem;border-radius:8px;background:#0074d9;color:#fff;border:none;cursor:pointer;'>Byrja aftur</button>\n</div>`;
+      document.getElementById('counter').textContent = '';
+    }
+
+    function checkAnswer(selectedName, btn, choicesDiv) {
+      const correct = brawlers[questionOrder[questionNumber-1]].name;
+      const buttons = choicesDiv.querySelectorAll('button');
+      // Disable all buttons
+      buttons.forEach(b => b.disabled = true);
+      if (selectedName === correct) {
+        btn.classList.add('correct');
+        document.getElementById('result').textContent = 'Rétt!';
+        score++;
+      } else {
+        btn.classList.add('incorrect');
+        document.getElementById('result').textContent = 'Rangt!';
+        // Highlight the correct answer
+        buttons.forEach(b => {
+          if (b.textContent === correct) b.classList.add('correct');
+        });
+      }
+      setTimeout(() => {
+        questionNumber++;
+        if (questionNumber > QUESTION_COUNT) {
+          showSummary();
+        } else {
+          showBrawler();
+        }
+      }, 1000);
+    }
+
+    function restartQuiz() {
+      questionOrder = shuffle([...Array(brawlers.length).keys()]).slice(0, QUESTION_COUNT);
+      questionNumber = 1;
+      score = 0;
+      document.getElementById('quiz-area').innerHTML =
+        `<img id="brawler-img" src="" alt="Brawler" />\n<div class="choices" id="choices"></div>\n<div class="result" id="result"></div>`;
+      showBrawler();
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      category = getCategoryFromUrl();
+      fetch('categories.json')
+        .then(response => response.json())
+        .then(categories => {
+          categoryConfig = categories[category] || categories['brawlstars'];
+          document.getElementById('quiz-title').textContent = categoryConfig.mcQuizTitle;
+          document.getElementById('brawler-img').alt = categoryConfig.imgAlt;
+          document.getElementById('back-link').textContent = '← ' + (categoryConfig.backLink || 'Til baka í val á spurningakeppni');
+          document.getElementById('back-link').href = 'index.html';
+          // Now fetch brawlers for the category
+          fetch((category === 'dogs' ? 'dogs.json' : 'brawlers.json'))
+            .then(response => response.json())
+            .then(data => {
+              brawlers = data;
+              restartQuiz();
+            })
+            .catch(err => {
+              document.getElementById('quiz-area').innerHTML = '<p>Tókst ekki að hlaða inn gögnum fyrir keppni.</p>';
+            });
+        });
+    });
+  </script>
+</body>
+</html>

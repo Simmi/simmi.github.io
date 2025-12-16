@@ -30,7 +30,33 @@
     .choice-img-btn { background: none; border: 4px solid transparent; border-radius: 12px; padding: 0; cursor: pointer; transition: border 0.2s; }
     .choice-img-btn.correct { border-color: #2ecc40; }
     .choice-img-btn.incorrect { border-color: #ff4136; }
-    .choice-img-btn:disabled { opacity: 0.7; cursor: not-allowed; }
+    .choice-img-btn.incorrect-overlay {
+      position: relative;
+    }
+    .choice-img-btn.incorrect-overlay::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(255, 65, 54, 0.55);
+      border-radius: 8px;
+      z-index: 1;
+      pointer-events: none;
+    }
+    .wrong-label {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+      z-index: 2;
+      pointer-events: none;
+      padding: 4px 12px;
+      border-radius: 8px;
+      background: rgba(0, 0, 0, 0.85);
+    }
     .choice-img { width: 100%; max-width: 180px; height: auto; border-radius: 8px; display: block; margin: 0 auto; }
     .result { font-weight: bold; margin-top: 16px; text-align: center; }
     .back-link { display: block; margin-top: 24px; text-align: center; }
@@ -158,6 +184,12 @@
         score++;
       } else {
         btn.classList.add('incorrect');
+        btn.classList.add('incorrect-overlay');
+        // Add overlay label with wrong name
+        const label = document.createElement('span');
+        label.className = 'wrong-label';
+        label.textContent = selectedName;
+        btn.appendChild(label);
         document.getElementById('result').textContent = 'Rangt!';
         // Highlight the correct image
         const correctItem = items.find(i => i.name === correctName);

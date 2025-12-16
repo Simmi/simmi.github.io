@@ -35,5 +35,18 @@
     "themeColor": "#666666",
     "logoImg_old": "\uD83C\uDFF4",
     "logoImg": "\uD83C\uDFF3\uFE0F\u200D\uD83C\uDF08"
+  },
+  "pokemons": {
+    "displayName": "Pokémon",
+    "typeQuizTitle": "Skrifaðu nafnið á Pokémoninum",
+    "mcQuizTitle": "Hvað heitir þessi Pokémon?",
+    "selectImageQuizTitle": "Hvaða Pokémon er ...",
+    "inputPlaceholder": "Sláðu inn nafn Pokémonsins",
+    "imgAlt": "Mynd af Pokémon",
+    "backLink": "Til baka í val á spurningakeppni",
+    "key": "pokemons",
+    "themeColor": "#FF0000",
+    "logoImg": "images/pokemons/logo.png"
+
   }
 }

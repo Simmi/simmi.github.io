@@ -47,6 +47,17 @@
     "key": "pokemons",
     "themeColor": "#FF0000",
     "logoImg": "images/pokemons/logo.png"
-
+  },
+  "territories": {
+    "displayName": "Landssvæði",
+    "typeQuizTitle": "Skrifaðu nafnið á landssvæðinu",
+    "mcQuizTitle": "Hvaða landssvæði er þetta?",
+    "selectImageQuizTitle": "Hvaða landssvæði er ...",
+    "inputPlaceholder": "Sláðu inn nafn landssvæðisins",
+    "imgAlt": "Mynd af landssvæði",
+    "backLink": "Til baka í val á spurningakeppni",
+    "key": "territories",
+    "themeColor": "#0099cc",
+    "logoImg": "🏝️"
   }
 }

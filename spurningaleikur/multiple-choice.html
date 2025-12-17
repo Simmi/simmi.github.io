@@ -17,6 +17,53 @@
     .result { font-weight: bold; margin-top: 16px; text-align: center; }
     .back-link { display: block; margin-top: 24px; text-align: center; }
     .counter { position: absolute; top: 24px; right: 32px; font-size: 1.1rem; color: #555; font-weight: bold; }
+    /* Add to style.css: */
+    .img-modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0; right: 0; bottom: 0;
+      width: 100vw; height: 100vh;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.6);
+    }
+    .img-modal[style*="display: flex"] {
+      display: flex !important;
+    }
+    .img-modal-overlay {
+      position: absolute;
+      left: 0; top: 0; right: 0; bottom: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(0,0,0,0.6);
+      z-index: 1;
+    }
+    .img-modal-img {
+      max-width: 90vw;
+      max-height: 80vh;
+      z-index: 2;
+      border-radius: 12px;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.4);
+      background: #fff;
+      object-fit: contain;
+      cursor: zoom-out;
+    }
+    .img-modal-close {
+      position: absolute;
+      top: 32px;
+      right: 48px;
+      z-index: 3;
+      font-size: 2.5rem;
+      background: none;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      padding: 0 12px;
+      line-height: 1;
+      opacity: 0.85;
+      transition: opacity 0.2s;
+    }
+    .img-modal-close:hover { opacity: 1; }
   </style>
 </head>
 <body>
@@ -24,11 +71,17 @@
     <span class="counter" id="counter"></span>
     <h1 id="quiz-title">...</h1>
     <div id="quiz-area">
-      <img id="quiz-img" src="" alt="" />
+      <img id="quiz-img" src="" alt="" style="cursor:zoom-in;" />
       <div class="choices" id="choices"></div>
       <div class="result" id="result"></div>
     </div>
     <a class="back-link" id="back-link" href="index.html"></a>
+  </div>
+  <!-- Modal for zoomed image -->
+  <div id="img-modal" class="img-modal" style="display:none;">
+    <div class="img-modal-overlay"></div>
+    <img id="img-modal-img" class="img-modal-img" src="" alt="Stækkuð mynd" />
+    <button id="img-modal-close" class="img-modal-close" aria-label="Loka">&times;</button>
   </div>
   <script>
     let brawlers = [];
@@ -165,6 +218,28 @@
               document.getElementById('quiz-area').innerHTML = '<p>Tókst ekki að hlaða inn gögnum fyrir keppni.</p>';
             });
         });
+    });
+    // Modal logic
+    const quizImg = document.getElementById('quiz-img');
+    const imgModal = document.getElementById('img-modal');
+    const imgModalImg = document.getElementById('img-modal-img');
+    const imgModalClose = document.getElementById('img-modal-close');
+    const imgModalOverlay = document.querySelector('.img-modal-overlay');
+    quizImg.addEventListener('click', function() {
+      if (!quizImg.src) return;
+      imgModalImg.src = quizImg.src;
+      imgModal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    });
+    function closeModal() {
+      imgModal.style.display = 'none';
+      imgModalImg.src = '';
+      document.body.style.overflow = '';
+    }
+    imgModalClose.addEventListener('click', closeModal);
+    imgModalOverlay.addEventListener('click', closeModal);
+    document.addEventListener('keydown', function(e) {
+      if (imgModal.style.display === 'flex' && (e.key === 'Escape' || e.key === 'Esc')) closeModal();
     });
   </script>
 </body>

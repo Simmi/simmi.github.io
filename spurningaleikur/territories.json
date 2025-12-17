@@ -1,0 +1,962 @@
+[
+  {
+    "name": "Afghanistan",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/AF-locator-map.gif"
+  },
+  {
+    "name": "Albania",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/AL-locator-map.gif"
+  },
+  {
+    "name": "Algeria",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/AG-locator-map.gif"
+  },
+  {
+    "name": "Andorra",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/AN-locator-map.gif"
+  },
+  {
+    "name": "Angola",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/AO-locator-map.gif"
+  },
+  {
+    "name": "Antigua and Barbuda",
+    "continent": "North America",
+    "img": "https://www.worldometers.info/img/maps_cl/AC-locator-map.gif"
+  },
+  {
+    "name": "Argentina",
+    "continent": "South America",
+    "img": "https://www.worldometers.info/img/maps_cl/AR-locator-map.gif"
+  },
+  {
+    "name": "Armenia",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/AM-locator-map.gif"
+  },
+  {
+    "name": "Australia",
+    "continent": "Oceania",
+    "img": "https://www.worldometers.info/img/maps_cl/AS-locator-map.gif"
+  },
+  {
+    "name": "Austria",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/AU-locator-map.gif"
+  },
+  {
+    "name": "Azerbaijan",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/AJ-locator-map.gif"
+  },
+  {
+    "name": "Bahamas",
+    "continent": "North America",
+    "img": "https://www.worldometers.info/img/maps_cl/BF-locator-map.gif"
+  },
+  {
+    "name": "Bahrain",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/BA-locator-map.gif"
+  },
+  {
+    "name": "Bangladesh",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/BG-locator-map.gif"
+  },
+  {
+    "name": "Barbados",
+    "continent": "North America",
+    "img": "https://www.worldometers.info/img/maps_cl/BB-locator-map.gif"
+  },
+  {
+    "name": "Belarus",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/BO-locator-map.gif"
+  },
+  {
+    "name": "Belgium",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/BE-locator-map.gif"
+  },
+  {
+    "name": "Belize",
+    "continent": "North America",
+    "img": "https://www.worldometers.info/img/maps_cl/BH-locator-map.gif"
+  },
+  {
+    "name": "Benin",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/BN-locator-map.gif"
+  },
+  {
+    "name": "Bhutan",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/BT-locator-map.gif"
+  },
+  {
+    "name": "Bolivia",
+    "continent": "South America",
+    "img": "https://www.worldometers.info/img/maps_cl/BL-locator-map.gif"
+  },
+  {
+    "name": "Bosnia and Herzegovina",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/BK-locator-map.gif"
+  },
+  {
+    "name": "Botswana",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/BC-locator-map.gif"
+  },
+  {
+    "name": "Brazil",
+    "continent": "South America",
+    "img": "https://www.worldometers.info/img/maps_cl/BR-locator-map.gif"
+  },
+  {
+    "name": "Brunei",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/BX-locator-map.gif"
+  },
+  {
+    "name": "Bulgaria",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/BU-locator-map.gif"
+  },
+  {
+    "name": "Burkina Faso",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/UV-locator-map.gif"
+  },
+  {
+    "name": "Burundi",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/BY-locator-map.gif"
+  },
+  {
+    "name": "Cabo Verde",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/CV-locator-map.gif"
+  },
+  {
+    "name": "Cambodia",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/CB-locator-map.gif"
+  },
+  {
+    "name": "Cameroon",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/CM-locator-map.gif"
+  },
+  {
+    "name": "Canada",
+    "continent": "North America",
+    "img": "https://www.worldometers.info/img/maps_cl/CA-locator-map.gif"
+  },
+  {
+    "name": "Central African Republic",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/CT-locator-map.gif"
+  },
+  {
+    "name": "Chad",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/CD-locator-map.gif"
+  },
+  {
+    "name": "Chile",
+    "continent": "South America",
+    "img": "https://www.worldometers.info/img/maps_cl/CI-locator-map.gif"
+  },
+  {
+    "name": "China",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/CH-locator-map.gif"
+  },
+  {
+    "name": "Colombia",
+    "continent": "South America",
+    "img": "https://www.worldometers.info/img/maps_cl/CO-locator-map.gif"
+  },
+  {
+    "name": "Comoros",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/CN-locator-map.gif"
+  },
+  {
+    "name": "Congo",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/CG-locator-map.gif"
+  },
+  {
+    "name": "Costa Rica",
+    "continent": "North America",
+    "img": "https://www.worldometers.info/img/maps_cl/CS-locator-map.gif"
+  },
+  {
+    "name": "Côte d'Ivoire",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/IV-locator-map.gif"
+  },
+  {
+    "name": "Croatia",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/HR-locator-map.gif"
+  },
+  {
+    "name": "Cuba",
+    "continent": "North America",
+    "img": "https://www.worldometers.info/img/maps_cl/CU-locator-map.gif"
+  },
+  {
+    "name": "Cyprus",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/CY-locator-map.gif"
+  },
+  {
+    "name": "Czech Republic",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/EZ-locator-map.gif"
+  },
+  {
+    "name": "Denmark",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/DA-locator-map.gif"
+  },
+  {
+    "name": "Djibouti",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/DJ-locator-map.gif"
+  },
+  {
+    "name": "Dominica",
+    "continent": "North America",
+    "img": "https://www.worldometers.info/img/maps_cl/DO-locator-map.gif"
+  },
+  {
+    "name": "Dominican Republic",
+    "continent": "North America",
+    "img": "https://www.worldometers.info/img/maps_cl/DR-locator-map.gif"
+  },
+  {
+    "name": "DR Congo",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/CG-locator-map.gif"
+  },
+  {
+    "name": "Ecuador",
+    "continent": "South America",
+    "img": "https://www.worldometers.info/img/maps_cl/EC-locator-map.gif"
+  },
+  {
+    "name": "Egypt",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/EG-locator-map.gif"
+  },
+  {
+    "name": "El Salvador",
+    "continent": "North America",
+    "img": "https://www.worldometers.info/img/maps_cl/ES-locator-map.gif"
+  },
+  {
+    "name": "Equatorial Guinea",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/EK-locator-map.gif"
+  },
+  {
+    "name": "Eritrea",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/ER-locator-map.gif"
+  },
+  {
+    "name": "Estonia",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/EN-locator-map.gif"
+  },
+  {
+    "name": "Eswatini",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/WZ-locator-map.gif"
+  },
+  {
+    "name": "Ethiopia",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/ET-locator-map.gif"
+  },
+  {
+    "name": "Finland",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/FI-locator-map.gif"
+  },
+  {
+    "name": "France",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/FR-locator-map.gif"
+  },
+  {
+    "name": "Gabon",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/GB-locator-map.gif"
+  },
+  {
+    "name": "Gambia",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/GA-locator-map.gif"
+  },
+  {
+    "name": "Georgia",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/GG-locator-map.gif"
+  },
+  {
+    "name": "Germany",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/GM-locator-map.gif"
+  },
+  {
+    "name": "Ghana",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/GH-locator-map.gif"
+  },
+  {
+    "name": "Greece",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/GR-locator-map.gif"
+  },
+  {
+    "name": "Grenada",
+    "continent": "North America",
+    "img": "https://www.worldometers.info/img/maps_cl/GJ-locator-map.gif"
+  },
+  {
+    "name": "Guatemala",
+    "continent": "North America",
+    "img": "https://www.worldometers.info/img/maps_cl/GT-locator-map.gif"
+  },
+  {
+    "name": "Guinea",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/GV-locator-map.gif"
+  },
+  {
+    "name": "Guinea-Bissau",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/PU-locator-map.gif"
+  },
+  {
+    "name": "Guyana",
+    "continent": "South America",
+    "img": "https://www.worldometers.info/img/maps_cl/GY-locator-map.gif"
+  },
+  {
+    "name": "Haiti",
+    "continent": "North America",
+    "img": "https://www.worldometers.info/img/maps_cl/HA-locator-map.gif"
+  },
+  {
+    "name": "Honduras",
+    "continent": "North America",
+    "img": "https://www.worldometers.info/img/maps_cl/HO-locator-map.gif"
+  },
+  {
+    "name": "Hungary",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/HU-locator-map.gif"
+  },
+  {
+    "name": "Iceland",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/IC-locator-map.gif"
+  },
+  {
+    "name": "India",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/IN-locator-map.gif"
+  },
+  {
+    "name": "Indonesia",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/ID-locator-map.gif"
+  },
+  {
+    "name": "Iran",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/IR-locator-map.gif"
+  },
+  {
+    "name": "Iraq",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/IZ-locator-map.gif"
+  },
+  {
+    "name": "Ireland",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/EI-locator-map.gif"
+  },
+  {
+    "name": "Israel",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/IS-locator-map.gif"
+  },
+  {
+    "name": "Italy",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/IT-locator-map.gif"
+  },
+  {
+    "name": "Jamaica",
+    "continent": "North America",
+    "img": "https://www.worldometers.info/img/maps_cl/JM-locator-map.gif"
+  },
+  {
+    "name": "Japan",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/JA-locator-map.gif"
+  },
+  {
+    "name": "Jordan",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/JO-locator-map.gif"
+  },
+  {
+    "name": "Kazakhstan",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/KZ-locator-map.gif"
+  },
+  {
+    "name": "Kenya",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/KE-locator-map.gif"
+  },
+  {
+    "name": "Kiribati",
+    "continent": "Oceania",
+    "img": "https://www.worldometers.info/img/maps_cl/KR-locator-map.gif"
+  },
+  {
+    "name": "Kuwait",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/KU-locator-map.gif"
+  },
+  {
+    "name": "Kyrgyzstan",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/KG-locator-map.gif"
+  },
+  {
+    "name": "Laos",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/LA-locator-map.gif"
+  },
+  {
+    "name": "Latvia",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/LG-locator-map.gif"
+  },
+  {
+    "name": "Lebanon",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/LE-locator-map.gif"
+  },
+  {
+    "name": "Lesotho",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/LT-locator-map.gif"
+  },
+  {
+    "name": "Liberia",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/LI-locator-map.gif"
+  },
+  {
+    "name": "Libya",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/LY-locator-map.gif"
+  },
+  {
+    "name": "Liechtenstein",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/LS-locator-map.gif"
+  },
+  {
+    "name": "Lithuania",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/LH-locator-map.gif"
+  },
+  {
+    "name": "Luxembourg",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/LU-locator-map.gif"
+  },
+  {
+    "name": "Madagascar",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/MA-locator-map.gif"
+  },
+  {
+    "name": "Malawi",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/MI-locator-map.gif"
+  },
+  {
+    "name": "Malaysia",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/MY-locator-map.gif"
+  },
+  {
+    "name": "Maldives",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/MV-locator-map.gif"
+  },
+  {
+    "name": "Mali",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/ML-locator-map.gif"
+  },
+  {
+    "name": "Malta",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/MT-locator-map.gif"
+  },
+  {
+    "name": "Marshall Islands",
+    "continent": "Oceania",
+    "img": "https://www.worldometers.info/img/maps_cl/RM-locator-map.gif"
+  },
+  {
+    "name": "Mauritania",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/MR-locator-map.gif"
+  },
+  {
+    "name": "Mauritius",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/MP-locator-map.gif"
+  },
+  {
+    "name": "Mexico",
+    "continent": "North America",
+    "img": "https://www.worldometers.info/img/maps_cl/MX-locator-map.gif"
+  },
+  {
+    "name": "Micronesia",
+    "continent": "Oceania",
+    "img": "https://www.worldometers.info/img/maps_cl/FM-locator-map.gif"
+  },
+  {
+    "name": "Moldova",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/MD-locator-map.gif"
+  },
+  {
+    "name": "Monaco",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/MN-locator-map.gif"
+  },
+  {
+    "name": "Mongolia",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/MG-locator-map.gif"
+  },
+  {
+    "name": "Montenegro",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/MJ-locator-map.gif"
+  },
+  {
+    "name": "Morocco",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/MO-locator-map.gif"
+  },
+  {
+    "name": "Mozambique",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/MZ-locator-map.gif"
+  },
+  {
+    "name": "Myanmar",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/BM-locator-map.gif"
+  },
+  {
+    "name": "Namibia",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/WA-locator-map.gif"
+  },
+  {
+    "name": "Nauru",
+    "continent": "Oceania",
+    "img": "https://www.worldometers.info/img/maps_cl/NR-locator-map.gif"
+  },
+  {
+    "name": "Nepal",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/NP-locator-map.gif"
+  },
+  {
+    "name": "Netherlands",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/NL-locator-map.gif"
+  },
+  {
+    "name": "New Zealand",
+    "continent": "Oceania",
+    "img": "https://www.worldometers.info/img/maps_cl/NZ-locator-map.gif"
+  },
+  {
+    "name": "Nicaragua",
+    "continent": "North America",
+    "img": "https://www.worldometers.info/img/maps_cl/NU-locator-map.gif"
+  },
+  {
+    "name": "Niger",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/NG-locator-map.gif"
+  },
+  {
+    "name": "Nigeria",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/NI-locator-map.gif"
+  },
+  {
+    "name": "North Korea",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/KN-locator-map.gif"
+  },
+  {
+    "name": "North Macedonia",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/MK-locator-map.gif"
+  },
+  {
+    "name": "Norway",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/NO-locator-map.gif"
+  },
+  {
+    "name": "Oman",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/MU-locator-map.gif"
+  },
+  {
+    "name": "Pakistan",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/PK-locator-map.gif"
+  },
+  {
+    "name": "Palau",
+    "continent": "Oceania",
+    "img": "https://www.worldometers.info/img/maps_cl/PS-locator-map.gif"
+  },
+  {
+    "name": "Panama",
+    "continent": "North America",
+    "img": "https://www.worldometers.info/img/maps_cl/PM-locator-map.gif"
+  },
+  {
+    "name": "Papua New Guinea",
+    "continent": "Oceania",
+    "img": "https://www.worldometers.info/img/maps_cl/PP-locator-map.gif"
+  },
+  {
+    "name": "Paraguay",
+    "continent": "South America",
+    "img": "https://www.worldometers.info/img/maps_cl/PA-locator-map.gif"
+  },
+  {
+    "name": "Peru",
+    "continent": "South America",
+    "img": "https://www.worldometers.info/img/maps_cl/PE-locator-map.gif"
+  },
+  {
+    "name": "Philippines",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/RP-locator-map.gif"
+  },
+  {
+    "name": "Poland",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/PL-locator-map.gif"
+  },
+  {
+    "name": "Portugal",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/PO-locator-map.gif"
+  },
+  {
+    "name": "Qatar",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/QA-locator-map.gif"
+  },
+  {
+    "name": "Romania",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/RO-locator-map.gif"
+  },
+  {
+    "name": "Russia",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/RS-locator-map.gif"
+  },
+  {
+    "name": "Rwanda",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/RW-locator-map.gif"
+  },
+  {
+    "name": "Saint Kitts and Nevis",
+    "continent": "North America",
+    "img": "https://www.worldometers.info/img/maps_cl/SC-locator-map.gif"
+  },
+  {
+    "name": "Saint Lucia",
+    "continent": "North America",
+    "img": "https://www.worldometers.info/img/maps_cl/ST-locator-map.gif"
+  },
+  {
+    "name": "Samoa",
+    "continent": "Oceania",
+    "img": "https://www.worldometers.info/img/maps_cl/WS-locator-map.gif"
+  },
+  {
+    "name": "San Marino",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/SM-locator-map.gif"
+  },
+  {
+    "name": "Sao Tome and Principe",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/TP-locator-map.gif"
+  },
+  {
+    "name": "Saudi Arabia",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/SA-locator-map.gif"
+  },
+  {
+    "name": "Senegal",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/SG-locator-map.gif"
+  },
+  {
+    "name": "Serbia",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/RI-locator-map.gif"
+  },
+  {
+    "name": "Seychelles",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/SE-locator-map.gif"
+  },
+  {
+    "name": "Sierra Leone",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/SL-locator-map.gif"
+  },
+  {
+    "name": "Singapore",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/SN-locator-map.gif"
+  },
+  {
+    "name": "Slovakia",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/LO-locator-map.gif"
+  },
+  {
+    "name": "Slovenia",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/SI-locator-map.gif"
+  },
+  {
+    "name": "Solomon Islands",
+    "continent": "Oceania",
+    "img": "https://www.worldometers.info/img/maps_cl/BP-locator-map.gif"
+  },
+  {
+    "name": "Somalia",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/SO-locator-map.gif"
+  },
+  {
+    "name": "South Africa",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/SF-locator-map.gif"
+  },
+  {
+    "name": "South Korea",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/KS-locator-map.gif"
+  },
+  {
+    "name": "South Sudan",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/OD-locator-map.gif"
+  },
+  {
+    "name": "Spain",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/SP-locator-map.gif"
+  },
+  {
+    "name": "Sri Lanka",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/CE-locator-map.gif"
+  },
+  {
+    "name": "Saint Vincent and the Grenadines",
+    "continent": "North America",
+    "img": "https://www.worldometers.info/img/maps_cl/VC-locator-map.gif"
+  },
+  {
+    "name": "Sudan",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/SU-locator-map.gif"
+  },
+  {
+    "name": "Suriname",
+    "continent": "South America",
+    "img": "https://www.worldometers.info/img/maps_cl/NS-locator-map.gif"
+  },
+  {
+    "name": "Sweden",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/SW-locator-map.gif"
+  },
+  {
+    "name": "Switzerland",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/SZ-locator-map.gif"
+  },
+  {
+    "name": "Syria",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/SY-locator-map.gif"
+  },
+  {
+    "name": "Tajikistan",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/TI-locator-map.gif"
+  },
+  {
+    "name": "Tanzania",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/TZ-locator-map.gif"
+  },
+  {
+    "name": "Thailand",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/TH-locator-map.gif"
+  },
+  {
+    "name": "Timor-Leste",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/TT-locator-map.gif"
+  },
+  {
+    "name": "Togo",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/TO-locator-map.gif"
+  },
+  {
+    "name": "Tonga",
+    "continent": "Oceania",
+    "img": "https://www.worldometers.info/img/maps_cl/TN-locator-map.gif"
+  },
+  {
+    "name": "Trinidad and Tobago",
+    "continent": "North America",
+    "img": "https://www.worldometers.info/img/maps_cl/TD-locator-map.gif"
+  },
+  {
+    "name": "Tunisia",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/TS-locator-map.gif"
+  },
+  {
+    "name": "Turkey",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/TU-locator-map.gif"
+  },
+  {
+    "name": "Turkmenistan",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/TX-locator-map.gif"
+  },
+  {
+    "name": "Tuvalu",
+    "continent": "Oceania",
+    "img": "https://www.worldometers.info/img/maps_cl/TV-locator-map.gif"
+  },
+  {
+    "name": "Uganda",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/UG-locator-map.gif"
+  },
+  {
+    "name": "Ukraine",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/UP-locator-map.gif"
+  },
+  {
+    "name": "United Arab Emirates",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/AE-locator-map.gif"
+  },
+  {
+    "name": "United Kingdom",
+    "continent": "Europe",
+    "img": "https://www.worldometers.info/img/maps_cl/UK-locator-map.gif"
+  },
+  {
+    "name": "United States",
+    "continent": "North America",
+    "img": "https://www.worldometers.info/img/maps_cl/US-locator-map.gif"
+  },
+  {
+    "name": "Uruguay",
+    "continent": "South America",
+    "img": "https://www.worldometers.info/img/maps_cl/UY-locator-map.gif"
+  },
+  {
+    "name": "Uzbekistan",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/UZ-locator-map.gif"
+  },
+  {
+    "name": "Vanuatu",
+    "continent": "Oceania",
+    "img": "https://www.worldometers.info/img/maps_cl/NH-locator-map.gif"
+  },
+  {
+    "name": "Venezuela",
+    "continent": "South America",
+    "img": "https://www.worldometers.info/img/maps_cl/VE-locator-map.gif"
+  },
+  {
+    "name": "Vietnam",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/VM-locator-map.gif"
+  },
+  {
+    "name": "Yemen",
+    "continent": "Asia",
+    "img": "https://www.worldometers.info/img/maps_cl/YM-locator-map.gif"
+  },
+  {
+    "name": "Zambia",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/ZA-locator-map.gif"
+  },
+  {
+    "name": "Zimbabwe",
+    "continent": "Africa",
+    "img": "https://www.worldometers.info/img/maps_cl/ZI-locator-map.gif"
+  }
+]

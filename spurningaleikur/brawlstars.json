@@ -80,6 +80,7 @@
   { "name": "Penny", "img": "images/brawlstars/penny_portrait.png" },
   { "name": "Piper", "img": "images/brawlstars/piper_portrait.png" },
   { "name": "Poco", "img": "images/brawlstars/poco_portrait.png" },
+  { "name": "Pierce", "img": "images/brawlstars/pierce_portrait.png"},
   { "name": "Rico", "img": "images/brawlstars/rico_portrait.png" },
   { "name": "Rosa", "img": "images/brawlstars/rosa_portrait.png" },
   { "name": "RT", "img": "images/brawlstars/rt_portrait.png" },

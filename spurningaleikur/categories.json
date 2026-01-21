@@ -9,7 +9,23 @@
     "backLink": "Til baka í val á spurningakeppni",
     "key": "brawlstars",
     "themeColor": "#9614ff",
-    "logoImg": "images/brawlstars/logo.png"
+    "logoImg": "images/brawlstars/logo.png",
+    "subCategories" : [
+      {
+        "key": "rarity",
+        "name": "Sjaldgæf",
+        "quizTitle": "Hversu sjaldgæfur er þessi Brawler?",
+        "inputPlaceholder": "Veldu hversu sjaldgæfur Brawlerinn er",
+        "possibleValues": [
+          "Rare",
+          "Super Rare",
+          "Epic",
+          "Mythic",
+          "Legendary",
+          "Ultra Legendary"
+        ]
+      }
+    ]
   },
   "dogs": {
     "displayName": "Hundar",

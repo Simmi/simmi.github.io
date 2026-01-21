@@ -41,6 +41,18 @@
         html += `<button class="quiz-type-btn" ${btnStyle} onclick="location.href='type-quiz.html?category=${category.key}'">${category.typeQuizTitle}</button>`;
         html += `<button class="quiz-type-btn" ${btnStyle} onclick="location.href='multiple-choice.html?category=${category.key}'">${category.mcQuizTitle}</button>`;
         html += `<button class="quiz-type-btn" ${btnStyle} onclick="location.href='select-image.html?category=${category.key}'">${category.selectImageQuizTitle}</button>`;
+        // Add subcategory quiz button if defined in config
+        if (category.subcategoryQuizField && category[category.subcategoryQuizField + 'QuizTitle']) {
+          html += `<button class="quiz-type-btn" ${btnStyle} onclick="location.href='multiple-choice.html?category=${category.key}&quizField=${category.subcategoryQuizField}'">${category[category.subcategoryQuizField + 'QuizTitle']}</button>`;
+        }
+        // Add subcategory quiz buttons for each subCategory
+        if (Array.isArray(category.subCategories)) {
+          category.subCategories.forEach(subCat => {
+            if (subCat.key && subCat.quizTitle) {
+              html += `<button class="quiz-type-btn" ${btnStyle} onclick="location.href='multiple-choice.html?category=${category.key}&quizField=${subCat.key}'">${subCat.quizTitle}</button>`;
+            }
+          });
+        }
         html += `<a href='index.html' style='display:block;margin-top:32px;'>← Til baka</a>`;
         document.getElementById('category-content').innerHTML = html.replace(/\\"/g, '"');
       });

@@ -88,7 +88,7 @@
           document.getElementById('back-link').textContent = '\u2190 ' + (categoryConfig.backLink || 'Til baka í val á spurningakeppni');
           document.getElementById('back-link').href = 'index.html';
           // Use the key to determine the data file
-          let dataFile = category + '.json';
+          let dataFile = '/data/' + category + '.json';
           fetch(dataFile)
             .then(response => response.json())
             .then(data => {

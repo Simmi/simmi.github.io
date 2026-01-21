@@ -93,6 +93,8 @@
     let score = 0;
     let categoryConfig = {};
     let category = 'brawlstars';
+    let quizField = 'name'; // default
+    let quizFieldTitle = '';
 
     function applyThemeColor(themeColor) {
       if (!themeColor) return;
@@ -104,6 +106,10 @@
       const params = new URLSearchParams(window.location.search);
       return params.get('category') || 'brawlstars';
     }
+    function getQuizFieldFromUrl() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get('quizField') || 'name';
+    }
 
     function shuffle(array) {
       for (let i = array.length - 1; i > 0; i--) {
@@ -114,16 +120,33 @@
     }
 
     function getRandomChoices(correctIdx) {
-      const choices = [brawlers[correctIdx]];
-      const used = new Set([correctIdx]);
-      while (choices.length < 4) {
-        const idx = Math.floor(Math.random() * brawlers.length);
-        if (!used.has(idx)) {
-          choices.push(brawlers[idx]);
-          used.add(idx);
+      if (quizField === 'name') {
+        const choices = [brawlers[correctIdx]];
+        const used = new Set([correctIdx]);
+        while (choices.length < 4) {
+          const idx = Math.floor(Math.random() * brawlers.length);
+          if (!used.has(idx)) {
+            choices.push(brawlers[idx]);
+            used.add(idx);
+          }
         }
+        return shuffle(choices);
+      } else {
+        // For subcategory quiz, get unique values for quizField
+        const correctValue = brawlers[correctIdx][quizField];
+        const allValues = Array.from(new Set(brawlers.map(b => b[quizField])));
+        const choices = [correctValue];
+        const used = new Set([correctValue]);
+        while (choices.length < 4 && allValues.length > choices.length) {
+          const idx = Math.floor(Math.random() * allValues.length);
+          const val = allValues[idx];
+          if (!used.has(val)) {
+            choices.push(val);
+            used.add(val);
+          }
+        }
+        return shuffle(choices);
       }
-      return shuffle(choices);
     }
 
     function showCounter() {
@@ -142,8 +165,8 @@
       choices.forEach(choice => {
         const btn = document.createElement('button');
         btn.className = 'choice-btn';
-        btn.textContent = choice.name;
-        btn.onclick = () => checkAnswer(choice.name, btn, choicesDiv);
+        btn.textContent = quizField === 'name' ? choice.name : choice;
+        btn.onclick = () => checkAnswer(btn.textContent, btn, choicesDiv);
         choicesDiv.appendChild(btn);
       });
     }
@@ -154,12 +177,12 @@
       document.getElementById('counter').textContent = '';
     }
 
-    function checkAnswer(selectedName, btn, choicesDiv) {
-      const correct = brawlers[questionOrder[questionNumber-1]].name;
+    function checkAnswer(selected, btn, choicesDiv) {
+      const correct = quizField === 'name' ? brawlers[questionOrder[questionNumber-1]].name : brawlers[questionOrder[questionNumber-1]][quizField];
       const buttons = choicesDiv.querySelectorAll('button');
       // Disable all buttons
       buttons.forEach(b => b.disabled = true);
-      if (selectedName === correct) {
+      if (selected === correct) {
         btn.classList.add('correct');
         document.getElementById('result').textContent = 'Rétt!';
         score++;
@@ -178,7 +201,7 @@
         } else {
           showBrawler();
         }
-      }, 3000);
+      }, 2000);
     }
 
     function restartQuiz() {
@@ -192,6 +215,7 @@
 
     document.addEventListener('DOMContentLoaded', function() {
       category = getCategoryFromUrl();
+      quizField = getQuizFieldFromUrl();
       fetch('categories.json')
         .then(response => response.json())
         .then(categories => {
@@ -199,12 +223,25 @@
           if (categoryConfig.themeColor) {
             applyThemeColor(categoryConfig.themeColor);
           }
-          document.getElementById('quiz-title').textContent = categoryConfig.mcQuizTitle;
+          // Set quiz title
+          console.log('categoryConfig:', categoryConfig);
+          if (quizField === 'name') {
+            document.getElementById('quiz-title').textContent = categoryConfig.mcQuizTitle || '';
+          } else {
+            // Try to get a custom title for this quizField
+            let customTitle = categoryConfig.subCategories?.find(subCat => subCat.key === quizField)?.quizTitle;
+            if (customTitle) {
+              document.getElementById('quiz-title').textContent = customTitle;
+            } else {
+              document.getElementById('quiz-title').textContent = (categoryConfig[quizField + 'QuizTitle']) || `Hver er gildið fyrir ${quizField}?`;
+            }
+
+          }
           document.getElementById('quiz-img').alt = categoryConfig.imgAlt;
           document.getElementById('back-link').textContent = '\u2190 ' + (categoryConfig.backLink || 'Til baka í val á spurningakeppni');
           document.getElementById('back-link').href = 'index.html';
           // Use the key to determine the data file
-          let dataFile = category + '.json';
+          let dataFile = '/data/' + category + '.json';
           fetch(dataFile)
             .then(response => response.json())
             .then(data => {

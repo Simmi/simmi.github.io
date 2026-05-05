@@ -1,0 +1,275 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* ── Birthday mode: shifting party gradient ─────────────── */
+body.mode-birthday {
+  background: linear-gradient(-45deg, #FF6B6B, #FECA57, #48DBFB, #FF9FF3, #C56CF0);
+  background-size: 400% 400%;
+  animation: gradientFlow 12s ease infinite;
+}
+
+@keyframes gradientFlow {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ── Default mode: soft blue-white ─────────────────────── */
+body.mode-default {
+  background: linear-gradient(145deg, #f0f4ff 0%, #e2eaff 45%, #ccd9ff 100%);
+}
+
+/* ── Confetti canvas ────────────────────────────────────── */
+#confetti {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+}
+
+/* ── App root ───────────────────────────────────────────── */
+#app {
+  position: relative;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  padding: 3vh 3vw;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ══════════════════════════════════════════════════════════
+   BIRTHDAY SCREEN
+   ══════════════════════════════════════════════════════════ */
+
+.birthday-screen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5vh;
+}
+
+/* Header */
+.birthday-header {
+  text-align: center;
+  font-family: 'Paytone One', sans-serif;
+  font-size: clamp(2.8rem, 6vw, 8.5rem);
+  color: #fff;
+  text-shadow:
+    0 4px 0 rgba(0, 0, 0, 0.15),
+    0 8px 30px rgba(0, 0, 0, 0.18);
+  letter-spacing: -0.01em;
+  flex-shrink: 0;
+  animation: headerPop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes headerPop {
+  0%   { opacity: 0; transform: scale(0.5) translateY(-30px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* People container */
+.people-container {
+  flex: 1;
+  display: flex;
+  gap: 2.5vw;
+  min-height: 0;
+  align-items: stretch;
+}
+
+/* Person card */
+.person-card {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 4vw;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-radius: 2.5rem;
+  border: 3px solid rgba(255, 255, 255, 0.75);
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  padding: 4vh 4vw;
+  overflow: hidden;
+  animation: cardRise 0.9s cubic-bezier(0.34, 1.4, 0.64, 1) 0.25s both;
+}
+
+@keyframes cardRise {
+  0%   { opacity: 0; transform: translateY(80px) scale(0.96); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Photo section */
+.photo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+  animation: slideFromLeft 0.7s ease 0.55s both;
+}
+
+@keyframes slideFromLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.person-photo {
+  display: block;
+  width: clamp(160px, 21vw, 310px);
+  height: clamp(160px, 21vw, 310px);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 7px solid #fff;
+  box-shadow:
+    0 0 0 4px rgba(255, 107, 107, 0.35),
+    0 15px 50px rgba(0, 0, 0, 0.22);
+}
+
+.person-name {
+  font-family: 'Paytone One', sans-serif;
+  font-size: clamp(2rem, 3.8vw, 5rem);
+  color: #1a1a2e;
+  text-align: center;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.person-date {
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(0.85rem, 1.2vw, 1.4rem);
+  font-weight: 800;
+  color: #fff;
+  background: linear-gradient(120deg, #FF6B6B, #FF9F43);
+  padding: 0.35em 1.1em;
+  border-radius: 999px;
+  letter-spacing: 0.04em;
+  box-shadow: 0 4px 14px rgba(255, 107, 107, 0.45);
+}
+
+/* Facts section */
+.facts-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: max(0.65vh, 7px);
+  min-width: 0;
+  min-height: 0;
+}
+
+.facts-label {
+  font-size: clamp(0.7rem, 0.9vw, 1.1rem);
+  font-weight: 900;
+  color: #adb5bd;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 0.2em;
+}
+
+.fact-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+  border-radius: 16px;
+  padding: 0.75em 1.2em;
+  font-size: clamp(0.95rem, 1.4vw, 1.75rem);
+  font-weight: 700;
+  line-height: 1.3;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.11);
+}
+
+/* Fact cards: distinct color per row + staggered slide-in */
+/* nth-child counts from 1; child(1) = .facts-label, so cards start at 2 */
+.fact-card:nth-child(2) {
+  background: #FF6B6B;
+  color: #fff;
+  animation: slideFromRight 0.5s cubic-bezier(0.34, 1.4, 0.64, 1) 0.6s both;
+}
+.fact-card:nth-child(3) {
+  background: #FECA57;
+  color: #2d3436;
+  animation: slideFromRight 0.5s cubic-bezier(0.34, 1.4, 0.64, 1) 0.75s both;
+}
+.fact-card:nth-child(4) {
+  background: #48DBFB;
+  color: #1a1a2e;
+  animation: slideFromRight 0.5s cubic-bezier(0.34, 1.4, 0.64, 1) 0.9s both;
+}
+.fact-card:nth-child(5) {
+  background: #C56CF0;
+  color: #fff;
+  animation: slideFromRight 0.5s cubic-bezier(0.34, 1.4, 0.64, 1) 1.05s both;
+}
+.fact-card:nth-child(6) {
+  background: #FF9F43;
+  color: #fff;
+  animation: slideFromRight 0.5s cubic-bezier(0.34, 1.4, 0.64, 1) 1.2s both;
+}
+
+@keyframes slideFromRight {
+  from { opacity: 0; transform: translateX(50px) scale(0.95); }
+  to   { opacity: 1; transform: translateX(0) scale(1); }
+}
+
+.fact-icon {
+  font-size: 1.35em;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+/* ── No-facts variant: center the photo ─────────────────── */
+.person-card.no-facts {
+  justify-content: center;
+}
+
+.person-card.no-facts .person-photo {
+  width: clamp(200px, 30vw, 440px);
+  height: clamp(200px, 30vw, 440px);
+}
+
+.person-card.no-facts .person-name {
+  font-size: clamp(2.5rem, 5vw, 6.5rem);
+}
+
+/* ══════════════════════════════════════════════════════════
+   DEFAULT / LOGO SCREEN
+   ══════════════════════════════════════════════════════════ */
+
+.logo-screen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* mix-blend-mode: multiply makes the white logo background
+   transparent against the light gradient, leaving only the
+   blue graphic and wordmark visible */
+.logo-img {
+  max-width: clamp(280px, 38vw, 680px);
+  max-height: 45vh;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  animation: logoReveal 1.4s cubic-bezier(0.34, 1.2, 0.64, 1) both;
+}
+
+@keyframes logoReveal {
+  0%   { opacity: 0; transform: scale(0.82); }
+  100% { opacity: 1; transform: scale(1); }
+}

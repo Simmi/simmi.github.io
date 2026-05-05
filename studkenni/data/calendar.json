@@ -230,5 +230,13 @@
       "facts": []
     }
   ],
-  "events": []
+  "events": [
+    {
+      "title": "Árshátíð Auðkennis",
+      "date": "2026-05-15",
+      "promo_days_before": 14,
+      "graphic": "images/events/berlin2026.jpg",
+      "description": "Nú þarf að dusta rykið af Die Lederhosen og Dirndl kjólunum því árshátíð Auðkennis verður haldin í Berlín."
+    }
+  ]
 }

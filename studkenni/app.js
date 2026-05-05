@@ -119,6 +119,48 @@ function makeConfetti(canvas) {
   };
 }
 
+/* ── Events ──────────────────────────────────────────────── */
+
+function daysUntil(dateStr) {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const target = new Date(dateStr);
+  target.setHours(0, 0, 0, 0);
+  return Math.round((target - today) / (1000 * 60 * 60 * 24));
+}
+
+// Returns events whose promo window is active today, soonest first.
+function getActiveEvents(events) {
+  return events
+    .map(e => ({ ...e, days: daysUntil(e.date) }))
+    .filter(e => e.days >= 0 && e.days <= e.promo_days_before)
+    .sort((a, b) => a.days - b.days);
+}
+
+function countdownText(days) {
+  if (days === 0) return '🎉 Í dag!';
+  if (days === 1) return '✨ Á morgun!';
+  return `Eftir ${days} daga`;
+}
+
+function renderEvent(event) {
+  document.body.className = 'mode-event';
+  document.getElementById('app').innerHTML = `
+    <div class="event-screen">
+      <div class="event-graphic">
+        <img src="${event.graphic}" alt="${event.title}"
+             onerror="this.parentElement.style.display='none'">
+      </div>
+      <div class="event-info">
+        <div class="event-label">Væntanlegt</div>
+        <div class="event-title">${event.title}</div>
+        <div class="event-description">${event.description}</div>
+        <div class="event-countdown">${countdownText(event.days)}</div>
+      </div>
+    </div>
+  `;
+}
+
 /* ── Rendering ───────────────────────────────────────────── */
 
 function renderBirthday(people, confetti) {
@@ -160,7 +202,7 @@ function renderDefault() {
   document.body.className = 'mode-default';
   document.getElementById('app').innerHTML = `
     <div class="logo-screen">
-      <img class="logo-img" src="images/logo_with_text.jpg" alt="Auðkenni">
+      <img class="logo-img" src="images/logo_with_text.svg" alt="Auðkenni">
     </div>
   `;
 }
@@ -181,14 +223,19 @@ async function init() {
   const confetti = makeConfetti(canvas);
 
   try {
-    const { people } = await fetch('data/calendar.json').then(r => r.json());
+    const { people, events = [] } = await fetch('data/calendar.json').then(r => r.json());
     const dates      = getRelevantDates();
     const celebrants = people.filter(p => dates.includes(birthdayToMMDD(p.birthday)));
 
     if (celebrants.length > 0) {
       renderBirthday(celebrants, confetti);
     } else {
-      renderDefault();
+      const activeEvents = getActiveEvents(events);
+      if (activeEvents.length > 0) {
+        renderEvent(activeEvents[0]);
+      } else {
+        renderDefault();
+      }
     }
   } catch (err) {
     console.error('Failed to load calendar data:', err);

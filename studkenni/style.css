@@ -46,6 +46,15 @@ body.mode-default {
   padding: 3vh 3vw;
   display: flex;
   flex-direction: column;
+  animation: pixelShift 45s ease-in-out infinite;
+}
+
+@keyframes pixelShift {
+  0%   { transform: translate(0px,  0px); }
+  25%  { transform: translate(2px,  1px); }
+  50%  { transform: translate(1px,  2px); }
+  75%  { transform: translate(-1px, 1px); }
+  100% { transform: translate(0px,  0px); }
 }
 
 /* ══════════════════════════════════════════════════════════

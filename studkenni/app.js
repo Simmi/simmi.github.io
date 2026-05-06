@@ -187,8 +187,9 @@ function renderEvent(event) {
       <div class="event-info">
         <div class="event-label">Væntanlegt</div>
         <div class="event-title">${event.title}</div>
-        <div class="event-description">${event.description}</div>
         <div class="event-countdown">${countdownText(event.days)}</div>
+        <div class="event-description">${event.description}</div>
+        
         ${event.facts && event.facts.length > 0 ? `
           <div class="event-fact-section">
             <div class="event-fact-label">Vissir þú að...</div>

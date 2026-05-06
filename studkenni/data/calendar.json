@@ -236,8 +236,15 @@
       "title": "Árshátíð Auðkennis",
       "date": "2026-05-15",
       "promo_days_before": 14,
-      "graphic": "images/events/berlin2026.jpg",
-      "description": "Nú þarf að dusta rykið af Die Lederhosen og Dirndl kjólunum því árshátíð Auðkennis verður haldin í Berlín.",
+      "graphic": [
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/4f/c2/7d/hotel-riu-plaza-berlin.jpg?w=1400&h=800&s=1",
+        "https://www.alice-rooftop.de/img/gallery/fullsize/image_225_20220802185438.jpg",
+        "https://www.visitberlin.de/system/files/styles/visitberlin_bleed_header_visitberlin_tablet_landscape_2x/private/image/Panorama_Berlin_Mitte_GettyImages-648821756_Getty_Images_Foto_bluejayphoto_web.jpg.webp?itok=R0yktL9O",
+        "https://img.static-kl.com/transform/a9eb8d2d-c180-4f6c-877c-3d4a44bbff3f/?io=transform:fill,width:1920&consumerid=bwp",
+        "https://berlin-stag-do.com/wp-content/uploads/berlin-beer-bike-scaled.webp",
+        "https://www.101bikerentals.com/wp-content/uploads/2018/02/nextbike_bike_rental_berlin.jpg"
+      ],
+      "description": "",
       "facts": [
         "Berlín er um það bil níu sinnum stærri en París að flatarmáli og Þýskaland á landamæri að flestum ríkjum í Mið-Evrópu, eða alls 9 nágrannalöndum.",
         "Frá 1961 til 1989 var Berlín skipt í tvennt af Berlínarmúrnum. Austur-Berlín var höfuðborg Austur-Þýskalands en Vestur-Berlín var eyja innan Austur-Þýskalands.",

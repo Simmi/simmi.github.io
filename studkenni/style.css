@@ -136,8 +136,8 @@ body.mode-default {
 
 .person-photo {
   display: block;
-  width: clamp(160px, 21vw, 310px);
-  height: clamp(160px, 21vw, 310px);
+  width: clamp(200px, 38vw, 560px);
+  height: clamp(200px, 38vw, 560px);
   border-radius: 50%;
   object-fit: cover;
   object-position: center top;
@@ -398,6 +398,42 @@ body.mode-event {
    ══════════════════════════════════════════════════════════ */
 
 @media (max-width: 640px) {
+  /* Birthday */
+  .birthday-header {
+    font-size: clamp(2rem, 10vw, 3.5rem);
+  }
+
+  .people-container {
+    flex-direction: column;
+    overflow-y: auto;
+  }
+
+  .person-card {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1.25rem;
+    gap: 1.25rem;
+    flex: none;
+  }
+
+  .person-photo {
+    width: clamp(100px, 28vw, 160px);
+    height: clamp(100px, 28vw, 160px);
+  }
+
+  .person-name {
+    font-size: clamp(1.6rem, 7vw, 2.5rem);
+  }
+
+  .facts-section {
+    width: 100%;
+  }
+
+  .fact-card {
+    font-size: clamp(0.9rem, 3.5vw, 1.2rem);
+  }
+
+  /* Event */
   .event-graphic {
     height: 25vh;
   }

@@ -197,7 +197,7 @@ function startEventImageRotation(images) {
       [activeId, hiddenId] = [hiddenId, activeId];
     };
     hidden.src = images[idx];
-  }, 5000);
+  }, 5 * 60 * 1000);
 }
 
 function preloadImages(urls) {

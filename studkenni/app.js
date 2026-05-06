@@ -2,6 +2,7 @@
 
 const FACT_ICONS  = ['🎈', '🌟', '🎯', '🚀', '💫'];
 let factRotationInterval = null;
+let imageRotationInterval = null;
 
 function shuffle(arr) {
   const a = [...arr];
@@ -176,13 +177,43 @@ function startEventFactRotation(facts) {
   factRotationInterval = setInterval(showFact, 10 * 60 * 1000);
 }
 
+function startEventImageRotation(images) {
+  if (imageRotationInterval) clearInterval(imageRotationInterval);
+  let idx = 0;
+  let activeId = 'event-img-a';
+  let hiddenId = 'event-img-b';
+
+  imageRotationInterval = setInterval(() => {
+    idx = (idx + 1) % images.length;
+    const hidden = document.getElementById(hiddenId);
+    if (!hidden) { clearInterval(imageRotationInterval); return; }
+
+    hidden.onload = () => {
+      const active = document.getElementById(activeId);
+      const h = document.getElementById(hiddenId);
+      if (!active || !h) return;
+      h.style.opacity = '1';
+      active.style.opacity = '0';
+      [activeId, hiddenId] = [hiddenId, activeId];
+    };
+    hidden.src = images[idx];
+  }, 5000);
+}
+
+function preloadImages(urls) {
+  urls.forEach(url => { const img = new Image(); img.src = url; });
+}
+
 function renderEvent(event) {
+  const images = Array.isArray(event.graphic) ? event.graphic : [event.graphic];
+  preloadImages(images);
+
   document.body.className = 'mode-event';
   document.getElementById('app').innerHTML = `
     <div class="event-screen">
       <div class="event-graphic">
-        <img src="${event.graphic}" alt="${event.title}"
-             onerror="this.parentElement.style.display='none'">
+        <img id="event-img-a" class="event-img" src="${images[0]}" alt="${event.title}">
+        <img id="event-img-b" class="event-img" src="" alt="${event.title}" style="opacity:0">
       </div>
       <div class="event-info">
         <div class="event-label">Væntanlegt</div>
@@ -201,6 +232,9 @@ function renderEvent(event) {
   `;
   if (event.facts && event.facts.length > 0) {
     startEventFactRotation(event.facts);
+  }
+  if (images.length > 1) {
+    startEventImageRotation(images);
   }
 }
 

@@ -82,7 +82,7 @@
       "nickname": "Halli",
       "image": "images/people/halli.jpg",
       "birthday": "05/05/1975",
-      "facts": []
+      "facts": ["Kom með 2 kökur árið 2026...daginn eftir afmælið"]
     },
     {
       "name": "Kolbrún Klara Gísladóttir",
@@ -107,6 +107,7 @@
     },
     {
       "name": "Einar Ársæll Hrafnsson",
+      "nickname": "Einar Ársæll",
       "image": "images/people/einar_a.jpg",
       "birthday": "15/05/1971",
       "facts": []

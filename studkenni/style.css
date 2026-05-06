@@ -422,6 +422,26 @@ body.mode-event {
   to   { opacity: 1; transform: translateY(0) scale(1); }
 }
 
+.upcoming-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.6rem;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.1rem 0.25rem;
+  border-radius: 4px;
+  transition: color 0.15s, background 0.15s;
+}
+
+.upcoming-close:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+}
+
 .upcoming-title {
   font-size: 0.7rem;
   font-weight: 900;
@@ -429,6 +449,7 @@ body.mode-event {
   letter-spacing: 0.18em;
   color: rgba(255, 255, 255, 0.5);
   margin-bottom: 0.2rem;
+  padding-right: 1.2rem;
 }
 
 .upcoming-person {

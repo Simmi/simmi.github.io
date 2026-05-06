@@ -287,6 +287,7 @@ function renderUpcomingWidget(people) {
   const widget = document.createElement('div');
   widget.className = 'upcoming-widget';
   widget.innerHTML = `
+    <button class="upcoming-close" aria-label="Loka">&times;</button>
     <div class="upcoming-title">Nýleg og væntanleg afmæli</div>
     ${list.map(p => `
       <div class="upcoming-person">
@@ -298,6 +299,7 @@ function renderUpcomingWidget(people) {
       </div>
     `).join('')}
   `;
+  widget.querySelector('.upcoming-close').addEventListener('click', () => widget.remove());
   document.body.appendChild(widget);
 }
 

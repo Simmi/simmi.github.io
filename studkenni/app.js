@@ -249,6 +249,57 @@ function renderDefault() {
   `;
 }
 
+/* ── Upcoming birthdays widget ───────────────────────────── */
+
+function getRecentAndUpcomingBirthdays(people) {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const isMonday = today.getDay() === 1;
+
+  // Offsets already covered by the main birthday screen
+  const mainScreenOffsets = new Set([0]);
+  if (isMonday) { mainScreenOffsets.add(-1); mainScreenOffsets.add(-2); }
+
+  const result = [];
+  for (let i = -3; i <= 4; i++) {
+    if (i === 0 || mainScreenOffsets.has(i)) continue;
+    const d = new Date(today);
+    d.setDate(today.getDate() + i);
+    people
+      .filter(p => birthdayToMMDD(p.birthday) === toMMDD(d))
+      .forEach(p => result.push({ ...p, daysOffset: i }));
+  }
+  return result;
+}
+
+function offsetLabel(n) {
+  if (n === -1) return 'Í gær';
+  if (n < 0)   return `Fyrir ${Math.abs(n)} dögum`;
+  if (n === 1)  return 'Á morgun';
+  return `Eftir ${n} daga`;
+}
+
+function renderUpcomingWidget(people) {
+  const list = getRecentAndUpcomingBirthdays(people);
+  if (list.length === 0) return;
+
+  const widget = document.createElement('div');
+  widget.className = 'upcoming-widget';
+  widget.innerHTML = `
+    <div class="upcoming-title">Nýleg og væntanleg afmæli</div>
+    ${list.map(p => `
+      <div class="upcoming-person">
+        <img class="upcoming-photo" src="${p.image}" alt="${p.nickname ?? p.name}">
+        <div class="upcoming-info">
+          <div class="upcoming-name">${p.nickname ?? p.name}</div>
+          <div class="upcoming-date">${offsetLabel(p.daysOffset)} · ${prettyDate(p.birthday).trim()}</div>
+        </div>
+      </div>
+    `).join('')}
+  `;
+  document.body.appendChild(widget);
+}
+
 /* ── Midnight auto-reload ─────────────────────────────────── */
 // The page auto-reloads at midnight so it picks up the new
 // day's birthdays without anyone needing to touch it.
@@ -279,6 +330,8 @@ async function init() {
         renderDefault();
       }
     }
+
+    renderUpcomingWidget(people);
   } catch (err) {
     console.error('Failed to load calendar data:', err);
     renderDefault();

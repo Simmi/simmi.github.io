@@ -1,6 +1,16 @@
 'use strict';
 
 const FACT_ICONS  = ['🎈', '🌟', '🎯', '🚀', '💫'];
+let factRotationInterval = null;
+
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
 const MONTHS      = ['janúar','febrúar','mars','apríl','maí','júní',
                      'júlí','ágúst','september','október','nóvember','desember'];
 const CONF_COLORS = ['#FF6B6B','#FECA57','#48DBFB','#C56CF0','#FF9F43',
@@ -105,8 +115,8 @@ function makeConfetti(canvas) {
       window.addEventListener('resize', resize);
       // Seed some particles across the full screen so it looks
       // full immediately, then the rest rain in from the top.
-      particles = Array.from({ length: 200 }, (_, i) =>
-        spawn(i < 150 ? Math.random() * window.innerHeight : -Math.random() * 300)
+      particles = Array.from({ length: 80 }, (_, i) =>
+        spawn(i < 60 ? Math.random() * window.innerHeight : -Math.random() * 300)
       );
       running = true;
       raf = requestAnimationFrame(tick);
@@ -143,6 +153,29 @@ function countdownText(days) {
   return `Eftir ${days} daga`;
 }
 
+function startEventFactRotation(facts) {
+  if (factRotationInterval) clearInterval(factRotationInterval);
+  let pool = shuffle(facts);
+  let idx = 0;
+
+  function showFact() {
+    const el = document.getElementById('event-fact');
+    if (!el) { clearInterval(factRotationInterval); return; }
+    if (idx >= pool.length) { pool = shuffle(facts); idx = 0; }
+    const text = pool[idx++];
+    el.style.opacity = '0';
+    setTimeout(() => {
+      const current = document.getElementById('event-fact');
+      if (!current) return;
+      current.textContent = text;
+      current.style.opacity = '1';
+    }, 600);
+  }
+
+  showFact();
+  factRotationInterval = setInterval(showFact, 10 * 60 * 1000);
+}
+
 function renderEvent(event) {
   document.body.className = 'mode-event';
   document.getElementById('app').innerHTML = `
@@ -156,9 +189,18 @@ function renderEvent(event) {
         <div class="event-title">${event.title}</div>
         <div class="event-description">${event.description}</div>
         <div class="event-countdown">${countdownText(event.days)}</div>
+        ${event.facts && event.facts.length > 0 ? `
+          <div class="event-fact-section">
+            <div class="event-fact-label">Vissir þú að...</div>
+            <div id="event-fact" class="event-fact"></div>
+          </div>
+        ` : ''}
       </div>
     </div>
   `;
+  if (event.facts && event.facts.length > 0) {
+    startEventFactRotation(event.facts);
+  }
 }
 
 /* ── Rendering ───────────────────────────────────────────── */

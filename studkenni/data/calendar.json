@@ -124,11 +124,11 @@
         "images/people/halli.jpg",
         "images/people/animal_ai/Halli.png"
       ],
-      "birthday": "08/05/1975",
+      "birthday": "05/05/1975",
       "facts": [
         "Kom með 2 kökur árið 2026...daginn eftir afmælið"
       ],
-      "cakes": [2026, 2028]
+      "cakes": [2026]
     },
     {
       "name": "Kolbrún Klara Gísladóttir",
@@ -137,7 +137,7 @@
         "images/people/myndataka/klara.jpg",
         "images/people/animal_ai/Klara.png"
       ],
-      "birthday": "08/05/1993",
+      "birthday": "10/05/1993",
       "facts": [],
       "cakes": []
     },

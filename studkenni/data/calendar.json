@@ -20,8 +20,8 @@
       "name": "Sveinbjörn Grétarsson",
       "nickname": "Bjössi",
       "image": [
-        "images/people/animal_ai/Bjössi.png",
-        "images/people/myndataka/bjossi.jpg"
+        "images/people/myndataka/bjossi.jpg",
+        "images/people/animal_ai/Bjössi.png"
       ],
       "birthday": "25/01/1967",
       "facts": []
@@ -48,9 +48,9 @@
       "name": "Sverrir Bergþór Sverrisson",
       "nickname": "Sverrir",
       "image": [
-        "images/people/animal_ai/Sverrir.png",
         "images/people/myndataka/sverrir.jpg",
-        "images/people/myndataka/sverrir_2.jpg"
+        "images/people/myndataka/sverrir_2.jpg",
+        "images/people/animal_ai/Sverrir.png"
       ],
       "birthday": "13/02/1973",
       "facts": []
@@ -59,9 +59,9 @@
       "name": "Þórunn Stefánsdóttir",
       "nickname": "Þórunn",
       "image": [
-        "images/people/animal_ai/Þórunn.png",
         "images/people/myndataka/thorunn.jpg",
-        "images/people/myndataka/thorunn_2.jpg"
+        "images/people/myndataka/thorunn_2.jpg",
+        "images/people/animal_ai/Þórunn.png"
       ],
       "birthday": "01/03/1979",
       "facts": []
@@ -70,8 +70,8 @@
       "name": "Sigmar Stefánsson",
       "nickname": "Simmi",
       "image": [
-        "images/people/animal_ai/Simmi.png",
-        "images/people/myndataka/simmi.jpg"
+        "images/people/myndataka/simmi.jpg",
+        "images/people/animal_ai/Simmi.png"
       ],
       "birthday": "02/03/1980",
       "facts": []
@@ -89,8 +89,8 @@
       "name": "Snorri Vignisson",
       "nickname": "Snorri",
       "image": [
-        "images/people/animal_ai/Snorri.png",
-        "images/people/myndataka/snorri.jpg"
+        "images/people/myndataka/snorri.jpg",
+        "images/people/animal_ai/Snorri.png"
       ],
       "birthday": "22/04/1997",
       "facts": []
@@ -108,10 +108,10 @@
       "name": "Haraldur Agnar Bjarnason",
       "nickname": "Halli",
       "image": [
-        "images/people/animal_ai/Halli.png",
         "images/people/myndataka/halli.jpg",
         "images/people/myndataka/halli_2.jpg",
-        "images/people/halli.jpg"
+        "images/people/halli.jpg",
+        "images/people/animal_ai/Halli.png"
       ],
       "birthday": "05/05/1975",
       "facts": ["Kom með 2 kökur árið 2026...daginn eftir afmælið"]
@@ -120,8 +120,8 @@
       "name": "Kolbrún Klara Gísladóttir",
       "nickname": "Klara",
       "image": [
-        "images/people/animal_ai/Klara.png",
-        "images/people/myndataka/klara.jpg"
+        "images/people/myndataka/klara.jpg",
+        "images/people/animal_ai/Klara.png"
       ],
       "birthday": "10/05/1993",
       "facts": []
@@ -139,8 +139,8 @@
       "name": "Zaki Ögmundsson",
       "nickname": "Zaki",
       "image": [
-        "images/people/animal_ai/Zaki.png",
-        "images/people/myndataka/zaki.jpg"
+        "images/people/myndataka/zaki.jpg",
+        "images/people/animal_ai/Zaki.png"
       ],
       "birthday": "11/05/1986",
       "facts": []
@@ -149,8 +149,8 @@
       "name": "Einar Ársæll Hrafnsson",
       "nickname": "Einar Ársæll",
       "image": [
-        "images/people/animal_ai/Einar Á.png",
-        "images/people/myndataka/einar_a.jpg"
+        "images/people/myndataka/einar_a.jpg",
+        "images/people/animal_ai/Einar Á.png"
       ],
       "birthday": "15/05/1971",
       "facts": []
@@ -159,9 +159,9 @@
       "name": "Óli H. Konráðsson",
       "nickname": "Óli",
       "image": [
-        "images/people/animal_ai/Óli.png",
         "images/people/myndataka/oli.jpg",
-        "images/people/myndataka/oli_2.jpg"
+        "images/people/myndataka/oli_2.jpg",
+        "images/people/animal_ai/Óli.png"
       ],
       "birthday": "18/05/1977",
       "facts": []
@@ -170,8 +170,8 @@
       "name": "Jenný Huyen Andradóttir",
       "nickname": "Jenný",
       "image": [
-        "images/people/animal_ai/Jenný.png",
-        "images/people/myndataka/jenny.jpg"
+        "images/people/myndataka/jenny.jpg",
+        "images/people/animal_ai/Jenný.png"
       ],
       "birthday": "28/05/1990",
       "facts": []
@@ -180,8 +180,8 @@
       "name": "Arnaldur F. Axfjörð",
       "nickname": "Addi",
       "image": [
-        "images/people/animal_ai/Addi.png",
-        "images/people/myndataka/addi.jpg"
+        "images/people/myndataka/addi.jpg",
+        "images/people/animal_ai/Addi.png"
       ],
       "birthday": "18/06/1960",
       "facts": []
@@ -199,8 +199,8 @@
       "name": "Sigríður Sveinsdóttir",
       "nickname": "Sigga",
       "image": [
-        "images/people/animal_ai/Sigga.png",
-        "images/people/myndataka/sigga.jpg"
+        "images/people/myndataka/sigga.jpg",
+        "images/people/animal_ai/Sigga.png"
       ],
       "birthday": "29/06/1991",
       "facts": []
@@ -209,8 +209,8 @@
       "name": "Þórir Magnússon",
       "nickname": "Þórir",
       "image": [
-        "images/people/animal_ai/Þórir.png",
-        "images/people/myndataka/thorir.jpg"
+        "images/people/myndataka/thorir.jpg",
+        "images/people/animal_ai/Þórir.png"
       ],
       "birthday": "08/07/1977",
       "facts": []
@@ -219,8 +219,8 @@
       "name": "Kristján Björgvin Schram",
       "nickname": "Kristján",
       "image": [
-        "images/people/animal_ai/Kristján.png",
-        "images/people/myndataka/kristjan.jpg"
+        "images/people/myndataka/kristjan.jpg",
+        "images/people/animal_ai/Kristján.png"
       ],
       "birthday": "23/07/1991",
       "facts": []
@@ -229,8 +229,8 @@
       "name": "Írena Rut Jónsdóttir",
       "nickname": "Írena",
       "image": [
-        "images/people/animal_ai/Írena.png",
-        "images/people/myndataka/irena.jpg"
+        "images/people/myndataka/irena.jpg",
+        "images/people/animal_ai/Írena.png"
       ],
       "birthday": "04/08/1998",
       "facts": []
@@ -248,9 +248,9 @@
       "name": "Kristín Lind Steingrímsdóttir",
       "nickname": "Kristín",
       "image": [
-        "images/people/animal_ai/Kristín.png",
         "images/people/myndataka/kristin.jpg",
-        "images/people/myndataka/kristin_2.jpg"
+        "images/people/myndataka/kristin_2.jpg",
+        "images/people/animal_ai/Kristín.png"
       ],
       "birthday": "26/08/1975",
       "facts": []
@@ -259,8 +259,8 @@
       "name": "Erla Valgerður Birgisdóttir",
       "nickname": "Erla",
       "image": [
-        "images/people/animal_ai/Erla.png",
-        "images/people/myndataka/erla.jpg"
+        "images/people/myndataka/erla.jpg",
+        "images/people/animal_ai/Erla.png"
       ],
       "birthday": "31/08/1994",
       "facts": []
@@ -269,8 +269,8 @@
       "name": "Ingibjörg Erna Jónsdóttir",
       "nickname": "Ingibjörg",
       "image": [
-        "images/people/animal_ai/Ingibjörg.png",
-        "images/people/myndataka/ingibjorg.jpg"
+        "images/people/myndataka/ingibjorg.jpg",
+        "images/people/animal_ai/Ingibjörg.png"
       ],
       "birthday": "24/10/1981",
       "facts": []
@@ -279,8 +279,8 @@
       "name": "Erna Birgisdóttir",
       "nickname": "Erna",
       "image": [
-        "images/people/animal_ai/Erna.png",
-        "images/people/myndataka/erna.jpg"
+        "images/people/myndataka/erna.jpg",
+        "images/people/animal_ai/Erna.png"
       ],
       "birthday": "11/11/1986",
       "facts": []
@@ -289,8 +289,8 @@
       "name": "Ásmundur Sveinsson",
       "nickname": "Ási",
       "image": [
-        "images/people/animal_ai/Ási.png",
-        "images/people/myndataka/asi.jpg"
+        "images/people/myndataka/asi.jpg",
+        "images/people/animal_ai/Ási.png"
       ],
       "birthday": "22/11/1985",
       "facts": []
@@ -299,8 +299,8 @@
       "name": "Tanja Kristín Leifsdóttir",
       "nickname": "Tanja",
       "image": [
-        "images/people/animal_ai/Tanja.png",
-        "images/people/myndataka/tanja.jpg"
+        "images/people/myndataka/tanja.jpg",
+        "images/people/animal_ai/Tanja.png"
       ],
       "birthday": "27/11/1989",
       "facts": []
@@ -309,9 +309,9 @@
       "name": "Vala Kristín Theodórsdóttir",
       "nickname": "Vala",
       "image": [
-        "images/people/animal_ai/Vala.png",
         "images/people/myndataka/vala.jpg",
-        "images/people/myndataka/vala_2.jpg"
+        "images/people/myndataka/vala_2.jpg",
+        "images/people/animal_ai/Vala.png"
       ],
       "birthday": "14/12/1998",
       "facts": []
@@ -320,8 +320,8 @@
       "name": "Elvar Bjarki Böðvarsson",
       "nickname": "Elvar",
       "image": [
-        "images/people/animal_ai/Elvar.png",
-        "images/people/myndataka/elvar.jpg"
+        "images/people/myndataka/elvar.jpg",
+        "images/people/animal_ai/Elvar.png"
       ],
       "birthday": "18/12/1979",
       "facts": []

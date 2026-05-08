@@ -265,7 +265,24 @@ function renderEvent(event) {
 
 /* ── Rendering ───────────────────────────────────────────── */
 
-function renderBirthday(people, confetti) {
+function renderCakeHistory(cakes, cakesSince) {
+  const lastYear = new Date().getFullYear() - 1;
+  const years = [];
+  for (let y = cakesSince; y <= lastYear; y++) years.push(y);
+  if (years.length === 0) return '';
+  return `
+    <div class="cake-history">
+      ${years.map(y => `
+        <div class="cake-year ${cakes.includes(y) ? 'cake-yes' : 'cake-no'}">
+          <span class="cake-icon">${cakes.includes(y) ? '🎂' : '🚫'}</span>
+          <span class="cake-label">${y}</span>
+        </div>
+      `).join('')}
+    </div>
+  `;
+}
+
+function renderBirthday(people, confetti, cakesSince) {
   personImageIntervals.forEach(clearInterval);
   personImageIntervals = [];
 
@@ -289,6 +306,7 @@ function renderBirthday(people, confetti) {
               </div>
               <div class="person-name">${p.nickname ?? p.name}</div>
               <div class="person-date">${prettyDate(p.birthday)}</div>
+              ${renderCakeHistory(p.cakes ?? [], cakesSince)}
             </div>
             ${p.facts && p.facts.length > 0 ? `
               <div class="facts-section">
@@ -394,12 +412,12 @@ async function init() {
   const confetti = makeConfetti(canvas);
 
   try {
-    const { people, events = [] } = await fetch('data/calendar.json').then(r => r.json());
+    const { people, events = [], cakes_since: cakesSince = 2026 } = await fetch('data/calendar.json').then(r => r.json());
     const dates      = getRelevantDates();
     const celebrants = people.filter(p => dates.includes(birthdayToMMDD(p.birthday)));
 
     if (celebrants.length > 0) {
-      renderBirthday(celebrants, confetti);
+      renderBirthday(celebrants, confetti, cakesSince);
     } else {
       const activeEvents = getActiveEvents(events);
       if (activeEvents.length > 0) {

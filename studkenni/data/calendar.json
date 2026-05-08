@@ -5,7 +5,8 @@
       "nickname": "Davíð",
       "image": [],
       "birthday": "21/01/2002",
-      "facts": []
+      "facts": [],
+      "cakes": []
     },
     {
       "name": "Jónas Sturla Sverrisson",
@@ -14,7 +15,8 @@
         "images/people/animal_ai/Jónas.png"
       ],
       "birthday": "24/01/1963",
-      "facts": []
+      "facts": [],
+      "cakes": []
     },
     {
       "name": "Sveinbjörn Grétarsson",
@@ -24,7 +26,8 @@
         "images/people/animal_ai/Bjössi.png"
       ],
       "birthday": "25/01/1967",
-      "facts": []
+      "facts": [],
+      "cakes": []
     },
     {
       "name": "Jakob Philip",
@@ -33,7 +36,8 @@
         "images/people/animal_ai/Jakob.png"
       ],
       "birthday": "25/01/1986",
-      "facts": []
+      "facts": [],
+      "cakes": []
     },
     {
       "name": "Einar Gunnlaugsson",
@@ -42,7 +46,8 @@
         "images/people/animal_ai/Einar G.png"
       ],
       "birthday": "29/01/1995",
-      "facts": []
+      "facts": [],
+      "cakes": []
     },
     {
       "name": "Sverrir Bergþór Sverrisson",
@@ -53,7 +58,8 @@
         "images/people/animal_ai/Sverrir.png"
       ],
       "birthday": "13/02/1973",
-      "facts": []
+      "facts": [],
+      "cakes": []
     },
     {
       "name": "Þórunn Stefánsdóttir",
@@ -64,7 +70,8 @@
         "images/people/animal_ai/Þórunn.png"
       ],
       "birthday": "01/03/1979",
-      "facts": []
+      "facts": [],
+      "cakes": []
     },
     {
       "name": "Sigmar Stefánsson",
@@ -74,7 +81,8 @@
         "images/people/animal_ai/Simmi.png"
       ],
       "birthday": "02/03/1980",
-      "facts": []
+      "facts": [],
+      "cakes": []
     },
     {
       "name": "Roland Nóason",
@@ -83,7 +91,8 @@
         "images/people/animal_ai/Róland.png"
       ],
       "birthday": "09/03/1983",
-      "facts": []
+      "facts": [],
+      "cakes": []
     },
     {
       "name": "Snorri Vignisson",
@@ -93,7 +102,8 @@
         "images/people/animal_ai/Snorri.png"
       ],
       "birthday": "22/04/1997",
-      "facts": []
+      "facts": [],
+      "cakes": []
     },
     {
       "name": "Sigurður Másson",
@@ -102,7 +112,8 @@
         "images/people/animal_ai/Siggi.png"
       ],
       "birthday": "28/04/1968",
-      "facts": []
+      "facts": [],
+      "cakes": []
     },
     {
       "name": "Haraldur Agnar Bjarnason",
@@ -113,8 +124,11 @@
         "images/people/halli.jpg",
         "images/people/animal_ai/Halli.png"
       ],
-      "birthday": "05/05/1975",
-      "facts": ["Kom með 2 kökur árið 2026...daginn eftir afmælið"]
+      "birthday": "08/05/1975",
+      "facts": [
+        "Kom með 2 kökur árið 2026...daginn eftir afmælið"
+      ],
+      "cakes": [2026, 2028]
     },
     {
       "name": "Kolbrún Klara Gísladóttir",
@@ -123,8 +137,9 @@
         "images/people/myndataka/klara.jpg",
         "images/people/animal_ai/Klara.png"
       ],
-      "birthday": "10/05/1993",
-      "facts": []
+      "birthday": "08/05/1993",
+      "facts": [],
+      "cakes": []
     },
     {
       "name": "Björn Þorvarðarson",
@@ -133,7 +148,8 @@
         "images/people/animal_ai/Björn.png"
       ],
       "birthday": "10/05/1984",
-      "facts": []
+      "facts": [],
+      "cakes": []
     },
     {
       "name": "Zaki Ögmundsson",
@@ -143,7 +159,8 @@
         "images/people/animal_ai/Zaki.png"
       ],
       "birthday": "11/05/1986",
-      "facts": []
+      "facts": [],
+      "cakes": []
     },
     {
       "name": "Einar Ársæll Hrafnsson",
@@ -153,7 +170,8 @@
         "images/people/animal_ai/Einar Á.png"
       ],
       "birthday": "15/05/1971",
-      "facts": []
+      "facts": [],
+      "cakes": []
     },
     {
       "name": "Óli H. Konráðsson",
@@ -164,7 +182,8 @@
         "images/people/animal_ai/Óli.png"
       ],
       "birthday": "18/05/1977",
-      "facts": []
+      "facts": [],
+      "cakes": []
     },
     {
       "name": "Jenný Huyen Andradóttir",
@@ -174,7 +193,8 @@
         "images/people/animal_ai/Jenný.png"
       ],
       "birthday": "28/05/1990",
-      "facts": []
+      "facts": [],
+      "cakes": []
     },
     {
       "name": "Arnaldur F. Axfjörð",
@@ -184,7 +204,8 @@
         "images/people/animal_ai/Addi.png"
       ],
       "birthday": "18/06/1960",
-      "facts": []
+      "facts": [],
+      "cakes": []
     },
     {
       "name": "Ásdís Svava Hallgrímsdóttir",
@@ -193,7 +214,8 @@
         "images/people/animal_ai/Ásdís.png"
       ],
       "birthday": "27/06/1987",
-      "facts": []
+      "facts": [],
+      "cakes": []
     },
     {
       "name": "Sigríður Sveinsdóttir",
@@ -203,7 +225,8 @@
         "images/people/animal_ai/Sigga.png"
       ],
       "birthday": "29/06/1991",
-      "facts": []
+      "facts": [],
+      "cakes": []
     },
     {
       "name": "Þórir Magnússon",
@@ -213,7 +236,8 @@
         "images/people/animal_ai/Þórir.png"
       ],
       "birthday": "08/07/1977",
-      "facts": []
+      "facts": [],
+      "cakes": []
     },
     {
       "name": "Kristján Björgvin Schram",
@@ -223,7 +247,8 @@
         "images/people/animal_ai/Kristján.png"
       ],
       "birthday": "23/07/1991",
-      "facts": []
+      "facts": [],
+      "cakes": []
     },
     {
       "name": "Írena Rut Jónsdóttir",
@@ -233,7 +258,8 @@
         "images/people/animal_ai/Írena.png"
       ],
       "birthday": "04/08/1998",
-      "facts": []
+      "facts": [],
+      "cakes": []
     },
     {
       "name": "Magnea Sigríður Guðmundsdóttir",
@@ -242,7 +268,8 @@
         "images/people/animal_ai/Magnea.png"
       ],
       "birthday": "05/08/1981",
-      "facts": []
+      "facts": [],
+      "cakes": []
     },
     {
       "name": "Kristín Lind Steingrímsdóttir",
@@ -253,7 +280,8 @@
         "images/people/animal_ai/Kristín.png"
       ],
       "birthday": "26/08/1975",
-      "facts": []
+      "facts": [],
+      "cakes": []
     },
     {
       "name": "Erla Valgerður Birgisdóttir",
@@ -263,7 +291,8 @@
         "images/people/animal_ai/Erla.png"
       ],
       "birthday": "31/08/1994",
-      "facts": []
+      "facts": [],
+      "cakes": []
     },
     {
       "name": "Ingibjörg Erna Jónsdóttir",
@@ -273,7 +302,8 @@
         "images/people/animal_ai/Ingibjörg.png"
       ],
       "birthday": "24/10/1981",
-      "facts": []
+      "facts": [],
+      "cakes": []
     },
     {
       "name": "Erna Birgisdóttir",
@@ -283,7 +313,8 @@
         "images/people/animal_ai/Erna.png"
       ],
       "birthday": "11/11/1986",
-      "facts": []
+      "facts": [],
+      "cakes": []
     },
     {
       "name": "Ásmundur Sveinsson",
@@ -293,7 +324,8 @@
         "images/people/animal_ai/Ási.png"
       ],
       "birthday": "22/11/1985",
-      "facts": []
+      "facts": [],
+      "cakes": []
     },
     {
       "name": "Tanja Kristín Leifsdóttir",
@@ -303,7 +335,8 @@
         "images/people/animal_ai/Tanja.png"
       ],
       "birthday": "27/11/1989",
-      "facts": []
+      "facts": [],
+      "cakes": []
     },
     {
       "name": "Vala Kristín Theodórsdóttir",
@@ -314,7 +347,8 @@
         "images/people/animal_ai/Vala.png"
       ],
       "birthday": "14/12/1998",
-      "facts": []
+      "facts": [],
+      "cakes": []
     },
     {
       "name": "Elvar Bjarki Böðvarsson",
@@ -324,7 +358,8 @@
         "images/people/animal_ai/Elvar.png"
       ],
       "birthday": "18/12/1979",
-      "facts": []
+      "facts": [],
+      "cakes": []
     }
   ],
   "events": [
@@ -362,5 +397,6 @@
         "Þrátt fyrir að vera höfuðborg stórrar þjóðar er Berlín meðal ódýrustu höfuðborga Vestur-Evrópu — sérstaklega þegar kemur að húsnæðis- og matvörukostnaði."
       ]
     }
-  ]
+  ],
+  "cakes_since": 2026
 }

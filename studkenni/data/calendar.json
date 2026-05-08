@@ -3,230 +3,326 @@
     {
       "name": "Davíð Ásmundsson",
       "nickname": "Davíð",
-      "image": "images/people/david.jpg",
+      "image": [],
       "birthday": "21/01/2002",
       "facts": []
     },
     {
       "name": "Jónas Sturla Sverrisson",
       "nickname": "Jónas",
-      "image": "images/people/jonas.jpg",
+      "image": [
+        "images/people/animal_ai/Jónas.png"
+      ],
       "birthday": "24/01/1963",
       "facts": []
     },
     {
       "name": "Sveinbjörn Grétarsson",
       "nickname": "Bjössi",
-      "image": "images/people/sveinbjorn.jpg",
+      "image": [
+        "images/people/animal_ai/Bjössi.png",
+        "images/people/myndataka/bjossi.jpg"
+      ],
       "birthday": "25/01/1967",
       "facts": []
     },
     {
       "name": "Jakob Philip",
       "nickname": "Jakob",
-      "image": "images/people/jakob.jpg",
+      "image": [
+        "images/people/animal_ai/Jakob.png"
+      ],
       "birthday": "25/01/1986",
       "facts": []
     },
     {
       "name": "Einar Gunnlaugsson",
       "nickname": "Einar G.",
-      "image": "images/people/einar_g.jpg",
+      "image": [
+        "images/people/animal_ai/Einar G.png"
+      ],
       "birthday": "29/01/1995",
       "facts": []
     },
     {
       "name": "Sverrir Bergþór Sverrisson",
       "nickname": "Sverrir",
-      "image": "images/people/sverrir.jpg",
+      "image": [
+        "images/people/animal_ai/Sverrir.png",
+        "images/people/myndataka/sverrir.jpg",
+        "images/people/myndataka/sverrir_2.jpg"
+      ],
       "birthday": "13/02/1973",
       "facts": []
     },
     {
       "name": "Þórunn Stefánsdóttir",
       "nickname": "Þórunn",
-      "image": "images/people/thorunn.jpg",
+      "image": [
+        "images/people/animal_ai/Þórunn.png",
+        "images/people/myndataka/thorunn.jpg",
+        "images/people/myndataka/thorunn_2.jpg"
+      ],
       "birthday": "01/03/1979",
       "facts": []
     },
     {
       "name": "Sigmar Stefánsson",
       "nickname": "Simmi",
-      "image": "images/people/sigmar.jpg",
+      "image": [
+        "images/people/animal_ai/Simmi.png",
+        "images/people/myndataka/simmi.jpg"
+      ],
       "birthday": "02/03/1980",
       "facts": []
     },
     {
       "name": "Roland Nóason",
       "nickname": "Roland",
-      "image": "images/people/roland.jpg",
+      "image": [
+        "images/people/animal_ai/Róland.png"
+      ],
       "birthday": "09/03/1983",
       "facts": []
     },
     {
       "name": "Snorri Vignisson",
       "nickname": "Snorri",
-      "image": "images/people/snorri.jpg",
+      "image": [
+        "images/people/animal_ai/Snorri.png",
+        "images/people/myndataka/snorri.jpg"
+      ],
       "birthday": "22/04/1997",
       "facts": []
     },
     {
       "name": "Sigurður Másson",
       "nickname": "Siggi",
-      "image": "images/people/sigurdur.jpg",
+      "image": [
+        "images/people/animal_ai/Siggi.png"
+      ],
       "birthday": "28/04/1968",
       "facts": []
     },
     {
       "name": "Haraldur Agnar Bjarnason",
       "nickname": "Halli",
-      "image": "images/people/halli.jpg",
+      "image": [
+        "images/people/animal_ai/Halli.png",
+        "images/people/myndataka/halli.jpg",
+        "images/people/myndataka/halli_2.jpg",
+        "images/people/halli.jpg"
+      ],
       "birthday": "05/05/1975",
       "facts": ["Kom með 2 kökur árið 2026...daginn eftir afmælið"]
     },
     {
       "name": "Kolbrún Klara Gísladóttir",
       "nickname": "Klara",
-      "image": "images/people/kolbrun.jpg",
+      "image": [
+        "images/people/animal_ai/Klara.png",
+        "images/people/myndataka/klara.jpg"
+      ],
       "birthday": "10/05/1993",
       "facts": []
     },
     {
       "name": "Björn Þorvarðarson",
       "nickname": "Björn",
-      "image": "images/people/bjorn.jpg",
+      "image": [
+        "images/people/animal_ai/Björn.png"
+      ],
       "birthday": "10/05/1984",
       "facts": []
     },
     {
       "name": "Zaki Ögmundsson",
       "nickname": "Zaki",
-      "image": "images/people/zaki.jpg",
+      "image": [
+        "images/people/animal_ai/Zaki.png",
+        "images/people/myndataka/zaki.jpg"
+      ],
       "birthday": "11/05/1986",
       "facts": []
     },
     {
       "name": "Einar Ársæll Hrafnsson",
       "nickname": "Einar Ársæll",
-      "image": "images/people/einar_a.jpg",
+      "image": [
+        "images/people/animal_ai/Einar Á.png",
+        "images/people/myndataka/einar_a.jpg"
+      ],
       "birthday": "15/05/1971",
       "facts": []
     },
     {
       "name": "Óli H. Konráðsson",
       "nickname": "Óli",
-      "image": "images/people/oli.jpg",
+      "image": [
+        "images/people/animal_ai/Óli.png",
+        "images/people/myndataka/oli.jpg",
+        "images/people/myndataka/oli_2.jpg"
+      ],
       "birthday": "18/05/1977",
       "facts": []
     },
     {
       "name": "Jenný Huyen Andradóttir",
       "nickname": "Jenný",
-      "image": "images/people/jenny.jpg",
+      "image": [
+        "images/people/animal_ai/Jenný.png",
+        "images/people/myndataka/jenny.jpg"
+      ],
       "birthday": "28/05/1990",
       "facts": []
     },
     {
       "name": "Arnaldur F. Axfjörð",
       "nickname": "Addi",
-      "image": "images/people/arnaldur.jpg",
+      "image": [
+        "images/people/animal_ai/Addi.png",
+        "images/people/myndataka/addi.jpg"
+      ],
       "birthday": "18/06/1960",
       "facts": []
     },
     {
       "name": "Ásdís Svava Hallgrímsdóttir",
       "nickname": "Ásdís",
-      "image": "images/people/asdis.jpg",
+      "image": [
+        "images/people/animal_ai/Ásdís.png"
+      ],
       "birthday": "27/06/1987",
       "facts": []
     },
     {
       "name": "Sigríður Sveinsdóttir",
-      "image": "images/people/sigridur.jpg",
+      "nickname": "Sigga",
+      "image": [
+        "images/people/animal_ai/Sigga.png",
+        "images/people/myndataka/sigga.jpg"
+      ],
       "birthday": "29/06/1991",
       "facts": []
     },
     {
       "name": "Þórir Magnússon",
       "nickname": "Þórir",
-      "image": "images/people/thorir.jpg",
+      "image": [
+        "images/people/animal_ai/Þórir.png",
+        "images/people/myndataka/thorir.jpg"
+      ],
       "birthday": "08/07/1977",
       "facts": []
     },
     {
       "name": "Kristján Björgvin Schram",
       "nickname": "Kristján",
-      "image": "images/people/kristjan.jpg",
+      "image": [
+        "images/people/animal_ai/Kristján.png",
+        "images/people/myndataka/kristjan.jpg"
+      ],
       "birthday": "23/07/1991",
       "facts": []
     },
     {
       "name": "Írena Rut Jónsdóttir",
       "nickname": "Írena",
-      "image": "images/people/irena.jpg",
+      "image": [
+        "images/people/animal_ai/Írena.png",
+        "images/people/myndataka/irena.jpg"
+      ],
       "birthday": "04/08/1998",
       "facts": []
     },
     {
       "name": "Magnea Sigríður Guðmundsdóttir",
       "nickname": "Magnea",
-      "image": "images/people/magnea.jpg",
+      "image": [
+        "images/people/animal_ai/Magnea.png"
+      ],
       "birthday": "05/08/1981",
       "facts": []
     },
     {
       "name": "Kristín Lind Steingrímsdóttir",
       "nickname": "Kristín",
-      "image": "images/people/kristin.jpg",
+      "image": [
+        "images/people/animal_ai/Kristín.png",
+        "images/people/myndataka/kristin.jpg",
+        "images/people/myndataka/kristin_2.jpg"
+      ],
       "birthday": "26/08/1975",
       "facts": []
     },
     {
       "name": "Erla Valgerður Birgisdóttir",
       "nickname": "Erla",
-      "image": "images/people/erla.jpg",
+      "image": [
+        "images/people/animal_ai/Erla.png",
+        "images/people/myndataka/erla.jpg"
+      ],
       "birthday": "31/08/1994",
       "facts": []
     },
     {
       "name": "Ingibjörg Erna Jónsdóttir",
       "nickname": "Ingibjörg",
-      "image": "images/people/ingibjorg.jpg",
+      "image": [
+        "images/people/animal_ai/Ingibjörg.png",
+        "images/people/myndataka/ingibjorg.jpg"
+      ],
       "birthday": "24/10/1981",
       "facts": []
     },
     {
       "name": "Erna Birgisdóttir",
       "nickname": "Erna",
-      "image": "images/people/erna.jpg",
+      "image": [
+        "images/people/animal_ai/Erna.png",
+        "images/people/myndataka/erna.jpg"
+      ],
       "birthday": "11/11/1986",
       "facts": []
     },
     {
       "name": "Ásmundur Sveinsson",
       "nickname": "Ási",
-      "image": "images/people/asi.jpg",
+      "image": [
+        "images/people/animal_ai/Ási.png",
+        "images/people/myndataka/asi.jpg"
+      ],
       "birthday": "22/11/1985",
       "facts": []
     },
     {
       "name": "Tanja Kristín Leifsdóttir",
       "nickname": "Tanja",
-      "image": "images/people/tanja.jpg",
+      "image": [
+        "images/people/animal_ai/Tanja.png",
+        "images/people/myndataka/tanja.jpg"
+      ],
       "birthday": "27/11/1989",
       "facts": []
     },
     {
       "name": "Vala Kristín Theodórsdóttir",
       "nickname": "Vala",
-      "image": "images/people/vala.jpg",
+      "image": [
+        "images/people/animal_ai/Vala.png",
+        "images/people/myndataka/vala.jpg",
+        "images/people/myndataka/vala_2.jpg"
+      ],
       "birthday": "14/12/1998",
       "facts": []
     },
     {
       "name": "Elvar Bjarki Böðvarsson",
       "nickname": "Elvar",
-      "image": "images/people/elvar.jpg",
+      "image": [
+        "images/people/animal_ai/Elvar.png",
+        "images/people/myndataka/elvar.jpg"
+      ],
       "birthday": "18/12/1979",
       "facts": []
     }

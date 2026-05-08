@@ -3,6 +3,7 @@
 const FACT_ICONS  = ['🎈', '🌟', '🎯', '🚀', '💫'];
 let factRotationInterval = null;
 let imageRotationInterval = null;
+let personImageIntervals = [];
 
 function shuffle(arr) {
   const a = [...arr];
@@ -200,6 +201,30 @@ function startEventImageRotation(images) {
   }, 5 * 60 * 1000);
 }
 
+function startPersonImageRotation(images, personIdx) {
+  let idx = 0;
+  let activeId = `person-img-a-${personIdx}`;
+  let hiddenId = `person-img-b-${personIdx}`;
+
+  const interval = setInterval(() => {
+    idx = (idx + 1) % images.length;
+    const hidden = document.getElementById(hiddenId);
+    if (!hidden) { clearInterval(interval); return; }
+
+    hidden.onload = () => {
+      const active = document.getElementById(activeId);
+      const h = document.getElementById(hiddenId);
+      if (!active || !h) return;
+      h.style.opacity = '1';
+      active.style.opacity = '0';
+      [activeId, hiddenId] = [hiddenId, activeId];
+    };
+    hidden.src = images[idx];
+  }, 5 * 60 * 1000);
+
+  personImageIntervals.push(interval);
+}
+
 function preloadImages(urls) {
   urls.forEach(url => { const img = new Image(); img.src = url; });
 }
@@ -241,6 +266,9 @@ function renderEvent(event) {
 /* ── Rendering ───────────────────────────────────────────── */
 
 function renderBirthday(people, confetti) {
+  personImageIntervals.forEach(clearInterval);
+  personImageIntervals = [];
+
   document.body.className = 'mode-birthday';
   confetti.start();
 
@@ -250,29 +278,42 @@ function renderBirthday(people, confetti) {
         🎂 Til hamingju með daginn! 🎂
       </div>
       <div class="people-container">
-        ${people.map(p => `
+        ${people.map((p, i) => {
+          const imgs = Array.isArray(p.image) ? p.image : [p.image];
+          return `
           <div class="person-card${p.facts && p.facts.length > 0 ? '' : ' no-facts'}">
             <div class="photo-section">
-              <img class="person-photo" src="${p.image}" alt="${p.nickname}">
-              <div class="person-name">${p.nickname}</div>
+              <div class="photo-frame">
+                <img id="person-img-a-${i}" class="person-photo" src="${imgs[0]}" alt="${p.nickname ?? p.name}">
+                <img id="person-img-b-${i}" class="person-photo" src="" alt="${p.nickname ?? p.name}" style="opacity:0">
+              </div>
+              <div class="person-name">${p.nickname ?? p.name}</div>
               <div class="person-date">${prettyDate(p.birthday)}</div>
             </div>
             ${p.facts && p.facts.length > 0 ? `
               <div class="facts-section">
                 <div class="facts-label">Skemmtilegar staðreyndir</div>
-                ${p.facts.slice(0, 5).map((fact, i) => `
+                ${p.facts.slice(0, 5).map((fact, fi) => `
                   <div class="fact-card">
-                    <span class="fact-icon">${FACT_ICONS[i]}</span>
+                    <span class="fact-icon">${FACT_ICONS[fi]}</span>
                     <span>${fact}</span>
                   </div>
                 `).join('')}
               </div>
             ` : ''}
           </div>
-        `).join('')}
+        `}).join('')}
       </div>
     </div>
   `;
+
+  people.forEach((p, i) => {
+    const imgs = Array.isArray(p.image) ? p.image : [p.image];
+    if (imgs.length > 1) {
+      preloadImages(imgs);
+      startPersonImageRotation(imgs, i);
+    }
+  });
 }
 
 function renderDefault() {
@@ -325,7 +366,7 @@ function renderUpcomingWidget(people) {
     <div class="upcoming-title">Nýleg og væntanleg afmæli</div>
     ${list.map(p => `
       <div class="upcoming-person">
-        <img class="upcoming-photo" src="${p.image}" alt="${p.nickname ?? p.name}">
+        <img class="upcoming-photo" src="${Array.isArray(p.image) ? p.image[0] : p.image}" alt="${p.nickname ?? p.name}">
         <div class="upcoming-info">
           <div class="upcoming-name">${p.nickname ?? p.name}</div>
           <div class="upcoming-date">${offsetLabel(p.daysOffset)} · ${prettyDate(p.birthday).trim()}</div>

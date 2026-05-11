@@ -8,7 +8,7 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Nunito', 'Noto Color Emoji', sans-serif;
 }
 
 /* ── Birthday mode: shifting party gradient ─────────────── */
@@ -72,7 +72,7 @@ body.mode-default {
 /* Header */
 .birthday-header {
   text-align: center;
-  font-family: 'Paytone One', sans-serif;
+  font-family: 'Paytone One', 'Noto Color Emoji', sans-serif;
   font-size: clamp(2.8rem, 6vw, 8.5rem);
   color: #fff;
   text-shadow:
@@ -168,7 +168,7 @@ body.mode-default {
 
 .person-date {
   font-family: 'Nunito', sans-serif;
-  font-size: clamp(0.85rem, 1.2vw, 1.4rem);
+  font-size: clamp(0.85rem, 3.2vw, 2.4rem);
   font-weight: 800;
   color: #fff;
   background: linear-gradient(120deg, #FF6B6B, #FF9F43);

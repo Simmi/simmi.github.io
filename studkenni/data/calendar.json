@@ -194,7 +194,7 @@
       ],
       "birthday": "28/05/1990",
       "facts": [],
-      "cakes": []
+      "cakes": [2026]
     },
     {
       "name": "Arnaldur F. Axfjörð",
@@ -365,7 +365,7 @@
   "events": [
     {
       "title": "Árshátíð Auðkennis",
-      "date": "2026-05-15",
+      "date": "15/05/2026",
       "promo_days_before": 14,
       "graphic": [
         "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/4f/c2/7d/hotel-riu-plaza-berlin.jpg?w=1400&h=800&s=1",
@@ -398,5 +398,14 @@
       ]
     }
   ],
-  "cakes_since": 2026
+  "cakes_since": 2026,
+  "highlights": [
+    {
+      "date": "29/05/2026",
+      "title": "Síðasti dagur Ásdísar fyrir fjölgun! 🍼",
+      "text": "Í dag fer Ásdís í fæðingarorlof. Við óskum henni og fjölskyldunni góðs gengis og hlökkum til að sjá hana úthvílda koma í heimsókn með nýja fjölskyldumeðliminn! 👶",
+      "image": "\uD83E\uDD30\uD83C\uDFFC"
+    }
+
+  ]
 }

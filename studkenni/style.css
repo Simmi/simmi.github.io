@@ -419,6 +419,109 @@ body.mode-event {
 }
 
 /* ══════════════════════════════════════════════════════════
+   HIGHLIGHT / "Í DAG" SCREEN
+   ══════════════════════════════════════════════════════════ */
+
+body.mode-highlight {
+  background: linear-gradient(-45deg, #FFF7ED, #FEF3C7, #FCE7F3, #F3E8FF);
+  background-size: 400% 400%;
+  animation: gradientFlow 18s ease infinite;
+}
+
+.highlight-screen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5vh;
+}
+
+.highlight-header {
+  text-align: center;
+  font-family: 'Paytone One', 'Noto Color Emoji', sans-serif;
+  font-size: clamp(2.8rem, 6vw, 8.5rem);
+  color: #92400E;
+  text-shadow:
+    0 4px 0 rgba(0, 0, 0, 0.08),
+    0 8px 30px rgba(251, 191, 36, 0.35);
+  letter-spacing: -0.01em;
+  flex-shrink: 0;
+  animation: headerPop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+.highlight-card {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 4vw;
+  background: rgba(255, 255, 255, 0.90);
+  border-radius: 2.5rem;
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  padding: 4vh 5vw;
+  overflow: hidden;
+  animation: cardRise 0.9s cubic-bezier(0.34, 1.4, 0.64, 1) 0.25s both;
+}
+
+.highlight-card.no-image {
+  justify-content: center;
+  text-align: center;
+}
+
+.highlight-image-wrap {
+  flex-shrink: 0;
+  width: clamp(180px, 28vw, 480px);
+  height: clamp(180px, 28vw, 480px);
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+  animation: slideFromLeft 0.7s ease 0.55s both;
+}
+
+.highlight-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.highlight-emoji {
+  flex-shrink: 0;
+  font-size: clamp(8rem, 18vw, 24rem);
+  font-family: 'Noto Color Emoji', sans-serif;
+  line-height: 1;
+  text-align: center;
+  animation: slideFromLeft 0.7s ease 0.55s both;
+}
+
+.highlight-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5vh;
+  min-width: 0;
+}
+
+.highlight-title {
+  font-family: 'Paytone One', 'Noto Color Emoji', sans-serif;
+  font-size: clamp(2rem, 4.5vw, 6.5rem);
+  color: #1a1a2e;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  animation: slideFromRight 0.5s cubic-bezier(0.34, 1.4, 0.64, 1) 0.6s both;
+}
+
+.highlight-text {
+  font-size: clamp(1.1rem, 2.2vw, 3rem);
+  font-weight: 700;
+  line-height: 1.5;
+  color: #374151;
+  animation: slideFromRight 0.5s cubic-bezier(0.34, 1.4, 0.64, 1) 0.75s both;
+}
+
+/* ══════════════════════════════════════════════════════════
    DEFAULT / LOGO SCREEN
    ══════════════════════════════════════════════════════════ */
 
@@ -591,6 +694,28 @@ body.mode-birthday .upcoming-widget {
 
   .fact-card {
     font-size: clamp(0.9rem, 3.5vw, 1.2rem);
+  }
+
+  /* Highlight */
+  .highlight-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1.25rem;
+    gap: 1.5rem;
+  }
+
+  .highlight-image-wrap {
+    width: clamp(120px, 40vw, 200px);
+    height: clamp(120px, 40vw, 200px);
+    border-radius: 50%;
+  }
+
+  .highlight-title {
+    font-size: clamp(1.6rem, 7vw, 2.5rem);
+  }
+
+  .highlight-text {
+    font-size: clamp(0.95rem, 4vw, 1.3rem);
   }
 
   /* Event */

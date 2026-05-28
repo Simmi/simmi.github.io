@@ -136,7 +136,8 @@ function makeConfetti(canvas) {
 function daysUntil(dateStr) {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
-  const target = new Date(dateStr);
+  const [dd, mm, yyyy] = dateStr.split('/');
+  const target = new Date(Number(yyyy), Number(mm) - 1, Number(dd));
   target.setHours(0, 0, 0, 0);
   return Math.round((target - today) / (1000 * 60 * 60 * 24));
 }
@@ -334,6 +335,32 @@ function renderBirthday(people, confetti, cakesSince) {
   });
 }
 
+function renderHighlight(highlight) {
+  document.body.className = 'mode-highlight';
+  const img    = highlight.image;
+  const isPath = img && img.includes('/');
+  const isEmoji = img && !isPath;
+
+  document.getElementById('app').innerHTML = `
+    <div class="highlight-screen">
+      <div class="highlight-header">✨ Í dag ✨</div>
+      <div class="highlight-card${img ? '' : ' no-image'}">
+        ${isPath ? `
+          <div class="highlight-image-wrap">
+            <img class="highlight-img" src="${img}" alt="${highlight.title}">
+          </div>
+        ` : isEmoji ? `
+          <div class="highlight-emoji">${img}</div>
+        ` : ''}
+        <div class="highlight-content">
+          <div class="highlight-title">${highlight.title}</div>
+          <div class="highlight-text">${highlight.text}</div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
 function renderDefault() {
   document.body.className = 'mode-default';
   document.getElementById('app').innerHTML = `
@@ -412,12 +439,22 @@ async function init() {
   const confetti = makeConfetti(canvas);
 
   try {
-    const { people, events = [], cakes_since: cakesSince = 2026 } = await fetch('data/calendar.json').then(r => r.json());
-    const dates      = getRelevantDates();
-    const celebrants = people.filter(p => dates.includes(birthdayToMMDD(p.birthday)));
+    const { people, events = [], highlights = [], cakes_since: cakesSince = 2026 } = await fetch('data/calendar.json').then(r => r.json());
+    const dates         = getRelevantDates();
+    const celebrants    = people.filter(p => dates.includes(birthdayToMMDD(p.birthday)));
+    const now    = new Date();
+    const todayDD = String(now.getDate()).padStart(2, '0');
+    const todayMM = String(now.getMonth() + 1).padStart(2, '0');
+    const todayYY = String(now.getFullYear());
+    const todayHighlights = highlights.filter(h => {
+      const [dd, mm, yyyy] = h.date.split('/');
+      return dd === todayDD && mm === todayMM && (!yyyy || yyyy === todayYY);
+    });
 
     if (celebrants.length > 0) {
       renderBirthday(celebrants, confetti, cakesSince);
+    } else if (todayHighlights.length > 0) {
+      renderHighlight(todayHighlights[0]);
     } else {
       const activeEvents = getActiveEvents(events);
       if (activeEvents.length > 0) {

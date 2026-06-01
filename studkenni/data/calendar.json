@@ -15,7 +15,7 @@
         "images/people/animal_ai/Jonas.png"
       ],
       "birthday": "24/01/1963",
-      "facts": [],
+      "facts": ["Stofnaði skóla sem núna hefur á fjórða þúsund nemenda", "Er flóttamaður – þurfti að flýja heimili sitt og skilja allt eftir"],
       "cakes": []
     },
     {
@@ -26,7 +26,7 @@
         "images/people/animal_ai/Bjossi.png"
       ],
       "birthday": "25/01/1967",
-      "facts": [],
+      "facts": ["Hefur verið svæfður oftar en 8x", "Hefur átt heima í fleiri en 14 húsum"],
       "cakes": []
     },
     {
@@ -46,7 +46,7 @@
         "images/people/animal_ai/Einar G.png"
       ],
       "birthday": "29/01/1995",
-      "facts": [],
+      "facts": ["Er með köfunarréttindi", "Kann ekki að smella fingrum"],
       "cakes": []
     },
     {
@@ -70,7 +70,7 @@
         "images/people/animal_ai/Thorunn.png"
       ],
       "birthday": "01/03/1979",
-      "facts": [],
+      "facts": ["Átti kött sem skeit í gullfiskabúrið hennar og drap fiskana af yfirlögðu ráði"],
       "cakes": []
     },
     {
@@ -81,7 +81,7 @@
         "images/people/animal_ai/Simmi.png"
       ],
       "birthday": "02/03/1980",
-      "facts": [],
+      "facts": ["Flutti að heiman 16 ára", "Hefur verið í flugvél þar sem kviknaði í hreyfli í miðju flugi"],
       "cakes": []
     },
     {
@@ -102,7 +102,7 @@
         "images/people/animal_ai/Snorri.png"
       ],
       "birthday": "22/04/1997",
-      "facts": [],
+      "facts": ["Var Íslandsmeistari í að snúa körfubolta á puttanum", "Er númer eitt allra Íslendinga í íþrótt sem keppt er í á Ólympíuleikunum"],
       "cakes": []
     },
     {
@@ -138,7 +138,7 @@
         "images/people/animal_ai/Klara.png"
       ],
       "birthday": "10/05/1993",
-      "facts": [],
+      "facts": ["Hefur misst bílprófið", "Baðaði einu sinni hamstur með klósetthreinsi"],
       "cakes": []
     },
     {
@@ -159,7 +159,10 @@
         "images/people/animal_ai/Zaki.png"
       ],
       "birthday": "11/05/1986",
-      "facts": [],
+      "facts": [
+        "Er margfaldur Íslands- og Bikarmeistari í körfu með Ungmennafélagi Njarðvíkur",
+        "Hefur hitað upp fyrir Herbert Guðmunds á tónleikum hjá honum"
+      ],
       "cakes": []
     },
     {
@@ -170,7 +173,10 @@
         "images/people/animal_ai/Einar A.png"
       ],
       "birthday": "15/05/1971",
-      "facts": [],
+      "facts": [
+        "Hefur valdið því að Nýdönsk var púuð af sviði",
+        "Hefur tekið þátt í tískusýningu íklæddur sundbol og sundhettu"
+      ],
       "cakes": []
     },
     {
@@ -182,7 +188,10 @@
         "images/people/animal_ai/Oli.png"
       ],
       "birthday": "18/05/1977",
-      "facts": [],
+      "facts": [
+        "Getur gert öldur með maganum",
+        "Hefur séð Yes Minister, allar seríur, oftar en 10x"
+      ],
       "cakes": []
     },
     {
@@ -193,7 +202,10 @@
         "images/people/animal_ai/Jenny.png"
       ],
       "birthday": "28/05/1990",
-      "facts": [],
+      "facts": [
+        "Drakk kók úr pela þegar hún var 4 ára",
+        "Er félagsfræðingur"
+      ],
       "cakes": [2026]
     },
     {
@@ -204,7 +216,10 @@
         "images/people/animal_ai/Addi.png"
       ],
       "birthday": "18/06/1960",
-      "facts": [],
+      "facts": [
+        "Hefur aldrei komið til Tenerife",
+        "Hefur verið með fótinn í gipsi upp að nára í 14 vikur eftir beinbrot"
+      ],
       "cakes": []
     },
     {
@@ -225,7 +240,10 @@
         "images/people/animal_ai/Sigga.png"
       ],
       "birthday": "29/06/1991",
-      "facts": [],
+      "facts": [
+        "Bjó einu sinni í Bandaríkjunum",
+        "Fór til þriggja landa árið 2023"
+      ],
       "cakes": []
     },
     {
@@ -258,7 +276,10 @@
         "images/people/animal_ai/Irena.png"
       ],
       "birthday": "04/08/1998",
-      "facts": [],
+      "facts": [
+        "Hefur farið í lýtaaðgerð á andliti",
+        "Var í kór af því amma hennar neyddi hana til þess"
+      ],
       "cakes": []
     },
     {
@@ -280,7 +301,10 @@
         "images/people/animal_ai/Kristin.png"
       ],
       "birthday": "26/08/1975",
-      "facts": [],
+      "facts": [
+        "Hefur sent lögregluna á gamla konu með göngugrind",
+        "Er í kvennahópi sem kallar sig kúlurassar"
+      ],
       "cakes": []
     },
     {
@@ -291,7 +315,10 @@
         "images/people/animal_ai/Erla.png"
       ],
       "birthday": "31/08/1994",
-      "facts": [],
+      "facts": [
+        "Var með spangir",
+        "Æfði fótbolta í 14 ár"
+      ],
       "cakes": []
     },
     {
@@ -302,7 +329,10 @@
         "images/people/animal_ai/Ingibjorg.png"
       ],
       "birthday": "24/10/1981",
-      "facts": [],
+      "facts": [
+        "Þolir ekki útilegur",
+        "Var ljósálfur"
+      ],
       "cakes": []
     },
     {
@@ -313,7 +343,10 @@
         "images/people/animal_ai/Erna.png"
       ],
       "birthday": "11/11/1986",
-      "facts": [],
+      "facts": [
+        "Er Íslandsmeistari í innanhússfótbolta",
+        "Hefur rennitæklað rjúpu"
+      ],
       "cakes": []
     },
     {
@@ -335,7 +368,10 @@
         "images/people/animal_ai/Tanja.png"
       ],
       "birthday": "27/11/1989",
-      "facts": [],
+      "facts": [
+        "Er með lyftarapróf",
+        "Vann næturvinnu um helgar í miðbænum sem unglingur"
+      ],
       "cakes": []
     },
     {
@@ -347,7 +383,10 @@
         "images/people/animal_ai/Vala.png"
       ],
       "birthday": "14/12/1998",
-      "facts": [],
+      "facts": [
+        "Hennar guilty pleasure eru dýralífsþættirnir hans David Attenborough",
+        "Það stóð Vala Svala aftan á keppnistreyjunni hennar þegar hún var yngri"
+      ],
       "cakes": []
     },
     {

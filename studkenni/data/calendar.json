@@ -440,10 +440,24 @@
       "title": "HM tippleikur",
       "date": "11/06/2026",
       "promo_days_before": 14,
+      "priority": 2,
       "graphic": [
         "https://digitalhub.fifa.com/transform/ac004beb-13cb-4cb9-923b-dc5f030eb34f/Detail-Image-03_3200x1800?&io=transform:fill,width:1366&quality=75"
       ],
-      "description": "Nú er komið að NÆSTA tippleik, fyrir HM karla í fótbolta sem hefst 11. júní nk. \n\n Buy-in er 2000 kr - verðlaun fyrir efstu 3 sætin\uD83E\uDD47\uD83E\uDD48\uD83E\uDD49 \n \n KOMA SVO - ALLIR MEÐ!!! ",
+      "description": "Nú er komið að NÆSTA tippleik, fyrir HM karla í fótbolta sem hefst 11. júní nk. \n\n Buy-in er 2000 kr - verðlaun fyrir efstu 3 sætin\uD83E\uDD47\uD83E\uDD48\uD83E\uDD49 \n \n KOMA SVO - ÖLL MEÐ!!! ",
+      "facts": []
+    },
+    {
+      "title": "Sumargleði",
+      "date": "12/06/2026",
+      "color_copy": ["#63BFD3", "#F0DD76"],
+      "color": "#63BFD3",
+      "promo_days_before": 14,
+      "priority": 1,
+      "graphic": [
+        "images/events/sumargledi_2026_header.png"
+      ],
+      "description": "Haldin í Oche í Kringlunni. \n \uD83C\uDF54 Matur og drykkur \uD83C\uDF79 \n \uD83C\uDFAF Píla og karaoke \uD83C\uDFA4",
       "facts": []
     }
   ],

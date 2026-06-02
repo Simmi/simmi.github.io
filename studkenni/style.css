@@ -266,6 +266,84 @@ body.mode-event {
   gap: 0;
 }
 
+/* Split layout: main (2/3) + minor (1/3) side by side */
+.event-screen.split {
+  flex-direction: row;
+  gap: 1.5vw;
+  padding: 2vh 2vw;
+}
+
+.event-main {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.event-screen:not(.split) .event-main {
+  flex: 1;
+}
+
+.event-minor {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  min-width: 0;
+  animation: slideFromRight 0.6s ease 0.4s both;
+}
+
+.event-minor-graphic {
+  flex: none;
+  width: 100%;
+  height: 22vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.event-minor-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.85;
+}
+
+.event-minor-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vh;
+  padding: 2vh 2.5vw;
+  color: #fff;
+  overflow-y: auto;
+}
+
+.event-minor-title {
+  font-family: 'Paytone One', sans-serif;
+  font-size: clamp(1.4rem, 2.8vw, 4rem);
+  line-height: 1.1;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+.event-minor-countdown {
+  font-family: 'Paytone One', sans-serif;
+  font-size: clamp(1.1rem, 2vw, 3rem);
+  background: linear-gradient(120deg, #FECA57, #FF9F43);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.event-minor-description {
+  font-size: clamp(0.85rem, 1.4vw, 1.8rem);
+  font-weight: 600;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.75);
+}
+
 .event-graphic {
   position: relative;
   flex: none;

@@ -142,12 +142,13 @@ function daysUntil(dateStr) {
   return Math.round((target - today) / (1000 * 60 * 60 * 24));
 }
 
-// Returns events whose promo window is active today, soonest first.
+// Returns events whose promo window is active today.
+// Sorted by priority (1=main first) then by days remaining.
 function getActiveEvents(events) {
   return events
-    .map(e => ({ ...e, days: daysUntil(e.date) }))
+    .map(e => ({ ...e, days: daysUntil(e.date), priority: e.priority ?? 1 }))
     .filter(e => e.days >= 0 && e.days <= e.promo_days_before)
-    .sort((a, b) => a.days - b.days);
+    .sort((a, b) => a.priority - b.priority || a.days - b.days);
 }
 
 function countdownText(days) {
@@ -230,34 +231,59 @@ function preloadImages(urls) {
   urls.forEach(url => { const img = new Image(); img.src = url; });
 }
 
-function renderEvent(event) {
-  const images = Array.isArray(event.graphic) ? event.graphic : [event.graphic];
+function nl2br(str) { return (str || '').replace(/\n/g, '<br>'); }
+
+function eventGradient(color) {
+  if (!color) return null;
+  if (Array.isArray(color)) return `linear-gradient(135deg, ${color[0]} 0%, ${color[1]} 100%)`;
+  return `linear-gradient(135deg, #0a0814 0%, ${color} 55%, #0d0d1a 100%)`;
+}
+
+function renderEvent(main, minor = null) {
+  const images = Array.isArray(main.graphic) ? main.graphic : [main.graphic];
   preloadImages(images);
 
   document.body.className = 'mode-event';
+  document.body.style.background = eventGradient(main.color) ?? '';
   document.getElementById('app').innerHTML = `
-    <div class="event-screen">
-      <div class="event-graphic">
-        <img id="event-img-a" class="event-img" src="${images[0]}" alt="${event.title}">
-        <img id="event-img-b" class="event-img" src="" alt="${event.title}" style="opacity:0">
+    <div class="event-screen${minor ? ' split' : ''}">
+      <div class="event-main">
+        <div class="event-graphic">
+          <img id="event-img-a" class="event-img" src="${images[0]}" alt="${main.title}">
+          <img id="event-img-b" class="event-img" src="" alt="${main.title}" style="opacity:0">
+        </div>
+        <div class="event-info">
+          <div class="event-label">Væntanlegt</div>
+          <div class="event-title">${main.title}</div>
+          <div class="event-countdown">${countdownText(main.days)}</div>
+          <div class="event-description">${nl2br(main.description)}</div>
+          ${main.facts && main.facts.length > 0 ? `
+            <div class="event-fact-section">
+              <div class="event-fact-label">Vissir þú að...</div>
+              <div id="event-fact" class="event-fact"></div>
+            </div>
+          ` : ''}
+        </div>
       </div>
-      <div class="event-info">
-        <div class="event-label">Væntanlegt</div>
-        <div class="event-title">${event.title}</div>
-        <div class="event-countdown">${countdownText(event.days)}</div>
-        <div class="event-description">${event.description}</div>
-        
-        ${event.facts && event.facts.length > 0 ? `
-          <div class="event-fact-section">
-            <div class="event-fact-label">Vissir þú að...</div>
-            <div id="event-fact" class="event-fact"></div>
+      ${minor ? (() => {
+        const mImgs = Array.isArray(minor.graphic) ? minor.graphic : [minor.graphic];
+        return `
+        <div class="event-minor">
+          <div class="event-minor-graphic">
+            <img class="event-minor-img" src="${mImgs[0]}" alt="${minor.title}">
           </div>
-        ` : ''}
-      </div>
+          <div class="event-minor-info">
+            <div class="event-label">Einnig væntanlegt</div>
+            <div class="event-minor-title">${minor.title}</div>
+            <div class="event-minor-countdown">${countdownText(minor.days)}</div>
+            ${minor.description ? `<div class="event-minor-description">${nl2br(minor.description)}</div>` : ''}
+          </div>
+        </div>`;
+      })() : ''}
     </div>
   `;
-  if (event.facts && event.facts.length > 0) {
-    startEventFactRotation(event.facts);
+  if (main.facts && main.facts.length > 0) {
+    startEventFactRotation(main.facts);
   }
   if (images.length > 1) {
     startEventImageRotation(images);
@@ -287,6 +313,7 @@ function renderBirthday(people, confetti, cakesSince) {
   personImageIntervals.forEach(clearInterval);
   personImageIntervals = [];
 
+  document.body.style.background = '';
   document.body.className = 'mode-birthday';
   confetti.start();
 
@@ -336,6 +363,7 @@ function renderBirthday(people, confetti, cakesSince) {
 }
 
 function renderHighlight(highlight) {
+  document.body.style.background = '';
   document.body.className = 'mode-highlight';
   const img    = highlight.image;
   const isPath = img && img.includes('/');
@@ -362,6 +390,7 @@ function renderHighlight(highlight) {
 }
 
 function renderDefault() {
+  document.body.style.background = '';
   document.body.className = 'mode-default';
   document.getElementById('app').innerHTML = `
     <div class="logo-screen">
@@ -458,7 +487,9 @@ async function init() {
     } else {
       const activeEvents = getActiveEvents(events);
       if (activeEvents.length > 0) {
-        renderEvent(activeEvents[0]);
+        const minor = activeEvents.length > 1 && activeEvents[1].priority > activeEvents[0].priority
+          ? activeEvents[1] : null;
+        renderEvent(activeEvents[0], minor);
       } else {
         renderDefault();
       }

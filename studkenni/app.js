@@ -492,13 +492,11 @@ function renderUpcomingWidget(people) {
   document.body.appendChild(widget);
 }
 
-/* ── Midnight auto-reload ─────────────────────────────────── */
-// The page auto-reloads at midnight so it picks up the new
-// day's birthdays without anyone needing to touch it.
-function scheduleMidnightReload() {
-  const now      = new Date();
-  const midnight = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
-  setTimeout(() => location.reload(), midnight - now);
+/* ── Hourly auto-reload ───────────────────────────────────── */
+// Reloads every hour so pushed changes and new data are
+// picked up without anyone needing to touch the TV.
+function scheduleHourlyReload() {
+  setInterval(() => location.reload(), 60 * 60 * 1000);
 }
 
 /* ── Bootstrap ───────────────────────────────────────────── */
@@ -551,7 +549,7 @@ async function init() {
     renderDefault();
   }
 
-  scheduleMidnightReload();
+  scheduleHourlyReload();
 }
 
 init();

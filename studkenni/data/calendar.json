@@ -464,6 +464,21 @@
     }
   ],
   "cakes_since": 2026,
+  "cafeterias": [
+    { "id": "intro", "title": "Intro", "graphic": "images/events/intro_logo.png" }
+  ],
+  "menu": [
+    {
+      "date": "04/06/2026",
+      "cafeteria": "intro",
+      "items": "Rjómalöguð rósakálssúpa (V)\nPiri Piri kjúklingur með aioli sósu og patatas bravas\nPiri Piri Oumph \"rif\" með aioli sósu og patatas bravas (V)\nFerskt grískt salat med ólífum, avókadó og sólþurrkuðum tómötum (V)"
+    },
+    {
+      "date": "04/07/2026",
+      "cafeteria": "intro",
+      "items": "Karrý grænmetissúpa (V)\nMexikóskur kjúklingaborgari með guacamole, salsa og frönskum kartöflur\nMexíkóskur grænmetisborgari med guacamole, salsa og frönskum kartöflum\nGranat epla og spergilkálssalat (V)\nÓmótstæðileg eplakaka með þeyttum rjóma"
+    }
+  ],
   "highlights": [
     {
       "date": "29/05/2026",

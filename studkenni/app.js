@@ -3,6 +3,7 @@
 const FACT_ICONS  = ['🎈', '🌟', '🎯', '🚀', '💫'];
 let factRotationInterval = null;
 let imageRotationInterval = null;
+let secondaryRotationInterval = null;
 let personImageIntervals = [];
 
 function shuffle(arr) {
@@ -239,14 +240,67 @@ function eventGradient(color) {
   return `linear-gradient(135deg, #0a0814 0%, ${color} 55%, #0d0d1a 100%)`;
 }
 
-function renderEvent(main, minor = null) {
+function secondaryEventHtml(event) {
+  const imgs = Array.isArray(event.graphic) ? event.graphic : [event.graphic];
+  return `
+    <div class="event-minor-graphic">
+      <img class="event-minor-img" src="${imgs[0]}" alt="${event.title}">
+    </div>
+    <div class="event-minor-info">
+      <div class="event-label">Einnig væntanlegt</div>
+      <div class="event-minor-title">${event.title}</div>
+      <div class="event-minor-countdown">${countdownText(event.days)}</div>
+      ${event.description ? `<div class="event-minor-description">${nl2br(event.description)}</div>` : ''}
+    </div>`;
+}
+
+function secondaryMenuHtml(cafeteria) {
+  const items = cafeteria.items.split('\n').map(s => s.trim()).filter(Boolean);
+  return `
+    ${cafeteria.graphic ? `
+      <div class="event-minor-graphic">
+        <img class="event-minor-img" src="${cafeteria.graphic}" alt="${cafeteria.title ?? ''}">
+      </div>` : ''}
+    <div class="event-minor-info event-minor-info--menu">
+      <div class="event-label">Í matinn 🍽️</div>
+      ${cafeteria.title ? `<div class="event-minor-title">${cafeteria.title}</div>` : ''}
+      <ul class="event-menu-list">
+        ${items.map(item => `<li class="event-menu-item">${item}</li>`).join('')}
+      </ul>
+    </div>`;
+}
+
+function startSecondaryRotation(panels) {
+  if (secondaryRotationInterval) clearInterval(secondaryRotationInterval);
+  let idx = 0;
+  secondaryRotationInterval = setInterval(() => {
+    idx = (idx + 1) % panels.length;
+    const el = document.getElementById('secondary-panel');
+    if (!el) { clearInterval(secondaryRotationInterval); return; }
+    el.style.opacity = '0';
+    setTimeout(() => {
+      const current = document.getElementById('secondary-panel');
+      if (!current) return;
+      current.innerHTML = panels[idx];
+      current.style.opacity = '1';
+    }, 600);
+  }, 60 * 1000);
+}
+
+// secondaries: array of {type: 'event'|'menu', data}
+function renderEvent(main, secondaries = []) {
   const images = Array.isArray(main.graphic) ? main.graphic : [main.graphic];
   preloadImages(images);
+
+  const panels = secondaries.map(s =>
+    s.type === 'menu' ? secondaryMenuHtml(s.data) : secondaryEventHtml(s.data)
+  );
+  const hasSecondary = panels.length > 0;
 
   document.body.className = 'mode-event';
   document.body.style.background = eventGradient(main.color) ?? '';
   document.getElementById('app').innerHTML = `
-    <div class="event-screen${minor ? ' split' : ''}">
+    <div class="event-screen${hasSecondary ? ' split' : ''}">
       <div class="event-main">
         <div class="event-graphic">
           <img id="event-img-a" class="event-img" src="${images[0]}" alt="${main.title}">
@@ -265,29 +319,15 @@ function renderEvent(main, minor = null) {
           ` : ''}
         </div>
       </div>
-      ${minor ? (() => {
-        const mImgs = Array.isArray(minor.graphic) ? minor.graphic : [minor.graphic];
-        return `
-        <div class="event-minor">
-          <div class="event-minor-graphic">
-            <img class="event-minor-img" src="${mImgs[0]}" alt="${minor.title}">
-          </div>
-          <div class="event-minor-info">
-            <div class="event-label">Einnig væntanlegt</div>
-            <div class="event-minor-title">${minor.title}</div>
-            <div class="event-minor-countdown">${countdownText(minor.days)}</div>
-            ${minor.description ? `<div class="event-minor-description">${nl2br(minor.description)}</div>` : ''}
-          </div>
-        </div>`;
-      })() : ''}
+      ${hasSecondary ? `
+        <div class="event-minor" id="secondary-panel" style="transition: opacity 0.6s ease;">
+          ${panels[0]}
+        </div>` : ''}
     </div>
   `;
-  if (main.facts && main.facts.length > 0) {
-    startEventFactRotation(main.facts);
-  }
-  if (images.length > 1) {
-    startEventImageRotation(images);
-  }
+  if (main.facts && main.facts.length > 0) startEventFactRotation(main.facts);
+  if (images.length > 1) startEventImageRotation(images);
+  if (panels.length > 1) startSecondaryRotation(panels);
 }
 
 /* ── Rendering ───────────────────────────────────────────── */
@@ -468,7 +508,7 @@ async function init() {
   const confetti = makeConfetti(canvas);
 
   try {
-    const { people, events = [], highlights = [], cakes_since: cakesSince = 2026 } = await fetch('data/calendar.json').then(r => r.json());
+    const { people, events = [], highlights = [], cafeterias = [], menu = [], cakes_since: cakesSince = 2026 } = await fetch('data/calendar.json').then(r => r.json());
     const dates         = getRelevantDates();
     const celebrants    = people.filter(p => dates.includes(birthdayToMMDD(p.birthday)));
     const now    = new Date();
@@ -487,9 +527,19 @@ async function init() {
     } else {
       const activeEvents = getActiveEvents(events);
       if (activeEvents.length > 0) {
-        const minor = activeEvents.length > 1 && activeEvents[1].priority > activeEvents[0].priority
-          ? activeEvents[1] : null;
-        renderEvent(activeEvents[0], minor);
+        const secondaries = [];
+        if (activeEvents.length > 1 && activeEvents[1].priority > activeEvents[0].priority)
+          secondaries.push({ type: 'event', data: activeEvents[1] });
+        const cafeteriaMap = Object.fromEntries(cafeterias.map(c => [c.id, c]));
+        const todayMenuEntries = menu.filter(m => {
+          const [dd, mm, yyyy] = m.date.split('/');
+          return dd === todayDD && mm === todayMM && (!yyyy || yyyy === todayYY);
+        });
+        todayMenuEntries.forEach(entry => {
+          const cafDef = cafeteriaMap[entry.cafeteria] ?? cafeterias[0] ?? {};
+          secondaries.push({ type: 'menu', data: { ...cafDef, items: entry.items } });
+        });
+        renderEvent(activeEvents[0], secondaries);
       } else {
         renderDefault();
       }

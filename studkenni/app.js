@@ -533,10 +533,12 @@ async function init() {
           const [dd, mm, yyyy] = m.date.split('/');
           return dd === todayDD && mm === todayMM && (!yyyy || yyyy === todayYY);
         });
-        todayMenuEntries.forEach(entry => {
-          const cafDef = cafeteriaMap[entry.cafeteria] ?? cafeterias[0] ?? {};
-          secondaries.push({ type: 'menu', data: { ...cafDef, items: entry.items } });
-        });
+        if (now.getHours() < 13) {
+          todayMenuEntries.forEach(entry => {
+            const cafDef = cafeteriaMap[entry.cafeteria] ?? cafeterias[0] ?? {};
+            secondaries.push({ type: 'menu', data: { ...cafDef, items: entry.items } });
+          });
+        }
         renderEvent(activeEvents[0], secondaries);
       } else {
         renderDefault();

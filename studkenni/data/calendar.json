@@ -469,14 +469,29 @@
   ],
   "menu": [
     {
-      "date": "04/06/2026",
+      "date": "08/06/2026",
       "cafeteria": "intro",
-      "items": "Rjómalöguð rósakálssúpa (V)\nPiri Piri kjúklingur með aioli sósu og patatas bravas\nPiri Piri Oumph \"rif\" með aioli sósu og patatas bravas (V)\nFerskt grískt salat med ólífum, avókadó og sólþurrkuðum tómötum (V)"
+      "items": "Graskers-eplasúpa (V)\nSteinbítur í tómat chili marineringu með kartöflum, hvítlauksósu og fersku salati\nOumph með spergilkáli og rótargrænmeti (V)\nÓtrúlega ferskt mangósalsa (V)"
     },
     {
-      "date": "04/07/2026",
+      "date": "09/06/2026",
       "cafeteria": "intro",
-      "items": "Karrý grænmetissúpa (V)\nMexikóskur kjúklingaborgari með guacamole, salsa og frönskum kartöflur\nMexíkóskur grænmetisborgari med guacamole, salsa og frönskum kartöflum\nGranat epla og spergilkálssalat (V)\nÓmótstæðileg eplakaka með þeyttum rjóma"
+      "items": "Hlýandi blómkálssúpa (V)\nTandoori kjúklingur með kókos hrísgrjónum og naan brauði\nTandoori tófú kjúklingabaunaréttur með kókoshrísgrjónum og fersku salati (V)\nEggaldin Chermoula salat (V)"
+    },
+    {
+      "date": "10/06/2026",
+      "cafeteria": "intro",
+      "items": "Blaðlauks-kartöflusúpa (V)\nÞorskur með salsa verde hjúp, kartöflum og hvítvínssósu\nGraskers risotto með blaðlauk og pekan hnetum (V)\nKartöflusalat með ferskum kryddjurtum (V)"
+    },
+    {
+      "date": "11/06/2026",
+      "cafeteria": "intro",
+      "items": "Engifer, black garli og gulrótasúpa (V)\nLambalæri með gratín kartöflum, bernaise, villisveppasósu og tilheyrandi\nHnetusteik með kryddjurtakartöflum og villisveppasósu (V)\nGljáð rótargrænmeti með klettasalati (V)"
+    },
+    {
+      "date": "12/06/2026",
+      "cafeteria": "intro",
+      "items": "Grænmetis kínóa súpa (V)\nShawarma kjúklingur með jasmine hrísgrjónum og arabísku brauði\nShawarma grænmetisréttur með jasmine hrísgrjónum og arabísku brauði (V)\nMarinerað spergilkálssalat (V)\nSúkkulaði kaka með súkkulaðimús og þeyttum rjóma"
     }
   ],
   "highlights": [

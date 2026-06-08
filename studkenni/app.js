@@ -253,7 +253,7 @@ function secondaryHighlightHtml(highlight) {
       <div class="event-label">Í dag</div>
       ${isEmoji ? `<div class="secondary-highlight-emoji">${img}</div>` : ''}
       <div class="event-minor-title">${highlight.title}</div>
-      <div class="event-minor-description">${highlight.text}</div>
+      <div class="event-minor-description">${nl2br(highlight.text)}</div>
     </div>`;
 }
 
@@ -468,7 +468,7 @@ function renderHighlight(highlight) {
         ` : ''}
         <div class="highlight-content">
           <div class="highlight-title">${highlight.title}</div>
-          <div class="highlight-text">${highlight.text}</div>
+          <div class="highlight-text">${nl2br(highlight.text)}</div>
         </div>
       </div>
     </div>

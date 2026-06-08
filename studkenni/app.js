@@ -321,7 +321,7 @@ function startSecondaryRotation(panels) {
       current.style.opacity = '1';
       resetProgressBar();
     }, 600);
-  }, 10 * 1000);
+  }, 60 * 1000);
 }
 
 // secondaries: array of {type: 'event'|'menu', data}
@@ -563,6 +563,8 @@ async function init() {
       const [dd, mm, yyyy] = h.date.split('/');
       return dd === todayDD && mm === todayMM && (!yyyy || yyyy === todayYY);
     });
+    const wcHighlight = await getWorldCupHighlight();
+    if (wcHighlight) todayHighlights.push(wcHighlight);
 
     const activeEvents = getActiveEvents(events);
 

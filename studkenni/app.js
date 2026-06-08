@@ -240,6 +240,23 @@ function eventGradient(color) {
   return `linear-gradient(135deg, #0a0814 0%, ${color} 55%, #0d0d1a 100%)`;
 }
 
+function secondaryHighlightHtml(highlight) {
+  const img    = highlight.image;
+  const isPath = img && img.includes('/');
+  const isEmoji = img && !isPath;
+  return `
+    ${isPath ? `
+      <div class="event-minor-graphic">
+        <img class="event-minor-img" src="${img}" alt="${highlight.title}">
+      </div>` : ''}
+    <div class="event-minor-info${isEmoji ? ' event-minor-info--menu' : ''}">
+      <div class="event-label">Í dag</div>
+      ${isEmoji ? `<div class="secondary-highlight-emoji">${img}</div>` : ''}
+      <div class="event-minor-title">${highlight.title}</div>
+      <div class="event-minor-description">${highlight.text}</div>
+    </div>`;
+}
+
 function secondaryEventHtml(event) {
   const imgs = Array.isArray(event.graphic) ? event.graphic : [event.graphic];
   return `
@@ -270,9 +287,21 @@ function secondaryMenuHtml(cafeteria) {
     </div>`;
 }
 
+function resetProgressBar() {
+  const bar = document.getElementById('secondary-progress-bar');
+  if (!bar) return;
+  bar.style.transition = 'none';
+  bar.style.width = '0%';
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    bar.style.transition = 'width 60s linear';
+    bar.style.width = '100%';
+  }));
+}
+
 function startSecondaryRotation(panels) {
   if (secondaryRotationInterval) clearInterval(secondaryRotationInterval);
   let idx = 0;
+  resetProgressBar();
   secondaryRotationInterval = setInterval(() => {
     idx = (idx + 1) % panels.length;
     const el = document.getElementById('secondary-panel');
@@ -281,10 +310,18 @@ function startSecondaryRotation(panels) {
     setTimeout(() => {
       const current = document.getElementById('secondary-panel');
       if (!current) return;
-      current.innerHTML = panels[idx];
+      current.querySelector('.secondary-footer')?.remove();
+      current.innerHTML = panels[idx] + `
+        <div class="secondary-footer">
+          <div class="secondary-dots">
+            ${panels.map((_, i) => `<span class="secondary-dot${i === idx ? ' active' : ''}"></span>`).join('')}
+          </div>
+          <div class="secondary-progress"><div class="secondary-progress-bar" id="secondary-progress-bar"></div></div>
+        </div>`;
       current.style.opacity = '1';
+      resetProgressBar();
     }, 600);
-  }, 60 * 1000);
+  }, 10 * 1000);
 }
 
 // secondaries: array of {type: 'event'|'menu', data}
@@ -293,7 +330,9 @@ function renderEvent(main, secondaries = []) {
   preloadImages(images);
 
   const panels = secondaries.map(s =>
-    s.type === 'menu' ? secondaryMenuHtml(s.data) : secondaryEventHtml(s.data)
+    s.type === 'menu'      ? secondaryMenuHtml(s.data) :
+    s.type === 'highlight' ? secondaryHighlightHtml(s.data) :
+                             secondaryEventHtml(s.data)
   );
   const hasSecondary = panels.length > 0;
 
@@ -322,6 +361,13 @@ function renderEvent(main, secondaries = []) {
       ${hasSecondary ? `
         <div class="event-minor" id="secondary-panel" style="transition: opacity 0.6s ease;">
           ${panels[0]}
+          ${panels.length > 1 ? `
+            <div class="secondary-footer">
+              <div class="secondary-dots">
+                ${panels.map((_, i) => `<span class="secondary-dot${i === 0 ? ' active' : ''}"></span>`).join('')}
+              </div>
+              <div class="secondary-progress"><div class="secondary-progress-bar" id="secondary-progress-bar"></div></div>
+            </div>` : ''}
         </div>` : ''}
     </div>
   `;
@@ -518,31 +564,31 @@ async function init() {
       return dd === todayDD && mm === todayMM && (!yyyy || yyyy === todayYY);
     });
 
+    const activeEvents = getActiveEvents(events);
+
     if (celebrants.length > 0) {
       renderBirthday(celebrants, confetti, cakesSince);
+    } else if (activeEvents.length > 0) {
+      const secondaries = [];
+      if (activeEvents.length > 1 && activeEvents[1].priority > activeEvents[0].priority)
+        secondaries.push({ type: 'event', data: activeEvents[1] });
+      const cafeteriaMap = Object.fromEntries(cafeterias.map(c => [c.id, c]));
+      const todayMenuEntries = menu.filter(m => {
+        const [dd, mm, yyyy] = m.date.split('/');
+        return dd === todayDD && mm === todayMM && (!yyyy || yyyy === todayYY);
+      });
+      if (now.getHours() < 13) {
+        todayMenuEntries.forEach(entry => {
+          const cafDef = cafeteriaMap[entry.cafeteria] ?? cafeterias[0] ?? {};
+          secondaries.push({ type: 'menu', data: { ...cafDef, items: entry.items } });
+        });
+      }
+      todayHighlights.forEach(h => secondaries.push({ type: 'highlight', data: h }));
+      renderEvent(activeEvents[0], secondaries);
     } else if (todayHighlights.length > 0) {
       renderHighlight(todayHighlights[0]);
     } else {
-      const activeEvents = getActiveEvents(events);
-      if (activeEvents.length > 0) {
-        const secondaries = [];
-        if (activeEvents.length > 1 && activeEvents[1].priority > activeEvents[0].priority)
-          secondaries.push({ type: 'event', data: activeEvents[1] });
-        const cafeteriaMap = Object.fromEntries(cafeterias.map(c => [c.id, c]));
-        const todayMenuEntries = menu.filter(m => {
-          const [dd, mm, yyyy] = m.date.split('/');
-          return dd === todayDD && mm === todayMM && (!yyyy || yyyy === todayYY);
-        });
-        if (now.getHours() < 13) {
-          todayMenuEntries.forEach(entry => {
-            const cafDef = cafeteriaMap[entry.cafeteria] ?? cafeterias[0] ?? {};
-            secondaries.push({ type: 'menu', data: { ...cafDef, items: entry.items } });
-          });
-        }
-        renderEvent(activeEvents[0], secondaries);
-      } else {
-        renderDefault();
-      }
+      renderDefault();
     }
 
     renderUpcomingWidget(people);

@@ -321,7 +321,7 @@ function startSecondaryRotation(panels) {
       current.style.opacity = '1';
       resetProgressBar();
     }, 600);
-  }, 60 * 1000);
+  }, 10 * 1000);
 }
 
 // secondaries: array of {type: 'event'|'menu', data}
@@ -330,6 +330,7 @@ function renderEvent(main, secondaries = []) {
   preloadImages(images);
 
   const panels = secondaries.map(s =>
+    typeof s === 'string'  ? s :
     s.type === 'menu'      ? secondaryMenuHtml(s.data) :
     s.type === 'highlight' ? secondaryHighlightHtml(s.data) :
                              secondaryEventHtml(s.data)
@@ -586,6 +587,8 @@ async function init() {
         });
       }
       todayHighlights.forEach(h => secondaries.push({ type: 'highlight', data: h }));
+      const wcStandings = await getWorldCupStandingsPanel();
+      if (wcStandings) secondaries.push(wcStandings);
       renderEvent(activeEvents[0], secondaries);
     } else if (todayHighlights.length > 0) {
       renderHighlight(todayHighlights[0]);

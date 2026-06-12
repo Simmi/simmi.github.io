@@ -421,6 +421,46 @@ body.mode-event {
   color: #FECA57;
 }
 
+.standings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7vh;
+  margin-top: 0.5vh;
+}
+
+.standings-row {
+  display: grid;
+  grid-template-columns: 2em 1fr auto;
+  align-items: center;
+  gap: 0.5em;
+  font-size: clamp(1rem, 1.7vw, 2.4rem);
+  font-weight: 700;
+}
+
+.standings-rank {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.85em;
+  text-align: right;
+}
+
+.standings-name {
+  color: rgba(255, 255, 255, 0.9);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.standings-pts {
+  font-family: 'Paytone One', sans-serif;
+  color: #FECA57;
+}
+
+.standings-more {
+  font-size: clamp(0.9rem, 1.4vw, 2rem);
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 0.5vh;
+}
+
 .event-graphic {
   position: relative;
   flex: none;

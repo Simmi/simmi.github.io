@@ -631,17 +631,18 @@ body.mode-highlight {
   gap: 2.5vh;
 }
 
-.highlight-screen.split {
+.highlight-body {
+  flex: 1;
+  display: flex;
   flex-direction: row;
   gap: 1.5vw;
-  padding: 2vh 2vw;
+  min-height: 0;
 }
 
 .highlight-main {
   flex: 2;
   display: flex;
   flex-direction: column;
-  gap: 2.5vh;
   min-width: 0;
 }
 

@@ -456,28 +456,31 @@ function renderHighlight(highlight, secondary = null) {
   const isPath = img && img.includes('/');
   const isEmoji = img && !isPath;
 
+  const card = `
+    <div class="highlight-card${img ? '' : ' no-image'}">
+      ${isPath ? `
+        <div class="highlight-image-wrap">
+          <img class="highlight-img" src="${img}" alt="${highlight.title}">
+        </div>
+      ` : isEmoji ? `
+        <div class="highlight-emoji">${img}</div>
+      ` : ''}
+      <div class="highlight-content">
+        <div class="highlight-title">${highlight.title}</div>
+        <div class="highlight-text">${nl2br(highlight.text)}</div>
+      </div>
+    </div>`;
+
   document.getElementById('app').innerHTML = `
     <div class="highlight-screen${secondary ? ' split' : ''}">
-      ${secondary ? '<div class="highlight-main">' : ''}
       <div class="highlight-header">✨ Í dag ✨</div>
-      <div class="highlight-card${img ? '' : ' no-image'}">
-        ${isPath ? `
-          <div class="highlight-image-wrap">
-            <img class="highlight-img" src="${img}" alt="${highlight.title}">
-          </div>
-        ` : isEmoji ? `
-          <div class="highlight-emoji">${img}</div>
-        ` : ''}
-        <div class="highlight-content">
-          <div class="highlight-title">${highlight.title}</div>
-          <div class="highlight-text">${nl2br(highlight.text)}</div>
-        </div>
-      </div>
-      ${secondary ? '</div>' : ''}
       ${secondary ? `
-        <div class="event-minor" id="secondary-panel" style="transition: opacity 0.6s ease;">
-          ${secondary}
-        </div>` : ''}
+        <div class="highlight-body">
+          <div class="highlight-main">${card}</div>
+          <div class="event-minor" id="secondary-panel" style="transition: opacity 0.6s ease;">
+            ${secondary}
+          </div>
+        </div>` : card}
     </div>
   `;
 }

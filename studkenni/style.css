@@ -631,6 +631,20 @@ body.mode-highlight {
   gap: 2.5vh;
 }
 
+.highlight-screen.split {
+  flex-direction: row;
+  gap: 1.5vw;
+  padding: 2vh 2vw;
+}
+
+.highlight-main {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5vh;
+  min-width: 0;
+}
+
 .highlight-header {
   text-align: center;
   font-family: 'Paytone One', 'Noto Color Emoji', sans-serif;

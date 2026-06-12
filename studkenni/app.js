@@ -321,7 +321,7 @@ function startSecondaryRotation(panels) {
       current.style.opacity = '1';
       resetProgressBar();
     }, 600);
-  }, 10 * 1000);
+  }, 60 * 1000);
 }
 
 // secondaries: array of {type: 'event'|'menu', data}
@@ -449,7 +449,7 @@ function renderBirthday(people, confetti, cakesSince) {
   });
 }
 
-function renderHighlight(highlight) {
+function renderHighlight(highlight, secondary = null) {
   document.body.style.background = '';
   document.body.className = 'mode-highlight';
   const img    = highlight.image;
@@ -457,7 +457,8 @@ function renderHighlight(highlight) {
   const isEmoji = img && !isPath;
 
   document.getElementById('app').innerHTML = `
-    <div class="highlight-screen">
+    <div class="highlight-screen${secondary ? ' split' : ''}">
+      ${secondary ? '<div class="highlight-main">' : ''}
       <div class="highlight-header">✨ Í dag ✨</div>
       <div class="highlight-card${img ? '' : ' no-image'}">
         ${isPath ? `
@@ -472,6 +473,11 @@ function renderHighlight(highlight) {
           <div class="highlight-text">${nl2br(highlight.text)}</div>
         </div>
       </div>
+      ${secondary ? '</div>' : ''}
+      ${secondary ? `
+        <div class="event-minor" id="secondary-panel" style="transition: opacity 0.6s ease;">
+          ${secondary}
+        </div>` : ''}
     </div>
   `;
 }
@@ -568,6 +574,7 @@ async function init() {
     if (wcHighlight) todayHighlights.push(wcHighlight);
 
     const activeEvents = getActiveEvents(events);
+    const wcStandings = await getWorldCupStandingsPanel();
 
     if (celebrants.length > 0) {
       renderBirthday(celebrants, confetti, cakesSince);
@@ -587,11 +594,10 @@ async function init() {
         });
       }
       todayHighlights.forEach(h => secondaries.push({ type: 'highlight', data: h }));
-      const wcStandings = await getWorldCupStandingsPanel();
       if (wcStandings) secondaries.push(wcStandings);
       renderEvent(activeEvents[0], secondaries);
     } else if (todayHighlights.length > 0) {
-      renderHighlight(todayHighlights[0]);
+      renderHighlight(todayHighlights[0], wcStandings);
     } else {
       renderDefault();
     }

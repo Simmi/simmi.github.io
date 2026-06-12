@@ -1,8 +1,8 @@
 'use strict';
 
 const WORLDCUP_IMAGE_2 = "https://digitalhub.fifa.com/transform/ac004beb-13cb-4cb9-923b-dc5f030eb34f/Detail-Image-03_3200x1800?&io=transform:fill,width:1366&quality=75";
-const WORLDCUP_IMAGE = "/images/events/wc_2.jpg";
-const WORLDCUP_IMAGE_3 = "/images/events/wc_1.png";
+const WORLDCUP_IMAGE = "images/events/wc_2.jpg";
+const WORLDCUP_IMAGE_3 = "images/events/wc_1.png";
 
 async function getWorldCupStandingsPanel() {
   try {

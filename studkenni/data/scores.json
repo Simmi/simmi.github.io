@@ -1,60 +1,60 @@
 {
-  "updated": "2026-06-13T12:06:51Z",
+  "updated": "2026-06-14T08:24:54Z",
   "standings": [
     {
       "rank": 1,
-      "name": "Klara",
-      "points": 14
+      "name": "Ásmundur Sveinsson",
+      "points": 17
     },
     {
-      "rank": 2,
-      "name": "Ásmundur Sveinsson",
-      "points": 12
+      "rank": 1,
+      "name": "Írena",
+      "points": 17
     },
     {
       "rank": 3,
       "name": "Vala Stína",
-      "points": 11
+      "points": 16
     },
     {
-      "rank": 3,
-      "name": "Ásdís Svava Hallgrímsdóttir",
-      "points": 11
-    },
-    {
-      "rank": 3,
-      "name": "Írena",
-      "points": 11
-    },
-    {
-      "rank": 6,
-      "name": "Erna",
-      "points": 10
-    },
-    {
-      "rank": 6,
+      "rank": 4,
       "name": "Kristján Björgvin Schram",
-      "points": 10
+      "points": 15
     },
     {
-      "rank": 6,
+      "rank": 4,
       "name": "Simmi",
-      "points": 10
+      "points": 15
     },
     {
-      "rank": 6,
+      "rank": 4,
+      "name": "Ásdís Svava Hallgrímsdóttir",
+      "points": 15
+    },
+    {
+      "rank": 4,
       "name": "Þórir",
-      "points": 10
+      "points": 15
+    },
+    {
+      "rank": 8,
+      "name": "Bjössi",
+      "points": 14
+    },
+    {
+      "rank": 8,
+      "name": "Klara",
+      "points": 14
     },
     {
       "rank": 10,
-      "name": "Bjössi",
-      "points": 9
+      "name": "Erna",
+      "points": 13
     },
     {
       "rank": 11,
       "name": "Erla perla",
-      "points": 7
+      "points": 12
     }
   ]
 }

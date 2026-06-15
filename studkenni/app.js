@@ -449,12 +449,20 @@ function renderBirthday(people, confetti, cakesSince) {
   });
 }
 
-function renderHighlight(highlight, secondary = null) {
+function renderHighlight(highlight, secondaries = []) {
   document.body.style.background = '';
   document.body.className = 'mode-highlight';
   const img    = highlight.image;
   const isPath = img && img.includes('/');
   const isEmoji = img && !isPath;
+
+  const panels = secondaries.map(s =>
+    typeof s === 'string'  ? s :
+    s.type === 'menu'      ? secondaryMenuHtml(s.data) :
+    s.type === 'highlight' ? secondaryHighlightHtml(s.data) :
+                             secondaryEventHtml(s.data)
+  );
+  const hasSecondary = panels.length > 0;
 
   const card = `
     <div class="highlight-card${img ? '' : ' no-image'}">
@@ -472,17 +480,26 @@ function renderHighlight(highlight, secondary = null) {
     </div>`;
 
   document.getElementById('app').innerHTML = `
-    <div class="highlight-screen${secondary ? ' split' : ''}">
+    <div class="highlight-screen${hasSecondary ? ' split' : ''}">
       <div class="highlight-header">✨ Í dag ✨</div>
-      ${secondary ? `
+      ${hasSecondary ? `
         <div class="highlight-body">
           <div class="highlight-main">${card}</div>
           <div class="event-minor" id="secondary-panel" style="transition: opacity 0.6s ease;">
-            ${secondary}
+            ${panels[0]}
+            ${panels.length > 1 ? `
+              <div class="secondary-footer">
+                <div class="secondary-dots">
+                  ${panels.map((_, i) => `<span class="secondary-dot${i === 0 ? ' active' : ''}"></span>`).join('')}
+                </div>
+                <div class="secondary-progress"><div class="secondary-progress-bar" id="secondary-progress-bar"></div></div>
+              </div>` : ''}
           </div>
         </div>` : card}
     </div>
   `;
+
+  if (panels.length > 1) startSecondaryRotation(panels);
 }
 
 function renderDefault() {
@@ -578,6 +595,11 @@ async function init() {
 
     const activeEvents = getActiveEvents(events);
     const wcStandings = await getWorldCupStandingsPanel();
+    const cafeteriaMap = Object.fromEntries(cafeterias.map(c => [c.id, c]));
+    const todayMenuEntries = menu.filter(m => {
+      const [dd, mm, yyyy] = m.date.split('/');
+      return dd === todayDD && mm === todayMM && (!yyyy || yyyy === todayYY);
+    });
 
     if (celebrants.length > 0) {
       renderBirthday(celebrants, confetti, cakesSince);
@@ -585,11 +607,6 @@ async function init() {
       const secondaries = [];
       if (activeEvents.length > 1 && activeEvents[1].priority > activeEvents[0].priority)
         secondaries.push({ type: 'event', data: activeEvents[1] });
-      const cafeteriaMap = Object.fromEntries(cafeterias.map(c => [c.id, c]));
-      const todayMenuEntries = menu.filter(m => {
-        const [dd, mm, yyyy] = m.date.split('/');
-        return dd === todayDD && mm === todayMM && (!yyyy || yyyy === todayYY);
-      });
       if (now.getHours() < 13) {
         todayMenuEntries.forEach(entry => {
           const cafDef = cafeteriaMap[entry.cafeteria] ?? cafeterias[0] ?? {};
@@ -599,8 +616,16 @@ async function init() {
       todayHighlights.forEach(h => secondaries.push({ type: 'highlight', data: h }));
       if (wcStandings) secondaries.push(wcStandings);
       renderEvent(activeEvents[0], secondaries);
+    } else if (now.getHours() < 13 && todayMenuEntries.length > 0) {
+      const entry = todayMenuEntries[0];
+      const cafDef = cafeteriaMap[entry.cafeteria] ?? cafeterias[0] ?? {};
+      const menuHighlight = { title: cafDef.title ?? 'Matseðill', text: entry.items, image: cafDef.graphic ?? '🍽️' };
+      const wcSecondaries = [];
+      todayHighlights.forEach(h => wcSecondaries.push({ type: 'highlight', data: h }));
+      if (wcStandings) wcSecondaries.push(wcStandings);
+      renderHighlight(menuHighlight, wcSecondaries);
     } else if (todayHighlights.length > 0) {
-      renderHighlight(todayHighlights[0], wcStandings);
+      renderHighlight(todayHighlights[0], wcStandings ? [wcStandings] : []);
     } else {
       renderDefault();
     }

@@ -464,7 +464,16 @@ function renderHighlight(highlight, secondaries = []) {
   );
   const hasSecondary = panels.length > 0;
 
-  const card = `
+  const card = highlight.headerGraphic && isPath ? `
+    <div class="highlight-card highlight-card--graphic-header">
+      <div class="highlight-graphic-header">
+        <img class="highlight-graphic-img" src="${img}" alt="${highlight.title}">
+      </div>
+      <div class="highlight-content">
+        <div class="highlight-title">${highlight.title}</div>
+        <div class="highlight-text">${nl2br(highlight.text)}</div>
+      </div>
+    </div>` : `
     <div class="highlight-card${img ? '' : ' no-image'}">
       ${isPath ? `
         <div class="highlight-image-wrap">
@@ -619,7 +628,7 @@ async function init() {
     } else if (now.getHours() < 13 && todayMenuEntries.length > 0) {
       const entry = todayMenuEntries[0];
       const cafDef = cafeteriaMap[entry.cafeteria] ?? cafeterias[0] ?? {};
-      const menuHighlight = { title: cafDef.title ?? 'Matseðill', text: entry.items, image: cafDef.graphic ?? '🍽️' };
+      const menuHighlight = { title: cafDef.title ?? 'Matseðill', text: entry.items, image: cafDef.graphic ?? '🍽️', headerGraphic: !!cafDef.graphic };
       const wcSecondaries = [];
       todayHighlights.forEach(h => wcSecondaries.push({ type: 'highlight', data: h }));
       if (wcStandings) wcSecondaries.push(wcStandings);

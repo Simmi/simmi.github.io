@@ -14,7 +14,7 @@ async function getWorldCupStandingsPanel() {
         <img class="event-minor-img" src="${WORLDCUP_IMAGE}" alt="HM 2026">
       </div>
       <div class="event-minor-info event-minor-info--menu">
-        <div class="event-label">⚽ Stigatafla · HM 2026</div>
+        <div class="event-label">⚽ Staðan í tippleiknum</div>
         <div class="standings-list">
           ${rows.map(r => `
             <div class="standings-row">

@@ -469,24 +469,24 @@
   ],
   "menu": [
     {
-      "date": "15/06/2026",
+      "date": "23/06/2026",
       "cafeteria": "intro",
-      "items": "Alvöru kakósúpa með tvíbökum og þeyttum rjóma\nÝsa í raspi með tartar sósu, kartöflum og fersku salati\nSteiktir sveppir og spínat í rjómalagaðri polentu (V)\nPalestínskt couscous með kryddjurtum og hvítlauk (V)"
+      "items": "Frönsk lauksúpa með croutons (V) og rifnum osti\nKjúklingur parmesan með arrabbiata sósu og hvítlauksbrauði\nEggaldin parmesan með hvítlauksbrauði og salati (V)\nKryddjurta kartöflusalat með ristuðu kínóa (V)"
     },
     {
-      "date": "16/06/2026",
+      "date": "24/06/2026",
       "cafeteria": "intro",
-      "items": "Sellerírótar spínatsúpa (V)\nKjúklinga fajitas með guacamole, tómatsalsa og fersku salati\nOumph fajitas með guacamole, tómatsalsa og fersku salati (V)\nSætar kartöflur með teriyaki sósu og graskersfræjum (V)"
+      "items": "Rjómalöguð sveppasúpa (V)\nEkta íslenskar fiskibollur með karrýsósu og kartöflum\nSumac og tahini marineruð blómkálssteik með kókos flögum (V)\nNýrnabaunasalat með sitrónudressingu og steinselju (V)"
     },
     {
-      "date": "18/06/2026",
+      "date": "25/06/2026",
       "cafeteria": "intro",
-      "items": "Léttreykt tómatsúpa með basil, hvítlauk og grilluðum chorizo teningum\nFranskur nautapottréttur með kartöflumús og ostabrauði\nIndverskar grænmetisbollur með döðlufyllingu (V)\nKúrbítssalat með bankabyggi (V)"
+      "items": "Hlýandi blómkálssúpa (V)\nchili con carne með hrísgrjonum, ostasósu og fersku salat\nChili sin carne með hrísgriónum og fersku salati (V)\nBlómkáls couscous (V)"
     },
     {
-      "date": "19/06/2026",
+      "date": "26/06/2026",
       "cafeteria": "intro",
-      "items": "Ljúffeng þriggjalaukasúpa (V)\nÚrbeinuð buffaló kjúklingalæri með frönskum kartöflum og gráðaostasósu\nBuffaló blómkálsnaggar með frönskum kartöflum og hvítlaukssósu (V)\nFerskt spergilkáls hrásalat (V)"
+      "items": "Grænertusúpa (V)\nBasil og hvítlauksmarineruò kjúklingalæri með hnetulausu pestó og gulrótum\nGrænmetisbollur í marinara sósu (V)\nGrænmeti núðlusalat (V)"
     }
   ],
   "highlights": [

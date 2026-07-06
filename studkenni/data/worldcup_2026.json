@@ -834,8 +834,8 @@
       "num": 93,
       "date": "06/07/2026",
       "time": "19:00",
-      "team1": "W83",
-      "team2": "W84",
+      "team1": "Portugal 🇵🇹",
+      "team2": "Spain 🇪🇸",
       "ground": "Dallas (Arlington)"
     },
     {
@@ -843,8 +843,8 @@
       "num": 94,
       "date": "06/07/2026",
       "time": "00:00",
-      "team1": "W81",
-      "team2": "W82",
+      "team1": "USA 🇺🇸",
+      "team2": "Belgium 🇧🇪",
       "ground": "Seattle"
     },
     {
@@ -852,8 +852,8 @@
       "num": 95,
       "date": "07/07/2026",
       "time": "16:00",
-      "team1": "W86",
-      "team2": "W88",
+      "team1": "Argentina 🇦🇷",
+      "team2": "Egypt 🇪🇬",
       "ground": "Atlanta"
     },
     {
@@ -861,8 +861,8 @@
       "num": 96,
       "date": "07/07/2026",
       "time": "20:00",
-      "team1": "W85",
-      "team2": "W87",
+      "team1": "Switzerland 🇨🇭",
+      "team2": "Colombia 🇨🇴",
       "ground": "Vancouver"
     },
     {
@@ -870,8 +870,8 @@
       "num": 97,
       "date": "09/07/2026",
       "time": "20:00",
-      "team1": "W89",
-      "team2": "W90",
+      "team1": "France 🇫🇷",
+      "team2": "Morocco 🇲🇦",
       "ground": "Boston (Foxborough)"
     },
     {
@@ -888,8 +888,8 @@
       "num": 99,
       "date": "11/07/2026",
       "time": "21:00",
-      "team1": "W91",
-      "team2": "W92",
+      "team1": "Norway 🇳🇴",
+      "team2": "England \uD83C\uDFF4\uDB40\uDC67\uDB40\uDC62\uDB40\uDC65\uDB40\uDC6E\uDB40\uDC67\uDB40\uDC7F",
       "ground": "Miami (Miami Gardens)"
     },
     {

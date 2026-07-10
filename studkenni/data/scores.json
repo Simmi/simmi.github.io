@@ -1,50 +1,50 @@
 {
-  "updated": "2026-07-09T14:06:59Z",
+  "updated": "2026-07-10T10:23:34Z",
   "standings": [
     {
       "rank": 1,
       "name": "Írena",
-      "points": 339
+      "points": 347
     },
     {
       "rank": 2,
       "name": "Vala Stína",
-      "points": 338
+      "points": 344
     },
     {
       "rank": 3,
       "name": "Ásmundur Sveinsson",
-      "points": 328
+      "points": 334
     },
     {
       "rank": 4,
       "name": "Þórir",
-      "points": 324
+      "points": 332
     },
     {
       "rank": 5,
       "name": "Erna",
-      "points": 322
+      "points": 330
     },
     {
       "rank": 6,
       "name": "Ásdís Svava Hallgrímsdóttir",
-      "points": 315
+      "points": 321
     },
     {
       "rank": 7,
       "name": "Kristján Björgvin Schram",
-      "points": 307
+      "points": 315
     },
     {
       "rank": 8,
       "name": "Erla perla",
-      "points": 303
+      "points": 311
     },
     {
       "rank": 9,
       "name": "Bjössi",
-      "points": 297
+      "points": 307
     },
     {
       "rank": 10,
@@ -54,7 +54,7 @@
     {
       "rank": 11,
       "name": "Ási",
-      "points": 169
+      "points": 175
     }
   ]
 }

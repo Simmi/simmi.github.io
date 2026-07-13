@@ -444,7 +444,7 @@
       "graphic": [
         "https://digitalhub.fifa.com/transform/ac004beb-13cb-4cb9-923b-dc5f030eb34f/Detail-Image-03_3200x1800?&io=transform:fill,width:1366&quality=75"
       ],
-      "description": "Nú er komið að NÆSTA tippleik, fyrir HM karla í fótbolta sem hefst 11. júní nk. \n\n Buy-in er 2000 kr - verðlaun fyrir efstu 3 sætin\uD83E\uDD47\uD83E\uDD48\uD83E\uDD49 \n \n KOMA SVO - ÖLL MEÐ!!! ",
+      "description": "Nú er komið að NÆSTA tippleik, fyrir HM karla í fótbolta sem hefst 11. júní nk. \n\n Buy-in er 2000 kr - verðlaun fyrir efstu 3 sætin\uD83E\uDD47\uD83E\uDD48\uD83E\uDD49 \n KOMA SVO - ÖLL MEÐ!!! ",
       "facts": []
     },
     {
@@ -469,24 +469,29 @@
   ],
   "menu": [
     {
-      "date": "23/06/2026",
+      "date": "13/07/2026",
       "cafeteria": "intro",
-      "items": "Frönsk lauksúpa með croutons (V) og rifnum osti\nKjúklingur parmesan með arrabbiata sósu og hvítlauksbrauði\nEggaldin parmesan með hvítlauksbrauði og salati (V)\nKryddjurta kartöflusalat með ristuðu kínóa (V)"
+      "items": "Pumpkin apple soup (V)\nCatfish in tomato chili marination with garlic sauce and fresh salad\nOumph with roasted broccoli and root vegetables (V)\nPasta salat with chreey tomatoes, pickled onion and rucula(V)"
     },
     {
-      "date": "24/06/2026",
+      "date": "14/07/2026",
       "cafeteria": "intro",
-      "items": "Rjómalöguð sveppasúpa (V)\nEkta íslenskar fiskibollur með karrýsósu og kartöflum\nSumac og tahini marineruð blómkálssteik með kókos flögum (V)\nNýrnabaunasalat með sitrónudressingu og steinselju (V)"
+      "items": "Warming cauliflower soup (V)\nTandoori chicken with steamed coconut rice and naan bread\nTandoori vegetables and chickpeas with tofu and steamed coconut rice (V)\nFresh mangosalsa (V)"
     },
     {
-      "date": "25/06/2026",
+      "date": "15/07/2026",
       "cafeteria": "intro",
-      "items": "Hlýandi blómkálssúpa (V)\nchili con carne með hrísgrjonum, ostasósu og fersku salat\nChili sin carne með hrísgriónum og fersku salati (V)\nBlómkáls couscous (V)"
+      "items": "Leek and potato soup (V)\nCod steaks with salsa verde breadcrumbs, potatos and white wine sauce\nPumpkin risotto with leek and topped with pekans (V)\nHome-made potato salad with fresh herbs (V)"
     },
     {
-      "date": "26/06/2026",
+      "date": "16/07/2026",
       "cafeteria": "intro",
-      "items": "Grænertusúpa (V)\nBasil og hvítlauksmarineruð kjúklingalæri með hnetulausu pestó og gulrótum\nGrænmetisbollur í marinara sósu (V)\nGrænmeti núðlusalat (V)"
+      "items": "Carrot, ginger and black garlic soup (V)\nLeg of lamb with gratin potatoes, bernaise and wild mushroom sauce\nNut roast with herb potatoes and wild mushroom sauce (V)\nGlazed root vegetables with rocket (V)"
+    },
+    {
+      "date": "17/07/2026",
+      "cafeteria": "intro",
+      "items": "Vegetable quinoa soup (V)\nShawarma chicken with jasmine rice and arabic bread\nShawarma vegetables with jasmine rice and arabic bread (V)\nMarinated broccoli salad (V)"
     }
   ],
   "highlights": [

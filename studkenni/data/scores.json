@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-14T12:49:28Z",
+  "updated": "2026-07-15T09:09:01Z",
   "standings": [
     {
       "rank": 1,
@@ -7,39 +7,39 @@
       "points": 366
     },
     {
-      "rank": 2,
+      "rank": 1,
+      "name": "Þórir",
+      "points": 366
+    },
+    {
+      "rank": 3,
       "name": "Írena",
       "points": 365
     },
     {
-      "rank": 3,
-      "name": "Þórir",
-      "points": 358
+      "rank": 4,
+      "name": "Ásdís Svava Hallgrímsdóttir",
+      "points": 351
     },
     {
-      "rank": 4,
+      "rank": 5,
+      "name": "Ásmundur Sveinsson",
+      "points": 348
+    },
+    {
+      "rank": 6,
       "name": "Erna",
       "points": 346
     },
     {
-      "rank": 4,
-      "name": "Ásmundur Sveinsson",
-      "points": 346
-    },
-    {
-      "rank": 6,
-      "name": "Ásdís Svava Hallgrímsdóttir",
-      "points": 343
-    },
-    {
       "rank": 7,
       "name": "Kristján Björgvin Schram",
-      "points": 331
+      "points": 339
     },
     {
       "rank": 8,
       "name": "Erla perla",
-      "points": 329
+      "points": 331
     },
     {
       "rank": 9,
@@ -49,7 +49,7 @@
     {
       "rank": 10,
       "name": "Simmi",
-      "points": 302
+      "points": 310
     },
     {
       "rank": 11,

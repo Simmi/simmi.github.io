@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-15T12:53:48Z",
+  "updated": "2026-07-16T09:12:49Z",
   "standings": [
     {
       "rank": 1,
@@ -18,33 +18,33 @@
     },
     {
       "rank": 4,
+      "name": "Ásmundur Sveinsson",
+      "points": 358
+    },
+    {
+      "rank": 5,
+      "name": "Erna",
+      "points": 356
+    },
+    {
+      "rank": 6,
       "name": "Ásdís Svava Hallgrímsdóttir",
       "points": 351
     },
     {
-      "rank": 5,
-      "name": "Ásmundur Sveinsson",
-      "points": 348
-    },
-    {
-      "rank": 6,
-      "name": "Erna",
-      "points": 346
-    },
-    {
       "rank": 7,
       "name": "Kristján Björgvin Schram",
-      "points": 339
+      "points": 341
     },
     {
       "rank": 8,
-      "name": "Erla perla",
-      "points": 331
+      "name": "Bjössi",
+      "points": 333
     },
     {
       "rank": 9,
-      "name": "Bjössi",
-      "points": 323
+      "name": "Erla perla",
+      "points": 331
     },
     {
       "rank": 10,

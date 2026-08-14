@@ -599,11 +599,12 @@ async function init() {
       const [dd, mm, yyyy] = h.date.split('/');
       return dd === todayDD && mm === todayMM && (!yyyy || yyyy === todayYY);
     });
-    const wcHighlight = await getWorldCupHighlight();
+    const SHOW_WORLDCUP = false;
+    const wcHighlight = SHOW_WORLDCUP ? await getWorldCupHighlight() : null;
     if (wcHighlight) todayHighlights.push(wcHighlight);
 
     const activeEvents = getActiveEvents(events);
-    const wcStandings = await getWorldCupStandingsPanel();
+    const wcStandings = SHOW_WORLDCUP ? await getWorldCupStandingsPanel() : null;
     const cafeteriaMap = Object.fromEntries(cafeterias.map(c => [c.id, c]));
     const todayMenuEntries = menu.filter(m => {
       const [dd, mm, yyyy] = m.date.split('/');

@@ -469,37 +469,22 @@
   ],
   "menu": [
     {
-      "date": "13/07/2026",
+      "date": "23/07/2026",
       "cafeteria": "intro",
-      "items": "Pumpkin apple soup (V)\nCatfish in tomato chili marination with garlic sauce and fresh salad\nOumph with roasted broccoli and root vegetables (V)\nPasta salat with chreey tomatoes, pickled onion and rucula(V)"
+      "items": "Léttreykt tómatsúpa með basil, hvítlauk og grilluðum chorizo teningum\nFranskur nautapottréttur med kartöflumús og ostabrauði\nIndverskar grænmetisbollur með döðlufyllingu (V)\nKúrbitssalat med bankabyggi (V)"
     },
     {
-      "date": "14/07/2026",
+      "date": "24/07/2026",
       "cafeteria": "intro",
-      "items": "Warming cauliflower soup (V)\nTandoori chicken with steamed coconut rice and naan bread\nTandoori vegetables and chickpeas with tofu and steamed coconut rice (V)\nFresh mangosalsa (V)"
-    },
-    {
-      "date": "15/07/2026",
-      "cafeteria": "intro",
-      "items": "Leek and potato soup (V)\nCod steaks with salsa verde breadcrumbs, potatos and white wine sauce\nPumpkin risotto with leek and topped with pekans (V)\nHome-made potato salad with fresh herbs (V)"
-    },
-    {
-      "date": "16/07/2026",
-      "cafeteria": "intro",
-      "items": "Carrot, ginger and black garlic soup (V)\nLeg of lamb with gratin potatoes, bernaise and wild mushroom sauce\nNut roast with herb potatoes and wild mushroom sauce (V)\nGlazed root vegetables with rocket (V)"
-    },
-    {
-      "date": "17/07/2026",
-      "cafeteria": "intro",
-      "items": "Vegetable quinoa soup (V)\nShawarma chicken with jasmine rice and arabic bread\nShawarma vegetables with jasmine rice and arabic bread (V)\nMarinated broccoli salad (V)"
+      "items": "Ljúffeng þriggjalaukasúpa (V)\nÚrbeinuð buffaló kjúklingalæri med frönskum kartöflum og gráðostasósu\nBuffalo blómkalsnaggar med frönskum kartöflum og hvítlaukssósu (V)\nFerskt spergilkáls hrásalat (V)"
     }
   ],
   "highlights": [
     {
-      "date": "29/05/2026",
-      "title": "Síðasti dagur Ásdísar fyrir fjölgun! 🍼",
-      "text": "Í dag fer Ásdís í fæðingarorlof. Við óskum henni og fjölskyldunni góðs gengis og hlökkum til að sjá hana úthvílda koma í heimsókn með nýja fjölskyldumeðliminn! 👶",
-      "image": "\uD83E\uDD30\uD83C\uDFFC"
+      "date": "14/08/2026",
+      "title": "Síðasti dagur Baldurs í bili.",
+      "text": "Í dag kveðjum við Baldur eftir frábært starf í sumar. Greinilega ekkert klikkað í uppeldinu þar á bæ.",
+      "image": "images/events/baldur_sverris.jpeg"
     }
 
   ]

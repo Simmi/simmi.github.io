@@ -469,29 +469,24 @@
   ],
   "menu": [
     {
-      "date": "17/08/2026",
+      "date": "25/08/2026",
       "cafeteria": "root",
-      "items": "• Þykk linsubaunasúpa með tómötum, broddkúmen, kóríander og sítrónu.\n• Kryddaðar nautakjötbollur í Rogan Josh tómatsósu og ferskum kryddjurtum.\n• Ofnbakaður steinbítur með tómötum, ólífutapenade, oregano og ristuðu smælki.\n• Ristað blómkál í gochujang-gljáa með edame baunum og sesamdressingu.\n• Spergilkál með ferskum kryddjurtum, sólblómafræjum og sítrónudressingu."
+      "items": "• Rúmensk Ciorbă-grænmetissúpa\n• Filippseyskur kjúklingur Adobo\n• Polenta með smjörbauna-puttanesca\n• Salat með bökuðum rófum"
     },
     {
-      "date": "18/08/2026",
+      "date": "26/08/2026",
       "cafeteria": "root",
-      "items": "• Ristað blómkál og kartöflur með hvítlauk, timían og stökkum fræjum.\n• Stökkur parmesan-kjúklingur með arrabbiata tómatsósu, tagliatelle og ferskri basilíku.\n• Kryddristaðar gulrætur með quinoa, graskersfræjum, ferskum kryddjurtum og sítrónu tahini.\n• Kirsuberjatómatar með rauðlauk, ferskum kryddjurtum og kryddaðri ólífuolíu."
+      "items": "• Gulrótar-, engifer- og svart-hvítlaukssúpa\n• Grískt hægeldað naut með perlulauk, tómötum, kanil, lárviðarlaufi og rauðvínsediki.\n• Ristað smælkimeð fennel og grænum baunum \n• Kúrbítur með quinoa og spínati \n• Orecchiette með brokkólí "
     },
     {
-      "date": "19/08/2026",
+      "date": "27/08/2026",
       "cafeteria": "root",
-      "items": "• Ilmandi kókossúpa með grænu karrý, grænmeti, lime og fersku kóríander.\n• Hægeldað lambakjöt í kryddmikilli kókos- og engifersósu með naan brauði og fersku kóríander.\n• Ristaður þorskur með sítrónu- og kryddjurtagremolata og kókos- og limekartöflum\n• Tandoori kryddað tofu með ristuðum kjúklingabaunum og karrýdressingu."
+      "items": "• Frönsk lauksúpa \n• Kjúklingur Marbella \n• Kryddjurtakúskús \n• Sætkartöflu-enchilada \n• Bauna- og maíssalat "
     },
     {
-      "date": "20/08/2026",
+      "date": "28/08/2026",
       "cafeteria": "root",
-        "items": "• Ristað grasker og epli með engifer og kókosmjólk.\n• Fajitas-kryddaður kjúklingur með papriku, lauk, guacamole, sýrðum rjóma, krydduðum hrísgrjónum og fersku lime.\n• Shawarma kryddaðir sveppir og perlubygg með hummus, pikkluðum rauðlauk og ferskum kryddjurtum.\n• Pasta með grænmeti, ferskum kryddjurtum og sítrónuvinaigrette."
-    },
-    {
-      "date": "21/08/2026",
-      "cafeteria": "root",
-      "items": "• Grænar ertur, spínat og ferskar kryddjurtir með sítrónu og ólífuolíu.\n• Char-Siu gljáð grísakjöt með engifer, hvítlauk og fimm krydda blöndu, borið fram með hrísgrjónum, agúrkusalati\n• Kremað risotto með ristuðu graskeri, blaðlauk og pekanhnetum.\n• Núðlur með stökku grænmeti, ferskum kryddjurtum og lime engiferdressingu."
+      "items": "• Graskers, peru og salvíusúpa \n• Milt kryddað lamb með jógúrt, engifer, fennelfræjum og kardimommum.\n• Basmati-hrísgrjón \n• Japanskt grænmetis-gyoza með kimchi \n• Blómkáls-couscous "
     }
   ],
   "highlights": [

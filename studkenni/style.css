@@ -69,6 +69,19 @@ body.mode-default {
   gap: 2.5vh;
 }
 
+.birthday-body {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5vw;
+  min-height: 0;
+}
+
+.birthday-body .people-container {
+  flex: 2;
+  min-width: 0;
+}
+
 /* Header */
 .birthday-header {
   text-align: center;
@@ -101,8 +114,10 @@ body.mode-default {
 .person-card {
   flex: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 4vw;
+  justify-content: center;
+  gap: 3vh;
   background: rgba(255, 255, 255, 0.95);
   border-radius: 2.5rem;
   border: 3px solid rgba(255, 255, 255, 0.75);
@@ -126,7 +141,7 @@ body.mode-default {
   align-items: center;
   gap: 1rem;
   flex-shrink: 0;
-  animation: slideFromLeft 0.7s ease 0.55s both;
+  animation: slideFromTop 0.7s ease 0.55s both;
 }
 
 @keyframes slideFromLeft {
@@ -134,10 +149,15 @@ body.mode-default {
   to   { opacity: 1; transform: translateX(0); }
 }
 
+@keyframes slideFromTop {
+  from { opacity: 0; transform: translateY(-40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 .photo-frame {
   position: relative;
-  width: clamp(200px, 38vw, 560px);
-  height: clamp(200px, 38vw, 560px);
+  width: clamp(160px, 20vw, 300px);
+  height: clamp(160px, 20vw, 300px);
   border-radius: 50%;
   flex-shrink: 0;
   box-shadow:
@@ -180,13 +200,10 @@ body.mode-default {
 
 /* Facts section */
 .facts-section {
-  flex: 1;
+  width: min(88%, 900px);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: max(0.65vh, 7px);
-  min-width: 0;
-  min-height: 0;
 }
 
 .facts-label {
@@ -195,6 +212,7 @@ body.mode-default {
   color: #adb5bd;
   text-transform: uppercase;
   letter-spacing: 0.2em;
+  text-align: center;
   margin-bottom: 0.2em;
 }
 
@@ -755,6 +773,30 @@ body.mode-highlight {
   line-height: 1.5;
   color: #374151;
   animation: slideFromRight 0.5s cubic-bezier(0.34, 1.4, 0.64, 1) 0.75s both;
+}
+
+.highlight-menu-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  font-size: clamp(1.1rem, 2.2vw, 3rem);
+  font-weight: 700;
+  line-height: 1.5;
+  color: #374151;
+  animation: slideFromRight 0.5s cubic-bezier(0.34, 1.4, 0.64, 1) 0.75s both;
+}
+
+.highlight-menu-item {
+  padding-left: 1.1em;
+  position: relative;
+}
+
+.highlight-menu-item::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #FF6B6B;
 }
 
 /* ══════════════════════════════════════════════════════════

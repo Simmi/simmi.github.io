@@ -271,8 +271,14 @@ function secondaryEventHtml(event) {
     </div>`;
 }
 
+// Splits menu text into items, stripping any bullet characters already
+// present in the source data so lists don't end up double-bulleted.
+function menuItemsList(text) {
+  return text.split('\n').map(s => s.trim().replace(/^[•\-*]\s*/, '')).filter(Boolean);
+}
+
 function secondaryMenuHtml(cafeteria) {
-  const items = cafeteria.items.split('\n').map(s => s.trim()).filter(Boolean);
+  const items = menuItemsList(cafeteria.items);
   return `
     ${cafeteria.graphic ? `
       <div class="event-minor-graphic">
@@ -285,6 +291,14 @@ function secondaryMenuHtml(cafeteria) {
         ${items.map(item => `<li class="event-menu-item">${item}</li>`).join('')}
       </ul>
     </div>`;
+}
+
+function highlightMenuHtml(text) {
+  const items = menuItemsList(text);
+  return `
+    <ul class="highlight-menu-list">
+      ${items.map(item => `<li class="highlight-menu-item">${item}</li>`).join('')}
+    </ul>`;
 }
 
 function resetProgressBar() {
@@ -396,7 +410,7 @@ function renderCakeHistory(cakes, cakesSince) {
   `;
 }
 
-function renderBirthday(people, confetti, cakesSince) {
+function renderBirthday(people, confetti, cakesSince, secondaries = []) {
   personImageIntervals.forEach(clearInterval);
   personImageIntervals = [];
 
@@ -404,11 +418,15 @@ function renderBirthday(people, confetti, cakesSince) {
   document.body.className = 'mode-birthday';
   confetti.start();
 
-  document.getElementById('app').innerHTML = `
-    <div class="birthday-screen">
-      <div class="birthday-header">
-        🎂 Til hamingju með daginn! 🎂
-      </div>
+  const panels = secondaries.map(s =>
+    typeof s === 'string'  ? s :
+    s.type === 'menu'      ? secondaryMenuHtml(s.data) :
+    s.type === 'highlight' ? secondaryHighlightHtml(s.data) :
+                             secondaryEventHtml(s.data)
+  );
+  const hasSecondary = panels.length > 0;
+
+  const peopleContainer = `
       <div class="people-container">
         ${people.map((p, i) => {
           const imgs = Array.isArray(p.image) ? p.image : [p.image];
@@ -436,9 +454,31 @@ function renderBirthday(people, confetti, cakesSince) {
             ` : ''}
           </div>
         `}).join('')}
+      </div>`;
+
+  document.getElementById('app').innerHTML = `
+    <div class="birthday-screen">
+      <div class="birthday-header">
+        🎂 Til hamingju með daginn! 🎂
       </div>
+      ${hasSecondary ? `
+        <div class="birthday-body">
+          ${peopleContainer}
+          <div class="event-minor" id="secondary-panel" style="transition: opacity 0.6s ease;">
+            ${panels[0]}
+            ${panels.length > 1 ? `
+              <div class="secondary-footer">
+                <div class="secondary-dots">
+                  ${panels.map((_, i) => `<span class="secondary-dot${i === 0 ? ' active' : ''}"></span>`).join('')}
+                </div>
+                <div class="secondary-progress"><div class="secondary-progress-bar" id="secondary-progress-bar"></div></div>
+              </div>` : ''}
+          </div>
+        </div>` : peopleContainer}
     </div>
   `;
+
+  if (panels.length > 1) startSecondaryRotation(panels);
 
   people.forEach((p, i) => {
     const imgs = Array.isArray(p.image) ? p.image : [p.image];
@@ -463,6 +503,7 @@ function renderHighlight(highlight, secondaries = []) {
                              secondaryEventHtml(s.data)
   );
   const hasSecondary = panels.length > 0;
+  const bodyHtml = highlight.isMenu ? highlightMenuHtml(highlight.text) : `<div class="highlight-text">${nl2br(highlight.text)}</div>`;
 
   const card = highlight.headerGraphic && isPath ? `
     <div class="highlight-card highlight-card--graphic-header">
@@ -471,7 +512,7 @@ function renderHighlight(highlight, secondaries = []) {
       </div>
       <div class="highlight-content">
         <div class="highlight-title">${highlight.title}</div>
-        <div class="highlight-text">${nl2br(highlight.text)}</div>
+        ${bodyHtml}
       </div>
     </div>` : `
     <div class="highlight-card${img ? '' : ' no-image'}">
@@ -484,7 +525,7 @@ function renderHighlight(highlight, secondaries = []) {
       ` : ''}
       <div class="highlight-content">
         <div class="highlight-title">${highlight.title}</div>
-        <div class="highlight-text">${nl2br(highlight.text)}</div>
+        ${bodyHtml}
       </div>
     </div>`;
 
@@ -612,7 +653,14 @@ async function init() {
     });
 
     if (celebrants.length > 0) {
-      renderBirthday(celebrants, confetti, cakesSince);
+      const birthdaySecondaries = [];
+      if (now.getHours() < 13) {
+        todayMenuEntries.forEach(entry => {
+          const cafDef = cafeteriaMap[entry.cafeteria] ?? cafeterias[0] ?? {};
+          birthdaySecondaries.push({ type: 'menu', data: { ...cafDef, items: entry.items } });
+        });
+      }
+      renderBirthday(celebrants, confetti, cakesSince, birthdaySecondaries);
     } else if (activeEvents.length > 0) {
       const secondaries = [];
       if (activeEvents.length > 1 && activeEvents[1].priority > activeEvents[0].priority)
@@ -629,7 +677,7 @@ async function init() {
     } else if (now.getHours() < 13 && todayMenuEntries.length > 0) {
       const entry = todayMenuEntries[0];
       const cafDef = cafeteriaMap[entry.cafeteria] ?? cafeterias[0] ?? {};
-      const menuHighlight = { title: cafDef.title ?? 'Matseðill', text: entry.items, image: cafDef.graphic ?? '🍽️', headerGraphic: !!cafDef.graphic };
+      const menuHighlight = { title: cafDef.title ?? 'Matseðill', text: entry.items, image: cafDef.graphic ?? '🍽️', headerGraphic: !!cafDef.graphic, isMenu: true };
       const wcSecondaries = [];
       todayHighlights.forEach(h => wcSecondaries.push({ type: 'highlight', data: h }));
       if (wcStandings) wcSecondaries.push(wcStandings);

@@ -469,24 +469,29 @@
   ],
   "menu": [
     {
-      "date": "25/08/2026",
+      "date": "31/08/2026",
       "cafeteria": "root",
-      "items": "Rúmensk Ciorbă-grænmetissúpa\nFilippseyskur kjúklingur Adobo\nPolenta með smjörbauna-puttanesca\nSalat með bökuðum rófum"
+      "items": "Sætkartöflu- og sítrónugrassúpa\nGigantes Plaki\nSteinbítur Moqueca\nKryddhrísgrjón\nVíetnamskt kjúklingakarrí – Cà Ri Gà\nSpergilkálsalat"
     },
     {
-      "date": "26/08/2026",
+      "date": "01/09/2026",
       "cafeteria": "root",
-      "items": "Gulrótar-, engifer- og svart-hvítlaukssúpa\nGrískt hægeldað naut með perlulauk, tómötum, kanil, lárviðarlaufi og rauðvínsediki.\nRistað smælkimeð fennel og grænum baunum \nKúrbítur með quinoa og spínati \nOrecchiette með brokkólí "
+      "items": "Tómat- og kínóasúpa\nGnocchi með ristuðum tómötum\nLasagne með hvítlauksbrauði\nPerlucouscous og ristuð paprika"
     },
     {
-      "date": "27/08/2026",
+      "date": "02/09/2026",
       "cafeteria": "root",
-      "items": "Frönsk lauksúpa \nKjúklingur Marbella \nKryddjurtakúskús \nSætkartöflu-enchilada \nBauna- og maíssalat "
+      "items": "Reykt papriku- og svartbaunasúpa\nBakaðir jarðskokkar og sætar kartöflur\nLúða í saffran- og fenníkusoði"
     },
     {
-      "date": "28/08/2026",
+      "date": "03/09/2026",
       "cafeteria": "root",
-      "items": "Graskers-, peru- og salvíusúpa \nMilt kryddað lamb með jógúrt, engifer, fennelfræjum og kardimommum.\nBasmati-hrísgrjón \nJapanskt grænmetis-gyoza með kimchi \nBlómkáls-couscous "
+      "items": "Rauðrófu-, epla- og piparrótarsúpa\nSæt kartöflu og svartbauna-mole\nLamb með rauðrófum og brómberjum\nEggaldin með chermoula"
+    },
+    {
+      "date": "04/09/2026",
+      "cafeteria": "root",
+      "items": "Sellerírótar- og spínatsúpa\nPizza al Taglio alla Romana\nPastasalat"
     }
   ],
   "highlights": [

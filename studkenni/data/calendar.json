@@ -361,20 +361,6 @@
       "cakes": []
     },
     {
-      "name": "Tanja Kristín Leifsdóttir",
-      "nickname": "Tanja",
-      "image": [
-        "images/people/myndataka/tanja.jpg",
-        "images/people/animal_ai/Tanja.png"
-      ],
-      "birthday": "27/11/1989",
-      "facts": [
-        "Er með lyftarapróf",
-        "Vann næturvinnu um helgar í miðbænum sem unglingur"
-      ],
-      "cakes": []
-    },
-    {
       "name": "Vala Kristín Theodórsdóttir",
       "nickname": "Vala",
       "image": [
@@ -460,6 +446,18 @@
         "https://venue-cms-images.oche.com/EINKA%20FYRIR%20VEF.webp"
       ],
       "description": "Haldin í Oche í Kringlunni. \n \uD83D\uDD60 Mæting 17:30 \n \uD83C\uDF54 Matur og drykkur \uD83C\uDF79 \n \uD83C\uDFAF Píla og karaoke \uD83C\uDFA4",
+      "facts": []
+    },
+    {
+      "title": "Treyjudagurinn",
+      "date": "04/09/2026",
+      "promo_days_before": 5,
+      "priority": 2,
+      "graphic": [
+        "images/events/treyjudagurinn.jpg",
+        "images/events/treyjudagurinn_2.jpeg"
+      ],
+      "description": "Komdu í uppáhalds treyjunni þinni í vinnuna.\nÞað skiptir ekki máli hvaða liði þú heldur með.\nÁ Treyjudeginum erum við öll í sama liði.\nFyrir börn með krabbamein.",
       "facts": []
     }
   ],

@@ -370,8 +370,8 @@ function renderEvent(main, secondaries = []) {
         </div>
         <div class="event-info">
           <div class="event-label">Væntanlegt</div>
-          <div class="event-date">${eventDateLabel(main.date)}</div>
           <div class="event-title">${main.title}</div>
+          <div class="event-date">${eventDateLabel(main.date)}</div>
           <div class="event-countdown">${countdownText(main.days)}</div>
           <div class="event-description">${nl2br(main.description)}</div>
           ${main.facts && main.facts.length > 0 ? `

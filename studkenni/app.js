@@ -16,6 +16,8 @@ function shuffle(arr) {
 }
 const MONTHS      = ['janúar','febrúar','mars','apríl','maí','júní',
                      'júlí','ágúst','september','október','nóvember','desember'];
+const WEEKDAYS    = ['Sunnudaginn','Mánudaginn','Þriðjudaginn','Miðvikudaginn',
+                     'Fimmtudaginn','Föstudaginn','Laugardaginn'];
 const CONF_COLORS = ['#FF6B6B','#FECA57','#48DBFB','#C56CF0','#FF9F43',
                      '#55EFC4','#FD79A8','#54A0FF'];
 
@@ -34,6 +36,12 @@ function birthdayToMMDD(birthday) {
 function prettyDate(birthday) {
   const [dd, mm] = birthday.split('/').map(Number);
   return `${dd}. ${MONTHS[mm - 1]} `;
+}
+
+function eventDateLabel(dateStr) {
+  const [dd, mm, yyyy] = dateStr.split('/').map(Number);
+  const weekday = WEEKDAYS[new Date(yyyy, mm - 1, dd).getDay()];
+  return `${weekday} ${dd}. ${MONTHS[mm - 1]}`;
 }
 
 // Returns the set of MM-DD strings to check for birthdays.
@@ -362,6 +370,7 @@ function renderEvent(main, secondaries = []) {
         </div>
         <div class="event-info">
           <div class="event-label">Væntanlegt</div>
+          <div class="event-date">${eventDateLabel(main.date)}</div>
           <div class="event-title">${main.title}</div>
           <div class="event-countdown">${countdownText(main.days)}</div>
           <div class="event-description">${nl2br(main.description)}</div>

@@ -523,21 +523,22 @@ body.mode-event {
   animation: slideFromRight 0.5s ease 0.2s both;
 }
 
-.event-title {
-  font-family: 'Paytone One', sans-serif;
-  font-size: clamp(3rem, 8vw, 11rem);
-  line-height: 1.0;
-  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
-  animation: slideFromRight 0.5s ease 0.35s both;
-}
-
 .event-date {
   font-family: 'Nunito', sans-serif;
   font-size: clamp(1.2rem, 2.4vw, 3rem);
   font-weight: 800;
   color: rgba(255, 255, 255, 0.7);
   letter-spacing: 0.02em;
-  animation: slideFromRight 0.5s ease 0.45s both;
+  margin-bottom: -3.2vh;
+  animation: slideFromRight 0.5s ease 0.3s both;
+}
+
+.event-title {
+  font-family: 'Paytone One', sans-serif;
+  font-size: clamp(3rem, 8vw, 11rem);
+  line-height: 1.0;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  animation: slideFromRight 0.5s ease 0.4s both;
 }
 
 .event-description {

@@ -161,8 +161,8 @@ function getActiveEvents(events) {
 }
 
 function countdownText(days) {
-  if (days === 0) return '🎉 Í dag!';
-  if (days === 1) return '✨ Á morgun!';
+  if (days === 0) return 'Í dag!';
+  if (days === 1) return 'Á morgun!';
   return `Eftir ${days} daga`;
 }
 

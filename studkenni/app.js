@@ -242,6 +242,14 @@ function preloadImages(urls) {
 
 function nl2br(str) { return (str || '').replace(/\n/g, '<br>'); }
 
+// Drawn instead of using the ✨ emoji, whose glyph/color rendering is
+// unreliable on some smart TV browsers.
+function sparkleIcon() {
+  return `<svg class="sparkle-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M12 0c.9 6.4 5.6 11.1 12 12-6.4.9-11.1 5.6-12 12-.9-6.4-5.6-11.1-12-12C6.4 11.1 11.1 6.4 12 0z"/>
+  </svg>`;
+}
+
 function eventGradient(color) {
   if (!color) return null;
   if (Array.isArray(color)) return `linear-gradient(135deg, ${color[0]} 0%, ${color[1]} 100%)`;
@@ -540,7 +548,7 @@ function renderHighlight(highlight, secondaries = []) {
 
   document.getElementById('app').innerHTML = `
     <div class="highlight-screen${hasSecondary ? ' split' : ''}">
-      <div class="highlight-header">✨ Í dag ✨</div>
+      <div class="highlight-header">${sparkleIcon()} Í dag ${sparkleIcon()}</div>
       ${hasSecondary ? `
         <div class="highlight-body">
           <div class="highlight-main">${card}</div>

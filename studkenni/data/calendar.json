@@ -465,7 +465,17 @@
   ],
   "cakes_since": 2026,
   "cafeterias": [
-    { "id": "root", "title": "Róót", "graphic": "images/events/intro_mynd.jpg" }
+    { "id": "root",
+      "title": "Róót",
+      "graphic": [
+        "https://rootbistro.is/_nuxt/venue-dining-room.CZMU03gF.jpg",
+        "https://rootbistro.is/_nuxt/venue-hall-wide.CI_cQEJY.jpg",
+        "https://rootbistro.is/_nuxt/venue-planter-chairs.DTRcM-d9.jpg",
+        "https://rootbistro.is/_nuxt/venue-lantern-ceiling.BUo2bgzh.jpg",
+        "https://rootbistro.is/_nuxt/venue-olive-curtain.Dn1ze5BQ.jpg",
+        "https://rootbistro.is/_nuxt/venue-lanterns-tree.lrcMUhIr.jpg"
+      ]
+    }
   ],
   "menu": [
     {

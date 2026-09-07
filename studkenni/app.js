@@ -212,6 +212,29 @@ function startEventImageRotation(images) {
   }, 5 * 60 * 1000);
 }
 
+function startHighlightImageRotation(images) {
+  if (imageRotationInterval) clearInterval(imageRotationInterval);
+  let idx = 0;
+  let activeId = 'highlight-img-a';
+  let hiddenId = 'highlight-img-b';
+
+  imageRotationInterval = setInterval(() => {
+    idx = (idx + 1) % images.length;
+    const hidden = document.getElementById(hiddenId);
+    if (!hidden) { clearInterval(imageRotationInterval); return; }
+
+    hidden.onload = () => {
+      const active = document.getElementById(activeId);
+      const h = document.getElementById(hiddenId);
+      if (!active || !h) return;
+      h.style.opacity = '0.9';
+      active.style.opacity = '0';
+      [activeId, hiddenId] = [hiddenId, activeId];
+    };
+    hidden.src = images[idx];
+  }, 5 * 60 * 1000);
+}
+
 function startPersonImageRotation(images, personIdx) {
   let idx = 0;
   let activeId = `person-img-a-${personIdx}`;
@@ -295,10 +318,11 @@ function menuItemsList(text) {
 
 function secondaryMenuHtml(cafeteria) {
   const items = menuItemsList(cafeteria.items);
+  const graphic = Array.isArray(cafeteria.graphic) ? cafeteria.graphic[0] : cafeteria.graphic;
   return `
-    ${cafeteria.graphic ? `
+    ${graphic ? `
       <div class="event-minor-graphic">
-        <img class="event-minor-img" src="${cafeteria.graphic}" alt="${cafeteria.title ?? ''}">
+        <img class="event-minor-img" src="${graphic}" alt="${cafeteria.title ?? ''}">
       </div>` : ''}
     <div class="event-minor-info event-minor-info--menu">
       <div class="event-label">Í matinn 🍽️</div>
@@ -509,7 +533,8 @@ function renderBirthday(people, confetti, cakesSince, secondaries = []) {
 function renderHighlight(highlight, secondaries = []) {
   document.body.style.background = '';
   document.body.className = 'mode-highlight';
-  const img    = highlight.image;
+  const images = Array.isArray(highlight.image) ? highlight.image : [highlight.image];
+  const img    = images[0];
   const isPath = img && img.includes('/');
   const isEmoji = img && !isPath;
 
@@ -525,7 +550,8 @@ function renderHighlight(highlight, secondaries = []) {
   const card = highlight.headerGraphic && isPath ? `
     <div class="highlight-card highlight-card--graphic-header">
       <div class="highlight-graphic-header">
-        <img class="highlight-graphic-img" src="${img}" alt="${highlight.title}">
+        <img id="highlight-img-a" class="highlight-graphic-img" src="${img}" alt="${highlight.title}">
+        <img id="highlight-img-b" class="highlight-graphic-img" src="" alt="${highlight.title}" style="opacity:0">
       </div>
       <div class="highlight-content">
         <div class="highlight-title">${highlight.title}</div>
@@ -567,6 +593,10 @@ function renderHighlight(highlight, secondaries = []) {
   `;
 
   if (panels.length > 1) startSecondaryRotation(panels);
+  if (highlight.headerGraphic && isPath && images.length > 1) {
+    preloadImages(images);
+    startHighlightImageRotation(images);
+  }
 }
 
 function renderDefault() {

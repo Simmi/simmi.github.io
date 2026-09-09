@@ -461,6 +461,31 @@
       ],
       "description": "Komdu í uppáhalds treyjunni þinni í vinnuna.\nÞað skiptir ekki máli hvaða liði þú heldur með.\nÁ Treyjudeginum erum við öll í sama liði.\nFyrir börn með krabbamein.",
       "facts": []
+    },
+    {
+      "title": "Guli dagurinn",
+      "date": "10/09/2026",
+      "color": "#FFC501",
+      "promo_days_before": 1,
+      "priority": 2,
+      "graphic": [
+        "images/events/logo_gulur_sept.png"
+      ],
+      "description": "Gulur september felur í sér samvinnu um geðrækt og sjálfsvígsforvarnir á öllum stigum.\nHvetjum öll til að mæta í gulu og sýna málefninu stuðning.",
+      "facts": []
+    },
+    {
+      "title": "Happpy hour Stuðkennis",
+      "date": "17/09/2026",
+      "color": "#FF00FF",
+      "promo_days_before": 3,
+      "priority": 2,
+      "graphic": [
+        "images/events/Hour 1.png",
+        "images/events/Hour 2.png"
+      ],
+      "description": "Klukkan 17:00 í Bjórgarðinum",
+      "facts": []
     }
   ],
   "cakes_since": 2026,

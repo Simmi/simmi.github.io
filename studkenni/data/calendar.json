@@ -33,7 +33,8 @@
       "name": "Jakob Philip",
       "nickname": "Jakob",
       "image": [
-        "images/people/animal_ai/Jakob.png"
+        "images/people/animal_ai/Jakob.png",
+        "images/people/south_park/jakob.png"
       ],
       "birthday": "25/01/1986",
       "facts": [],
@@ -43,7 +44,8 @@
       "name": "Einar Gunnlaugsson",
       "nickname": "Einar G.",
       "image": [
-        "images/people/animal_ai/Einar G.png"
+        "images/people/animal_ai/Einar G.png",
+        "images/people/south_park/einar_g.png"
       ],
       "birthday": "29/01/1995",
       "facts": ["Er með köfunarréttindi", "Kann ekki að smella fingrum"],
@@ -55,7 +57,8 @@
       "image": [
         "images/people/myndataka/sverrir.jpg",
         "images/people/myndataka/sverrir_2.jpg",
-        "images/people/animal_ai/Sverrir.png"
+        "images/people/animal_ai/Sverrir.png",
+        "images/people/south_park/sverrir.png"
       ],
       "birthday": "13/02/1973",
       "facts": [],
@@ -88,7 +91,8 @@
       "name": "Roland Nóason",
       "nickname": "Roland",
       "image": [
-        "images/people/animal_ai/Roland.png"
+        "images/people/animal_ai/Roland.png",
+        "images/people/south_park/roland.png"
       ],
       "birthday": "09/03/1983",
       "facts": [],
@@ -99,7 +103,8 @@
       "nickname": "Snorri",
       "image": [
         "images/people/myndataka/snorri.jpg",
-        "images/people/animal_ai/Snorri.png"
+        "images/people/animal_ai/Snorri.png",
+        "images/people/south_park/snorri.png"
       ],
       "birthday": "22/04/1997",
       "facts": ["Var Íslandsmeistari í að snúa körfubolta á puttanum", "Er númer eitt allra Íslendinga í íþrótt sem keppt er í á Ólympíuleikunum"],
@@ -135,7 +140,8 @@
       "nickname": "Klara",
       "image": [
         "images/people/myndataka/klara.jpg",
-        "images/people/animal_ai/Klara.png"
+        "images/people/animal_ai/Klara.png",
+        "images/people/south_park/klara.png"
       ],
       "birthday": "10/05/1993",
       "facts": ["Hefur misst bílprófið", "Baðaði einu sinni hamstur með klósetthreinsi"],
@@ -145,7 +151,8 @@
       "name": "Björn Þorvarðarson",
       "nickname": "Björn",
       "image": [
-        "images/people/animal_ai/bjorn.png"
+        "images/people/animal_ai/bjorn.png",
+        "images/people/south_park/bjorn.png"
       ],
       "birthday": "10/05/1984",
       "facts": [],
@@ -156,7 +163,8 @@
       "nickname": "Zaki",
       "image": [
         "images/people/myndataka/zaki.jpg",
-        "images/people/animal_ai/Zaki.png"
+        "images/people/animal_ai/Zaki.png",
+        "images/people/south_park/zaki.png"
       ],
       "birthday": "11/05/1986",
       "facts": [
@@ -170,7 +178,8 @@
       "nickname": "Einar Ársæll",
       "image": [
         "images/people/myndataka/einar_a.jpg",
-        "images/people/animal_ai/Einar A.png"
+        "images/people/animal_ai/Einar A.png",
+        "images/people/south_park/einar_a.png"
       ],
       "birthday": "15/05/1971",
       "facts": [
@@ -185,7 +194,8 @@
       "image": [
         "images/people/myndataka/oli.jpg",
         "images/people/myndataka/oli_2.jpg",
-        "images/people/animal_ai/Oli.png"
+        "images/people/animal_ai/Oli.png",
+        "images/people/south_park/oli.png"
       ],
       "birthday": "18/05/1977",
       "facts": [
@@ -199,7 +209,8 @@
       "nickname": "Jenný",
       "image": [
         "images/people/myndataka/jenny.jpg",
-        "images/people/animal_ai/Jenny.png"
+        "images/people/animal_ai/Jenny.png",
+        "images/people/south_park/jenny.png"
       ],
       "birthday": "28/05/1990",
       "facts": [
@@ -237,7 +248,8 @@
       "nickname": "Sigga",
       "image": [
         "images/people/myndataka/sigga.jpg",
-        "images/people/animal_ai/Sigga.png"
+        "images/people/animal_ai/Sigga.png",
+        "images/people/south_park/sigga.png"
       ],
       "birthday": "29/06/1991",
       "facts": [
@@ -251,7 +263,8 @@
       "nickname": "Þórir",
       "image": [
         "images/people/myndataka/thorir.jpg",
-        "images/people/animal_ai/Thorir.png"
+        "images/people/animal_ai/Thorir.png",
+        "images/people/south_park/thorir.png"
       ],
       "birthday": "08/07/1977",
       "facts": [],
@@ -354,7 +367,8 @@
       "nickname": "Ási",
       "image": [
         "images/people/myndataka/asi.jpg",
-        "images/people/animal_ai/Asi.png"
+        "images/people/animal_ai/Asi.png",
+        "images/people/south_park/asi.png"
       ],
       "birthday": "22/11/1985",
       "facts": [],

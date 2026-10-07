@@ -879,7 +879,7 @@ body.mode-highlight {
 
 .presenter-avatar {
   position: fixed;
-  bottom: -8vw;
+  bottom: -3vw;
   right: 2vw;
   z-index: 110;
   width: clamp(180px, 44vw, 500px);

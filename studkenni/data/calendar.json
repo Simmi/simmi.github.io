@@ -513,8 +513,16 @@
         "images/events/kokteilaskolinn_3.webp"
       ],
       "description": "Komum saman, lyftum glösum og lærum að töfra fram góða kokteila. \nKlukkan 16:30 á Rauðarárstíg 27",
-      "facts": []
+      "facts": [],
+      "showPresenterAvatar": true
     }
+  ],
+  "presentationAvatarGraphics": [
+    "images/people/stjorn/pixar_snorri_kynnir.png",
+    "images/people/stjorn/pixar_erla_kynnir.png",
+    "images/people/stjorn/pixar_klara_kynnir.png",
+    "images/people/stjorn/pixar_jenny_kynnir.png",
+    "images/people/stjorn/pixar_kristjan_kynnir.png"
   ],
   "cakes_since": 2026,
   "cafeterias": [

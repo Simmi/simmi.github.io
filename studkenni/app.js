@@ -5,6 +5,7 @@ let factRotationInterval = null;
 let imageRotationInterval = null;
 let secondaryRotationInterval = null;
 let personImageIntervals = [];
+let presenterAvatarInterval = null;
 
 function shuffle(arr) {
   const a = [...arr];
@@ -259,6 +260,49 @@ function startPersonImageRotation(images, personIdx) {
   personImageIntervals.push(interval);
 }
 
+// Picks a random avatar that differs from the last one shown. The last
+// one is remembered across the hourly reload so it doesn't repeat then either.
+const LAST_AVATAR_KEY = 'lastPresenterAvatar';
+
+function pickPresenterAvatar(images) {
+  let last = null;
+  try { last = localStorage.getItem(LAST_AVATAR_KEY); } catch {}
+  const options = images.length > 1 ? images.filter(img => img !== last) : images;
+  const pick = opLettions[Math.floor(Math.random() * options.length)];
+  try { localStorage.setItem(LAST_AVATAR_KEY, pick); } catch {}
+  return pick;
+}
+
+function startPresenterAvatarRotation(images) {
+  if (presenterAvatarInterval) clearInterval(presenterAvatarInterval);
+  let activeId = 'presenter-avatar-a';
+  let hiddenId = 'presenter-avatar-b';
+
+  presenterAvatarInterval = setInterval(() => {
+    const hidden = document.getElementById(hiddenId);
+    if (!hidden) { clearInterval(presenterAvatarInterval); return; }
+
+    hidden.onload = () => {
+      const active = document.getElementById(activeId);
+      const h = document.getElementById(hiddenId);
+      if (!active || !h) return;
+      h.style.opacity = '1';
+      active.style.opacity = '0';
+      [activeId, hiddenId] = [hiddenId, activeId];
+    };
+    hidden.src = pickPresenterAvatar(images);
+  }, 10 * 60 * 1000);
+}
+
+function presenterAvatarHtml(images) {
+  return `
+    <div class="presenter-avatar">
+      <img id="presenter-avatar-a" class="presenter-avatar-img" src="${pickPresenterAvatar(images)}" alt="">
+      <img id="presenter-avatar-b" class="presenter-avatar-img" src="" alt="" style="opacity:0">
+    </div>
+  `;
+}
+
 function preloadImages(urls) {
   urls.forEach(url => { const img = new Image(); img.src = url; });
 }
@@ -379,9 +423,11 @@ function startSecondaryRotation(panels) {
 }
 
 // secondaries: array of {type: 'event'|'menu', data}
-function renderEvent(main, secondaries = []) {
+function renderEvent(main, secondaries = [], avatarGraphics = []) {
   const images = Array.isArray(main.graphic) ? main.graphic : [main.graphic];
   preloadImages(images);
+  const showAvatar = main.showPresenterAvatar === true && avatarGraphics.length > 0;
+  if (showAvatar) preloadImages(avatarGraphics);
 
   const panels = secondaries.map(s =>
     typeof s === 'string'  ? s :
@@ -426,7 +472,9 @@ function renderEvent(main, secondaries = []) {
             </div>` : ''}
         </div>` : ''}
     </div>
+    ${showAvatar ? presenterAvatarHtml(avatarGraphics) : ''}
   `;
+  if (showAvatar && avatarGraphics.length > 1) startPresenterAvatarRotation(avatarGraphics);
   if (main.facts && main.facts.length > 0) startEventFactRotation(main.facts);
   if (images.length > 1) startEventImageRotation(images);
   if (panels.length > 1) startSecondaryRotation(panels);
@@ -676,7 +724,7 @@ async function init() {
   const confetti = makeConfetti(canvas);
 
   try {
-    const { people, events = [], highlights = [], cafeterias = [], menu = [], cakes_since: cakesSince = 2026 } = await fetch('data/calendar.json').then(r => r.json());
+    const { people, events = [], highlights = [], cafeterias = [], menu = [], cakes_since: cakesSince = 2026, presentationAvatarGraphics = [] } = await fetch('data/calendar.json').then(r => r.json());
     const dates         = getRelevantDates();
     const celebrants    = people.filter(p => dates.includes(birthdayToMMDD(p.birthday)));
     const now    = new Date();
@@ -720,7 +768,7 @@ async function init() {
       }
       todayHighlights.forEach(h => secondaries.push({ type: 'highlight', data: h }));
       if (wcStandings) secondaries.push(wcStandings);
-      renderEvent(activeEvents[0], secondaries);
+      renderEvent(activeEvents[0], secondaries, presentationAvatarGraphics);
     } else if (now.getHours() < 13 && todayMenuEntries.length > 0) {
       const entry = todayMenuEntries[0];
       const cafDef = cafeteriaMap[entry.cafeteria] ?? cafeterias[0] ?? {};

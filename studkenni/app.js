@@ -268,7 +268,7 @@ function pickPresenterAvatar(images) {
   let last = null;
   try { last = localStorage.getItem(LAST_AVATAR_KEY); } catch {}
   const options = images.length > 1 ? images.filter(img => img !== last) : images;
-  const pick = opLettions[Math.floor(Math.random() * options.length)];
+  const pick = options[Math.floor(Math.random() * options.length)];
   try { localStorage.setItem(LAST_AVATAR_KEY, pick); } catch {}
   return pick;
 }

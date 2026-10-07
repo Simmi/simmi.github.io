@@ -882,7 +882,7 @@ body.mode-highlight {
   bottom: -3vw;
   right: 2vw;
   z-index: 110;
-  width: clamp(180px, 44vw, 500px);
+  width: clamp(180px, 44vw, 800px);
   aspect-ratio: 1;
   pointer-events: none;
 }

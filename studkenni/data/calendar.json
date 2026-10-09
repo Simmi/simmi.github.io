@@ -540,16 +540,6 @@
   ],
   "menu": [
     {
-      "date": "01/10/2026",
-      "cafeteria": "root",
-      "items": "Tex-Mex-sjávarréttasúpa\nBBQ-hlaðborð\nBBQ-portobello með borlotti-baunum og stökkum kartöflum\nHvítkáls- og gulrótahrásalat með sellerífræjum"
-    },
-    {
-      "date": "02/10/2026",
-      "cafeteria": "root",
-      "items": "Marokkósk harira með kjúklingabaunum og linsum\nKjúklingur með za’atar og sítrónu á krydduðum hrísgrjónum\nFalafel með hummus, rauðlauk, raita og arabísku brauði\nBlómkálstabbouleh með granatepli og myntu"
-    },
-    {
       "date": "05/10/2026",
       "cafeteria": "root",
       "items": "Nípu- og perusúpa\nOfnbakaður kjúklingur með soja og engifer\nÞorskur með súrdeigsbrauðssósu\nFylltar paprikur með kjúklingabaunum og kúskúsi\nSalathjörtu með radísum og kjúklingabaunum"
@@ -573,6 +563,31 @@
       "date": "09/10/2026",
       "cafeteria": "root",
       "items": "Rauðrófusúpa með súrkáli og dilli\nKjúklingur með parmesan og tómatsósu\nEggaldin parmigiana\nTómatasalat með avókadó og radísum\nSítrónu- og vanillukaka með valmúafræjum"
+    },
+    {
+      "date": "12/10/2026",
+      "cafeteria": "root",
+      "items": "Jarðskokkasúpa með sólþurrkuðum tómötum\nPappardelle með krydduðu ragù, fennel og tómötum\nLanga með fennel, sítrónu og hvítlaukssósu\nBakaðir rauðlaukar með graskeri, perlubyggi og salvíu\nRósakáls- og grænkálssalat"
+    },
+    {
+      "date": "13/10/2026",
+      "cafeteria": "root",
+      "items": "Kókos- og sætkartöflusúpa með lime og engifer\nSatay-kjúklingur\nÞorskur með sítrónugrasi, lime og kókos\nTamarindgljáðar rauðrófur með svörtum baunum og sesami\nAgúrku- og kínakálssalat með mangó"
+    },
+    {
+      "date": "14/10/2026",
+      "cafeteria": "root",
+      "items": "Engifer- og tofusúpa\nGrís með peru–gochujanggljáa og sesamnúðlum\nSteinbítur með svartediksponzu og engiferolíu\nStökkbakaðar grænmetisvorrúllur með plómusósu og grænum baunum\nAgúrku- og wakame-salat með radísum"
+    },
+    {
+      "date": "15/10/2026",
+      "cafeteria": "root",
+      "items": "Tómat- og hvítlaukssúpa með parmesan-brauðteningum\nRibeye með foie gras-béarnaise og chimichurri\nBlaðlauks- og hvítbaunagratín með veganosti\nEndívu- og eplasalat með grænum vínberjum\nGlæsilegt ostaborð frá MS\nSkyrkaka í boði MS"
+    },
+    {
+      "date": "16/10/2026",
+      "cafeteria": "root",
+      "items": "Aspassúpa með estragoni og límónu\nKjúklingur með ristuðum kókos, karrílaufum og svörtum pipar\nNýrnabaunir, kúrbítur og edamame í tómat–engifersósu\nGulrótar- og kókossalat með límónu\nKaramellubananakaka með kardimommum"
     }
   ],
 

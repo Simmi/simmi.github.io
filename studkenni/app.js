@@ -7,6 +7,9 @@ let secondaryRotationInterval = null;
 let personImageIntervals = [];
 let presenterAvatarInterval = null;
 
+// The lunch menu is shown until this hour (24h clock)
+const MENU_CUTOFF_HOUR = 14;
+
 function shuffle(arr) {
   const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
@@ -749,7 +752,7 @@ async function init() {
 
     if (celebrants.length > 0) {
       const birthdaySecondaries = [];
-      if (now.getHours() < 13) {
+      if (now.getHours() < MENU_CUTOFF_HOUR) {
         todayMenuEntries.forEach(entry => {
           const cafDef = cafeteriaMap[entry.cafeteria] ?? cafeterias[0] ?? {};
           birthdaySecondaries.push({ type: 'menu', data: { ...cafDef, items: entry.items } });
@@ -760,7 +763,7 @@ async function init() {
       const secondaries = [];
       if (activeEvents.length > 1 && activeEvents[1].priority > activeEvents[0].priority)
         secondaries.push({ type: 'event', data: activeEvents[1] });
-      if (now.getHours() < 13) {
+      if (now.getHours() < MENU_CUTOFF_HOUR) {
         todayMenuEntries.forEach(entry => {
           const cafDef = cafeteriaMap[entry.cafeteria] ?? cafeterias[0] ?? {};
           secondaries.push({ type: 'menu', data: { ...cafDef, items: entry.items } });
@@ -769,7 +772,7 @@ async function init() {
       todayHighlights.forEach(h => secondaries.push({ type: 'highlight', data: h }));
       if (wcStandings) secondaries.push(wcStandings);
       renderEvent(activeEvents[0], secondaries, presentationAvatarGraphics);
-    } else if (now.getHours() < 13 && todayMenuEntries.length > 0) {
+    } else if (now.getHours() < MENU_CUTOFF_HOUR && todayMenuEntries.length > 0) {
       const entry = todayMenuEntries[0];
       const cafDef = cafeteriaMap[entry.cafeteria] ?? cafeterias[0] ?? {};
       const menuHighlight = { title: cafDef.title ?? 'Matseðill', text: entry.items, image: cafDef.graphic ?? '🍽️', headerGraphic: !!cafDef.graphic, isMenu: true };

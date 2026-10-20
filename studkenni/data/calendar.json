@@ -523,7 +523,9 @@
       "promo_days_before": 3,
       "priority": 2,
       "graphic": [
-        "images/events/bleiki_dagurinn.png"
+        "images/events/bleiki_dagurinn.png",
+        "images/events/bleik_slaufa.png",
+        "images/events/bleika2026-herobanner.jpg"
       ],
       "description": "Í tilefni af bleikum október ætlum við að hafa bleikan dag í vinnunni á miðvikudaginn. Hvetjum ykkur öll til að klæðast einhverju bleiku þennan dag.",
       "facts": [],

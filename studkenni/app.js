@@ -42,6 +42,16 @@ function prettyDate(birthday) {
   return `${dd}. ${MONTHS[mm - 1]} `;
 }
 
+// Age the person turns on the birthday that falls on `date`
+function ageOn(birthday, date) {
+  const yyyy = Number(birthday.split('/')[2]);
+  return yyyy ? date.getFullYear() - yyyy : null;
+}
+
+function ageLabel(age) {
+  return age ? ` · ${age} ára` : '';
+}
+
 function eventDateLabel(dateStr) {
   const [dd, mm, yyyy] = dateStr.split('/').map(Number);
   const weekday = WEEKDAYS[new Date(yyyy, mm - 1, dd).getDay()];
@@ -502,6 +512,18 @@ function renderCakeHistory(cakes, cakesSince) {
   `;
 }
 
+// The date in the main screen's window (today, plus the weekend on
+// Mondays) on which this birthday falls
+function birthdayDateInWindow(birthday) {
+  const mmdd = birthdayToMMDD(birthday);
+  for (let i = 0; i <= 2; i++) {
+    const d = new Date();
+    d.setDate(d.getDate() - i);
+    if (toMMDD(d) === mmdd) return d;
+  }
+  return new Date();
+}
+
 function renderBirthday(people, confetti, cakesSince, secondaries = []) {
   personImageIntervals.forEach(clearInterval);
   personImageIntervals = [];
@@ -530,7 +552,7 @@ function renderBirthday(people, confetti, cakesSince, secondaries = []) {
                 <img id="person-img-b-${i}" class="person-photo" src="" alt="${p.nickname ?? p.name}" style="opacity:0">
               </div>
               <div class="person-name">${p.nickname ?? p.name}</div>
-              <div class="person-date">${prettyDate(p.birthday)}</div>
+              <div class="person-date">${prettyDate(p.birthday).trim()}${ageLabel(ageOn(p.birthday, birthdayDateInWindow(p.birthday)))}</div>
               ${renderCakeHistory(p.cakes ?? [], cakesSince)}
             </div>
             ${p.facts && p.facts.length > 0 ? `
@@ -678,7 +700,7 @@ function getRecentAndUpcomingBirthdays(people) {
     d.setDate(today.getDate() + i);
     people
       .filter(p => birthdayToMMDD(p.birthday) === toMMDD(d))
-      .forEach(p => result.push({ ...p, daysOffset: i }));
+      .forEach(p => result.push({ ...p, daysOffset: i, age: ageOn(p.birthday, d) }));
   }
   return result;
 }
@@ -704,7 +726,7 @@ function renderUpcomingWidget(people) {
         <img class="upcoming-photo" src="${Array.isArray(p.image) ? p.image[0] : p.image}" alt="${p.nickname ?? p.name}">
         <div class="upcoming-info">
           <div class="upcoming-name">${p.nickname ?? p.name}</div>
-          <div class="upcoming-date">${offsetLabel(p.daysOffset)} · ${prettyDate(p.birthday).trim()}</div>
+          <div class="upcoming-date">${offsetLabel(p.daysOffset)} · ${prettyDate(p.birthday).trim()}${ageLabel(p.age)}</div>
         </div>
       </div>
     `).join('')}

@@ -530,6 +530,20 @@
       "description": "Í tilefni af bleikum október ætlum við að hafa bleikan dag í vinnunni á miðvikudaginn. Hvetjum ykkur öll til að klæðast einhverju bleiku þennan dag.",
       "facts": [],
       "showPresenterAvatar": false
+    },
+    {
+      "title": "Búningadagur",
+      "date": "30/10/2026",
+      "color": "#E65A27",
+      "promo_days_before": 3,
+      "priority": 2,
+      "graphic": [
+        "Halloween_background.jpg",
+        "Halloween_background_2.jpg"
+      ],
+      "description": "Þau sem vilja mæta í búningum mega gera það á föstudaginn 30. október. Hvetjum ykkur öll til að klæðast einhverju hryllilega skemmtilegu þennan dag.",
+      "facts": [],
+      "showPresenterAvatar": false
     }
   ],
   "presentationAvatarGraphics": [

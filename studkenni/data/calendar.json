@@ -538,8 +538,8 @@
       "promo_days_before": 3,
       "priority": 2,
       "graphic": [
-        "Halloween_background.jpg",
-        "Halloween_background_2.jpg"
+        "images/events/Halloween_background.jpg",
+        "images/events/Halloween_background_2.jpg"
       ],
       "description": "Þau sem vilja mæta í búningum mega gera það á föstudaginn 30. október. Hvetjum ykkur öll til að klæðast einhverju hryllilega skemmtilegu þennan dag.",
       "facts": [],

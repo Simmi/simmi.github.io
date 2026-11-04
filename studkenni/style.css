@@ -550,6 +550,87 @@ body.mode-event {
   animation: slideFromRight 0.5s ease 0.5s both;
 }
 
+/* Registration phase: make it obvious the countdown is for sign-up,
+   not the event itself */
+.event-label--registration {
+  align-self: flex-start;
+  padding: 0.35em 0.9em;
+  border-radius: 999px;
+  background: #FECA57;
+  color: #2a1f00;
+  letter-spacing: 0.15em;
+}
+
+.event-registration {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4vh;
+  margin-top: 2.5vh;
+  animation: slideFromRight 0.5s ease 0.6s both;
+}
+
+.event-registration-label {
+  font-size: clamp(1.1rem, 2vw, 2.6rem);
+  font-weight: 900;
+  color: #FECA57;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.event-registration-deadline {
+  font-size: clamp(1rem, 1.8vw, 2.4rem);
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.event-registration .event-countdown {
+  line-height: 1.05;
+  animation: none;
+}
+
+/* Portrait poster: runs down the right of everything below the title.
+   The row takes the remaining height so the poster always fits; long
+   text scrolls in its own column instead of pushing the poster down. */
+.event-info:has(.event-body) {
+  overflow: hidden;
+}
+
+.event-body {
+  flex: 1;
+  min-height: 0;
+  margin-top: 2.5vh;
+  display: flex;
+  gap: 2.5vw;
+}
+
+.event-body-text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  overflow-y: auto;
+}
+
+.event-body .event-registration {
+  margin-top: 0;
+}
+
+.event-body .event-description {
+  font-size: clamp(1.1rem, 2vw, 2.8rem);
+}
+
+.event-poster {
+  flex: none;
+  height: 100%;
+  width: auto;
+  max-width: 45%;
+  object-fit: contain;
+  object-position: top right;
+  border-radius: 1rem;
+  animation: slideFromRight 0.5s ease 0.6s both;
+}
+
 .event-countdown {
   font-family: 'Paytone One', sans-serif;
   font-size: clamp(2.5rem, 5.5vw, 8rem);

@@ -165,12 +165,36 @@ function daysUntil(dateStr) {
   return Math.round((target - today) / (1000 * 60 * 60 * 24));
 }
 
+// Parses "DD/MM/YYYY HH:MM" (time optional, defaults to end of day)
+function parseDeadline(str) {
+  const [datePart, timePart] = str.trim().split(/\s+/);
+  const [dd, mm, yyyy] = datePart.split('/').map(Number);
+  const [h, min] = timePart ? timePart.split(':').map(Number) : [23, 59];
+  return { date: datePart, time: timePart ?? null, at: new Date(yyyy, mm - 1, dd, h, min) };
+}
+
 // Returns events whose promo window is active today.
+// An event with a registration_deadline is first promoted for sign-up
+// (phase 'registration', counting down to the deadline) during the
+// registration_promo_days_before window (falls back to promo_days_before).
+// After the deadline it is promoted as usual ahead of the event date.
 // Sorted by priority (1=main first) then by days remaining.
 function getActiveEvents(events) {
+  const now = new Date();
   return events
-    .map(e => ({ ...e, days: daysUntil(e.date), priority: e.priority ?? 1 }))
-    .filter(e => e.days >= 0 && e.days <= e.promo_days_before)
+    .map(e => {
+      const base = { ...e, priority: e.priority ?? 1 };
+      if (e.registration_deadline) {
+        const deadline = parseDeadline(e.registration_deadline);
+        const days = daysUntil(deadline.date);
+        const promoDays = e.registration_promo_days_before ?? e.promo_days_before;
+        if (now < deadline.at && days <= promoDays)
+          return { ...base, phase: 'registration', days, deadline };
+      }
+      const days = daysUntil(e.date);
+      return days >= 0 && days <= e.promo_days_before ? { ...base, phase: 'event', days } : null;
+    })
+    .filter(Boolean)
     .sort((a, b) => a.priority - b.priority || a.days - b.days);
 }
 
@@ -178,6 +202,22 @@ function countdownText(days) {
   if (days === 0) return 'Í dag!';
   if (days === 1) return 'Á morgun!';
   return `Eftir ${days} daga`;
+}
+
+function registrationCountdownText(event) {
+  const time = event.deadline.time ? ` kl. ${event.deadline.time}` : '';
+  if (event.days === 0) return `Í dag${time}!`;
+  if (event.days === 1) return `Á morgun${time}!`;
+  return `Eftir ${event.days} daga`;
+}
+
+function eventImages(event) {
+  const src = event.graphic ?? event.poster;
+  return Array.isArray(src) ? src : [src];
+}
+
+function eventPoster(event) {
+  return Array.isArray(event.poster) ? event.poster[0] : event.poster;
 }
 
 function startEventFactRotation(facts) {
@@ -354,15 +394,20 @@ function secondaryHighlightHtml(highlight) {
 }
 
 function secondaryEventHtml(event) {
-  const imgs = Array.isArray(event.graphic) ? event.graphic : [event.graphic];
+  const imgs = eventImages(event);
+  const isRegistration = event.phase === 'registration';
   return `
     <div class="event-minor-graphic">
       <img class="event-minor-img" src="${imgs[0]}" alt="${event.title}">
     </div>
     <div class="event-minor-info">
-      <div class="event-label">Einnig væntanlegt</div>
+      ${isRegistration
+        ? `<div class="event-label event-label--registration">Skráning opin</div>`
+        : `<div class="event-label">Einnig væntanlegt</div>`}
       <div class="event-minor-title">${event.title}</div>
-      <div class="event-minor-countdown">${countdownText(event.days)}</div>
+      <div class="event-minor-countdown">${isRegistration
+        ? `Skráningu lýkur ${registrationCountdownText(event).replace(/^./, c => c.toLowerCase())}`
+        : countdownText(event.days)}</div>
       ${event.description ? `<div class="event-minor-description">${nl2br(event.description)}</div>` : ''}
     </div>`;
 }
@@ -437,7 +482,9 @@ function startSecondaryRotation(panels) {
 
 // secondaries: array of {type: 'event'|'menu', data}
 function renderEvent(main, secondaries = [], avatarGraphics = []) {
-  const images = Array.isArray(main.graphic) ? main.graphic : [main.graphic];
+  const images = eventImages(main);
+  const poster = eventPoster(main);
+  const isRegistration = main.phase === 'registration';
   preloadImages(images);
   const showAvatar = main.showPresenterAvatar === true && avatarGraphics.length > 0;
   if (showAvatar) preloadImages(avatarGraphics);
@@ -460,11 +507,21 @@ function renderEvent(main, secondaries = [], avatarGraphics = []) {
           <img id="event-img-b" class="event-img" src="" alt="${main.title}" style="opacity:0">
         </div>
         <div class="event-info">
-          <div class="event-label">Væntanlegt</div>
+          ${isRegistration
+            ? `<div class="event-label event-label--registration">Skráning opin</div>`
+            : `<div class="event-label">Væntanlegt</div>`}
           <div class="event-date">${eventDateLabel(main.date)}</div>
           <div class="event-title">${main.title}</div>
-          <div class="event-countdown">${countdownText(main.days)}</div>
+          ${poster ? `<div class="event-body"><div class="event-body-text">` : ''}
+          ${isRegistration ? `
+            <div class="event-registration">
+              <div class="event-registration-label">Skráningu lýkur</div>
+              <div class="event-countdown">${registrationCountdownText(main)}</div>
+              <div class="event-registration-deadline">${eventDateLabel(main.deadline.date)}${main.deadline.time ? ` kl. ${main.deadline.time}` : ''}</div>
+            </div>
+          ` : `<div class="event-countdown">${countdownText(main.days)}</div>`}
           <div class="event-description">${nl2br(main.description)}</div>
+          ${poster ? `</div><img class="event-poster" src="${poster}" alt="${main.title}"></div>` : ''}
           ${main.facts && main.facts.length > 0 ? `
             <div class="event-fact-section">
               <div class="event-fact-label">Vissir þú að...</div>

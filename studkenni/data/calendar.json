@@ -544,6 +544,22 @@
       "description": "Eru ekki öll skelfileg?",
       "facts": [],
       "showPresenterAvatar": false
+    },
+    {
+      "title": "Jólauppistand",
+      "date": "18/12/2026",
+      "registration_deadline": "09/11/2026 12:00",
+      "registration_promo_days_before": 10,
+      "color": "#D3011C",
+      "promo_days_before": 3,
+      "priority": 2,
+      "graphic": [
+        "images/events/bbj.webp"
+      ],
+      "poster": "images/events/birna_bjargar_jolunum.jpeg",
+      "description": "Stuðkenni býður starfsfólki og mökum á uppistandið ,,Birna bjargar jólunum\" þann 18. desember klukkan 20:00 \n \nMeðlimir stuðkennis greiða ekkert fyrir miðann en dregið verður 3.000 kr af launum starfsmanns fyrir maka. \n \nEndilega skráið ykkur sem fyrst, hlekkur í Stuðkennisspjallinu ásamt frekari upplýsingum\nSkráningu lýkur á mánudaginn 9. nóvember klukkan 12:00",
+      "facts": [],
+      "showPresenterAvatar": false
     }
   ],
   "presentationAvatarGraphics": [

@@ -211,6 +211,14 @@ function registrationCountdownText(event) {
   return `Eftir ${event.days} daga`;
 }
 
+function registrationHeadline(event) {
+  return `Skráningu lýkur ${registrationCountdownText(event).replace(/^./, c => c.toLowerCase())}`;
+}
+
+function registrationDeadlineLabel(event) {
+  return `${eventDateLabel(event.deadline.date)}${event.deadline.time ? ` kl. ${event.deadline.time}` : ''}`;
+}
+
 function eventImages(event) {
   const src = event.graphic ?? event.poster;
   return Array.isArray(src) ? src : [src];
@@ -406,7 +414,7 @@ function secondaryEventHtml(event) {
         : `<div class="event-label">Einnig væntanlegt</div>`}
       <div class="event-minor-title">${event.title}</div>
       <div class="event-minor-countdown">${isRegistration
-        ? `Skráningu lýkur ${registrationCountdownText(event).replace(/^./, c => c.toLowerCase())}`
+        ? registrationHeadline(event)
         : countdownText(event.days)}</div>
       ${event.description ? `<div class="event-minor-description">${nl2br(event.description)}</div>` : ''}
     </div>`;
@@ -501,25 +509,26 @@ function renderEvent(main, secondaries = [], avatarGraphics = []) {
   document.body.style.background = eventGradient(main.color) ?? '';
   document.getElementById('app').innerHTML = `
     <div class="event-screen${hasSecondary ? ' split' : ''}">
-      <div class="event-main">
+      <div class="event-main${isRegistration ? ' is-registration' : ''}">
         <div class="event-graphic">
           <img id="event-img-a" class="event-img" src="${images[0]}" alt="${main.title}">
           <img id="event-img-b" class="event-img" src="" alt="${main.title}" style="opacity:0">
         </div>
         <div class="event-info">
-          ${isRegistration
-            ? `<div class="event-label event-label--registration">Skráning opin</div>`
-            : `<div class="event-label">Væntanlegt</div>`}
-          <div class="event-date">${eventDateLabel(main.date)}</div>
-          <div class="event-title">${main.title}</div>
-          ${poster ? `<div class="event-body"><div class="event-body-text">` : ''}
           ${isRegistration ? `
-            <div class="event-registration">
-              <div class="event-registration-label">Skráningu lýkur</div>
-              <div class="event-countdown">${registrationCountdownText(main)}</div>
-              <div class="event-registration-deadline">${eventDateLabel(main.deadline.date)}${main.deadline.time ? ` kl. ${main.deadline.time}` : ''}</div>
+            <div class="event-reg-kicker">
+              <span class="event-label event-label--registration">Skráning opin</span>
+              <span class="event-reg-event">${main.title} · ${eventDateLabel(main.date)}</span>
             </div>
-          ` : `<div class="event-countdown">${countdownText(main.days)}</div>`}
+            <div class="event-reg-headline">${registrationHeadline(main)}</div>
+            <div class="event-registration-deadline">${registrationDeadlineLabel(main)}</div>
+          ` : `
+            <div class="event-label">Væntanlegt</div>
+            <div class="event-date">${eventDateLabel(main.date)}</div>
+            <div class="event-title">${main.title}</div>
+          `}
+          ${poster ? `<div class="event-body"><div class="event-body-text">` : ''}
+          ${isRegistration ? '' : `<div class="event-countdown">${countdownText(main.days)}</div>`}
           <div class="event-description">${nl2br(main.description)}</div>
           ${poster ? `</div><img class="event-poster" src="${poster}" alt="${main.title}"></div>` : ''}
           ${main.facts && main.facts.length > 0 ? `

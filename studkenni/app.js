@@ -390,6 +390,14 @@ function eventGradient(color) {
   return `linear-gradient(135deg, #0a0814 0%, ${color} 55%, #0d0d1a 100%)`;
 }
 
+// Softer than eventGradient: the event colour mixed towards a muted
+// grey so the panel doesn't overpower the light default/highlight screens
+function mutedGradient(color) {
+  if (!color) return null;
+  const c = Array.isArray(color) ? color[0] : color;
+  return `linear-gradient(160deg, color-mix(in srgb, ${c} 62%, #8a8796) 0%, color-mix(in srgb, ${c} 55%, #3a3644) 100%)`;
+}
+
 function secondaryHighlightHtml(highlight) {
   const img    = highlight.image;
   const isPath = img && img.includes('/');
@@ -413,7 +421,7 @@ function secondaryRegistrationHtml(event) {
   const description = registrationDescription(event);
   const img = eventImages(event)[0];
   return `
-    <div class="event-minor-section" style="background: ${eventGradient(event.color) ?? 'transparent'}">
+    <div class="event-minor-section" style="background: ${mutedGradient(event.color) ?? 'transparent'}">
       <div class="event-minor-graphic">
         <img class="event-minor-img" src="${img}" alt="${event.title}">
       </div>

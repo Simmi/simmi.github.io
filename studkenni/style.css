@@ -561,42 +561,47 @@ body.mode-event {
   letter-spacing: 0.15em;
 }
 
-/* Slimmer header graphic in registration mode to leave room for the text */
-.event-main.is-registration .event-graphic {
-  height: 18vh;
-}
-
-.event-reg-kicker {
+/* Registration as a coloured section inside the secondary panel */
+.event-minor-section {
+  flex: 1;
+  min-height: 0;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.6vh 1vw;
-  animation: slideFromRight 0.5s ease 0.2s both;
+  flex-direction: column;
 }
 
-.event-reg-event {
-  font-size: clamp(1.1rem, 1.7vw, 2.4rem);
+.event-minor-section .event-label--registration {
+  font-size: clamp(0.8rem, 1vw, 1.4rem);
+}
+
+.event-minor-event-date,
+.event-minor-deadline {
+  font-size: clamp(0.9rem, 1.4vw, 2rem);
   font-weight: 800;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: -1vh;
+}
+
+.event-minor-section .event-minor-description {
+  font-size: clamp(1rem, 1.5vw, 2.2rem);
   color: rgba(255, 255, 255, 0.85);
 }
 
-.event-reg-headline {
-  font-family: 'Paytone One', sans-serif;
-  font-size: clamp(1.8rem, 2.9vw, 4.5rem);
-  line-height: 1.05;
-  background: linear-gradient(120deg, #FECA57, #FF9F43);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: slideFromRight 0.5s ease 0.35s both;
+/* Logo screen with a secondary panel beside it */
+.default-screen.split {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5vw;
 }
 
-.event-registration-deadline {
-  font-size: clamp(1rem, 1.8vw, 2.4rem);
-  font-weight: 800;
-  color: rgba(255, 255, 255, 0.75);
-  margin-top: -1.2vh;
-  animation: slideFromRight 0.5s ease 0.45s both;
+.default-screen.split .logo-screen {
+  flex: 2;
+  height: auto;
+}
+
+.default-screen.split .event-minor {
+  flex: 1;
 }
 
 /* Portrait poster: runs down the right of everything below the title.

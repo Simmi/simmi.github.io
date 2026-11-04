@@ -219,6 +219,12 @@ function registrationDeadlineLabel(event) {
   return `${eventDateLabel(event.deadline.date)}${event.deadline.time ? ` kl. ${event.deadline.time}` : ''}`;
 }
 
+// Registration events use registration_description when it's set
+// (even if empty), falling back to the event's own description
+function registrationDescription(event) {
+  return event.registration_description ?? event.description;
+}
+
 function eventImages(event) {
   const src = event.graphic ?? event.poster;
   return Array.isArray(src) ? src : [src];
@@ -401,21 +407,38 @@ function secondaryHighlightHtml(highlight) {
     </div>`;
 }
 
+// Registration phase: shown as a coloured section in the secondary
+// panel rather than taking over the whole screen like the event itself
+function secondaryRegistrationHtml(event) {
+  const description = registrationDescription(event);
+  const img = eventImages(event)[0];
+  return `
+    <div class="event-minor-section" style="background: ${eventGradient(event.color) ?? 'transparent'}">
+      <div class="event-minor-graphic">
+        <img class="event-minor-img" src="${img}" alt="${event.title}">
+      </div>
+      <div class="event-minor-info">
+        <div class="event-label event-label--registration">Skráning opin</div>
+        <div class="event-minor-title">${event.title}</div>
+        <div class="event-minor-event-date">${eventDateLabel(event.date)}</div>
+        <div class="event-minor-countdown">${registrationHeadline(event)}</div>
+        <div class="event-minor-deadline">${registrationDeadlineLabel(event)}</div>
+        ${description ? `<div class="event-minor-description">${nl2br(description)}</div>` : ''}
+      </div>
+    </div>`;
+}
+
 function secondaryEventHtml(event) {
+  if (event.phase === 'registration') return secondaryRegistrationHtml(event);
   const imgs = eventImages(event);
-  const isRegistration = event.phase === 'registration';
   return `
     <div class="event-minor-graphic">
       <img class="event-minor-img" src="${imgs[0]}" alt="${event.title}">
     </div>
     <div class="event-minor-info">
-      ${isRegistration
-        ? `<div class="event-label event-label--registration">Skráning opin</div>`
-        : `<div class="event-label">Einnig væntanlegt</div>`}
+      <div class="event-label">Einnig væntanlegt</div>
       <div class="event-minor-title">${event.title}</div>
-      <div class="event-minor-countdown">${isRegistration
-        ? registrationHeadline(event)
-        : countdownText(event.days)}</div>
+      <div class="event-minor-countdown">${countdownText(event.days)}</div>
       ${event.description ? `<div class="event-minor-description">${nl2br(event.description)}</div>` : ''}
     </div>`;
 }
@@ -492,7 +515,6 @@ function startSecondaryRotation(panels) {
 function renderEvent(main, secondaries = [], avatarGraphics = []) {
   const images = eventImages(main);
   const poster = eventPoster(main);
-  const isRegistration = main.phase === 'registration';
   preloadImages(images);
   const showAvatar = main.showPresenterAvatar === true && avatarGraphics.length > 0;
   if (showAvatar) preloadImages(avatarGraphics);
@@ -509,26 +531,17 @@ function renderEvent(main, secondaries = [], avatarGraphics = []) {
   document.body.style.background = eventGradient(main.color) ?? '';
   document.getElementById('app').innerHTML = `
     <div class="event-screen${hasSecondary ? ' split' : ''}">
-      <div class="event-main${isRegistration ? ' is-registration' : ''}">
+      <div class="event-main">
         <div class="event-graphic">
           <img id="event-img-a" class="event-img" src="${images[0]}" alt="${main.title}">
           <img id="event-img-b" class="event-img" src="" alt="${main.title}" style="opacity:0">
         </div>
         <div class="event-info">
-          ${isRegistration ? `
-            <div class="event-reg-kicker">
-              <span class="event-label event-label--registration">Skráning opin</span>
-              <span class="event-reg-event">${main.title} · ${eventDateLabel(main.date)}</span>
-            </div>
-            <div class="event-reg-headline">${registrationHeadline(main)}</div>
-            <div class="event-registration-deadline">${registrationDeadlineLabel(main)}</div>
-          ` : `
-            <div class="event-label">Væntanlegt</div>
-            <div class="event-date">${eventDateLabel(main.date)}</div>
-            <div class="event-title">${main.title}</div>
-          `}
+          <div class="event-label">Væntanlegt</div>
+          <div class="event-date">${eventDateLabel(main.date)}</div>
+          <div class="event-title">${main.title}</div>
           ${poster ? `<div class="event-body"><div class="event-body-text">` : ''}
-          ${isRegistration ? '' : `<div class="event-countdown">${countdownText(main.days)}</div>`}
+          <div class="event-countdown">${countdownText(main.days)}</div>
           <div class="event-description">${nl2br(main.description)}</div>
           ${poster ? `</div><img class="event-poster" src="${poster}" alt="${main.title}"></div>` : ''}
           ${main.facts && main.facts.length > 0 ? `
@@ -738,14 +751,30 @@ function renderHighlight(highlight, secondaries = []) {
   }
 }
 
-function renderDefault() {
+function renderDefault(secondaries = []) {
   document.body.style.background = '';
   document.body.className = 'mode-default';
-  document.getElementById('app').innerHTML = `
+  const panels = secondaries.map(s => secondaryEventHtml(s.data));
+  const logo = `
     <div class="logo-screen">
       <img class="logo-img" src="images/logo_with_text.svg" alt="Auðkenni">
+    </div>`;
+  document.getElementById('app').innerHTML = panels.length === 0 ? logo : `
+    <div class="default-screen split">
+      ${logo}
+      <div class="event-minor" id="secondary-panel" style="transition: opacity 0.6s ease;">
+        ${panels[0]}
+        ${panels.length > 1 ? `
+          <div class="secondary-footer">
+            <div class="secondary-dots">
+              ${panels.map((_, i) => `<span class="secondary-dot${i === 0 ? ' active' : ''}"></span>`).join('')}
+            </div>
+            <div class="secondary-progress"><div class="secondary-progress-bar" id="secondary-progress-bar"></div></div>
+          </div>` : ''}
+      </div>
     </div>
   `;
+  if (panels.length > 1) startSecondaryRotation(panels);
 }
 
 /* ── Upcoming birthdays widget ───────────────────────────── */
@@ -830,7 +859,11 @@ async function init() {
     const wcHighlight = SHOW_WORLDCUP ? await getWorldCupHighlight() : null;
     if (wcHighlight) todayHighlights.push(wcHighlight);
 
-    const activeEvents = getActiveEvents(events);
+    const activeAll    = getActiveEvents(events);
+    const activeEvents = activeAll.filter(e => e.phase !== 'registration');
+    const registrationPanels = activeAll
+      .filter(e => e.phase === 'registration')
+      .map(e => ({ type: 'event', data: e }));
     const wcStandings = SHOW_WORLDCUP ? await getWorldCupStandingsPanel() : null;
     const cafeteriaMap = Object.fromEntries(cafeterias.map(c => [c.id, c]));
     const todayMenuEntries = menu.filter(m => {
@@ -846,6 +879,7 @@ async function init() {
           birthdaySecondaries.push({ type: 'menu', data: { ...cafDef, items: entry.items } });
         });
       }
+      birthdaySecondaries.push(...registrationPanels);
       renderBirthday(celebrants, confetti, cakesSince, birthdaySecondaries);
     } else if (activeEvents.length > 0) {
       const secondaries = [];
@@ -857,6 +891,7 @@ async function init() {
           secondaries.push({ type: 'menu', data: { ...cafDef, items: entry.items } });
         });
       }
+      secondaries.push(...registrationPanels);
       todayHighlights.forEach(h => secondaries.push({ type: 'highlight', data: h }));
       if (wcStandings) secondaries.push(wcStandings);
       renderEvent(activeEvents[0], secondaries, presentationAvatarGraphics);
@@ -864,14 +899,14 @@ async function init() {
       const entry = todayMenuEntries[0];
       const cafDef = cafeteriaMap[entry.cafeteria] ?? cafeterias[0] ?? {};
       const menuHighlight = { title: cafDef.title ?? 'Matseðill', text: entry.items, image: cafDef.graphic ?? '🍽️', headerGraphic: !!cafDef.graphic, isMenu: true };
-      const wcSecondaries = [];
+      const wcSecondaries = [...registrationPanels];
       todayHighlights.forEach(h => wcSecondaries.push({ type: 'highlight', data: h }));
       if (wcStandings) wcSecondaries.push(wcStandings);
       renderHighlight(menuHighlight, wcSecondaries);
     } else if (todayHighlights.length > 0) {
-      renderHighlight(todayHighlights[0], wcStandings ? [wcStandings] : []);
+      renderHighlight(todayHighlights[0], [...registrationPanels, ...(wcStandings ? [wcStandings] : [])]);
     } else {
-      renderDefault();
+      renderDefault(registrationPanels);
     }
 
     renderUpcomingWidget(people);

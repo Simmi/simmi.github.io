@@ -9,7 +9,9 @@ description: Convert a pasted weekly cafeteria menu (Icelandic text, Mon-Fri blo
 Raw Icelandic text for one week. Days are separated by divider lines of dashes
 (`--`, `---`, `-----`, any length). Blocks appear in order Monday to Friday.
 Each dish is: a name line, then a description line, then optionally an
-"Ofnæmisvaldar: ..." line. Blank lines may be scattered anywhere.
+"Ofnæmisvaldar: ..." line, then optionally a block of nutrition values: lines
+containing only a number (e.g. `205`, `9.3`, `15`), usually five in a row,
+placed directly before the next dish name. Blank lines may be scattered anywhere.
 
 ## Output
 Only a JSON fragment, in this exact shape, one object per day:
@@ -25,6 +27,9 @@ Only a JSON fragment, in this exact shape, one object per day:
 ## Rules
 - Keep ONLY the dish name lines, in the original order (soup first, as given).
 - Drop every description line and every "Ofnæmisvaldar:" line.
+- Drop every line that is only a number (integer or decimal, `.` or `,`):
+  these are nutrition values, not dishes. They don't count as name or
+  description lines, so the next non-numeric line after them is a dish name.
 - Keep names verbatim: same wording, punctuation, dashes and any "(V)" tag.
   Do not translate or "fix" Icelandic.
 - Trim trailing whitespace and strip invisible characters (soft hyphens U+00AD,
@@ -41,4 +46,5 @@ Only a JSON fragment, in this exact shape, one object per day:
 ## Checks before answering
 - Exactly 5 day blocks (if not, flag it).
 - No "Ofnæmisvaldar" text in the output.
+- No item is a bare number.
 - Dates are consecutive weekdays.

@@ -587,31 +587,6 @@
   ],
   "menu": [
     {
-      "date": "02/11/2026",
-      "cafeteria": "root",
-      "items": "Ristuð tómata- og paprikusúpa með harissa\nKjúklinga-shawarma með hvítlaukssósu, bökuðum kartöflum og flatbrauði\nÞorskur með shawarma-kryddi, hvítlaukssósu og flatbrauði\nRistað grasker og hvítar baunir með zhoug\nKínakáls- og gúrkusalat með sumak"
-    },
-    {
-      "date": "03/11/2026",
-      "cafeteria": "root",
-      "items": "Ristuð hvítlauks- og tómatsúpa\nKjúklingur með parmesan og rigatoni í arrabbiata-sósu\nBökuð fennika og borlotti-baunir með tómötum\nGrænkálssalat að hætti Caesars"
-    },
-    {
-      "date": "04/11/2026",
-      "cafeteria": "root",
-      "items": "Maís- og kartöflusúpa með graslauk\nNautahakkssteik með lauksósu og kartöflumús\nStökkbökuð ýsa með jógúrtremúlaði og kartöflumús\nRistað blómkál með vegan ostasósu og svörtum baunum\nEpla- og sellerísalat með sinneps- og ediksósu"
-    },
-    {
-      "date": "05/11/2026",
-      "cafeteria": "root",
-      "items": "Lauksúpa með svörtum pipar og timjan\nHlaðnar franskar með hægelduðu nautakjöti og piparsósu\nHlaðnar franskar með sveppum, lauk og veganosti\nHvítkáls- og perusalat með dilli"
-    },
-    {
-      "date": "06/11/2026",
-      "cafeteria": "root",
-      "items": "Ristuð gulrótar- og karrýsúpa með límónu\nSmjörkjúklingur að hætti RÓÓT\nRistaðar sætar kartöflur og svartar baunir í makhani-sósu\nGúrku- og eplasalat með myntu\nKlassísk basknesk ostakaka með volgu karamellueplakompotti"
-    },
-    {
       "date": "09/11/2026",
       "cafeteria": "root",
       "items": "Sellerírótar- og spínatsúpa\nPiri-piri-kjúklingur með límónu og chili\nPönnusteikt ýsa í raspi með gremolata\nPiri-piri saðningaraldin með svörtum hrísgrjónum\nQuinoa með ristuðum paprikum"
@@ -635,6 +610,31 @@
       "date": "13/11/2026",
       "cafeteria": "root",
       "items": "Rauðrófu- og timjansúpa\nChili con carne\nTandoori-tófú með kókos og myntu\nHvítkáls- og gulrótarhrásalat með sellerífræjum"
+    },
+    {
+      "date": "16/11/2026",
+      "cafeteria": "root",
+      "items": "Grjónagrautur með kanilsykri\nPersneskur saffran-kjúklingur með jógúrt–myntusósu, granateplum og smælki\nSteikt ýsa í raspi með lauksmjöri, kapers og smælki\nFylltar paprikur með villisveppum, kínóa og tahinisósu\nHvítlauks- og basilmarineraðir kirsuberjatómatar"
+    },
+    {
+      "date": "17/11/2026",
+      "cafeteria": "root",
+      "items": "Jarðskokkasúpa með ristuðum heslihnetum og graslauksolíu\nRigatoni bolognese með parmesan og basilíku\nGnocchi með ristuðu graskeri, salvíu og stökkum fræjum\nAsískt salat með pak choi, appelsínum og yuzu-vinaigrette"
+    },
+    {
+      "date": "18/11/2026",
+      "cafeteria": "root",
+      "items": "Léttreykt tómatsúpa með chorizo og basilolíu\nHarissa-kjúklingur með jógúrt–tahinisósu og jasmine-hrísgrjónum\nÞorskur að hætti Miðjarðarhafsins með ólífum, salsa verde og jasmine-hrísgrjónum\nHarissa-tófú með rótargrænmeti, pistasíum og mangósalsa\nGúrku-, radísu- og grænbaunasalat með myntu"
+    },
+    {
+      "date": "19/11/2026",
+      "cafeteria": "root",
+      "items": "Græn karrísúpa með rótargrænmeti, kóríander og lime\nLambaprime með rósmarínkartöflum, ristuðu rótargrænmeti og rauðvínssósu\nHnetusteik með rósmarínkartöflum, ristuðu rótargrænmeti og villisveppasósu\nEggaldinsalat með chermoula"
+    },
+    {
+      "date": "20/11/2026",
+      "cafeteria": "root",
+      "items": "Aspassúpa með estragoni og stökkum brauðteningum\nLíbanskt nauta-arayes í pítubrauði með toum, súrsuðum rauðlauk og sumac\nSteiktir sveppir og spínat á rjómalagaðri polentu með furuhnetum og gremolata\nSpergilkálssalat með granateplum og sinnepsvinaigrette"
     }
   ],
 

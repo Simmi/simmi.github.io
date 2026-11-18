@@ -48,8 +48,12 @@ function ageOn(birthday, date) {
   return yyyy ? date.getFullYear() - yyyy : null;
 }
 
+// Icelandic: "árs" when the age ends in 1 (21, 31, 41…) but not 11 (11, 111);
+// "ára" otherwise
 function ageLabel(age) {
-  return age ? ` · ${age} ára` : '';
+  if (!age) return '';
+  const unit = age % 10 === 1 && age % 100 !== 11 ? 'árs' : 'ára';
+  return ` · ${age} ${unit}`;
 }
 
 function eventDateLabel(dateStr) {

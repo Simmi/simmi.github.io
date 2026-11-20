@@ -575,10 +575,13 @@
       "description": "Þér og þínum er boðið í árlega jólaboð hjá Halla og Giggu. Við hlökkum til að sjá ykkur til að fagna með okkur ✨\nÍ ár er búningaþema: Jólabíómynd \uD83C\uDF85. Það verða verðlaun fyrir fjölskylduna sem tekst best til! Halli, Gigga og fjölskylda eru dómarar kvöldsins.\nSjáumst hress!",
       "registration_description": "",
       "facts": [],
-      "showPresenterAvatar": false
+      "showPresenterAvatar": true
     }
   ],
   "presentationAvatarGraphics": [
+    "images/people/pixar_halli_kynnir.png"
+  ],
+  "temporarilyHiddenPresentationAvatarGraphics": [
     "images/people/stjorn/pixar_snorri_kynnir.png",
     "images/people/stjorn/pixar_erla_kynnir.png",
     "images/people/stjorn/pixar_klara_kynnir.png",
@@ -600,31 +603,6 @@
     }
   ],
   "menu": [
-    {
-      "date": "09/11/2026",
-      "cafeteria": "root",
-      "items": "Sellerírótar- og spínatsúpa\nPiri-piri-kjúklingur með límónu og chili\nPönnusteikt ýsa í raspi með gremolata\nPiri-piri saðningaraldin með svörtum hrísgrjónum\nQuinoa með ristuðum paprikum"
-    },
-    {
-      "date": "10/11/2026",
-      "cafeteria": "root",
-      "items": "Gulrófu- og kókossúpa með karrýlaufum\nFajitas-kjúklingur\nGraskersrisotto\nSætar kartöflur með blaðlauk og grænkálspestói"
-    },
-    {
-      "date": "11/11/2026",
-      "cafeteria": "root",
-      "items": "Spergilkáls- og spínatsúpa með basil\nKjúklingur með apríkósu–gochujang-gljáa\nLanga í orly\nTempura-spergilkál með ristuðum kjúklingabaunum\nPastasalat með kúrbít og ætiþistlum"
-    },
-    {
-      "date": "12/11/2026",
-      "cafeteria": "root",
-      "items": "Ristuð paprikusúpa\nSteikt lambalæri með svörtum hvítlauk, béarnaise og portersósu\nRistað blómkál með shawarma-kryddum, Oumph og granatepla–zhoug\nKartöflusalat með estragoni og pikkluðum smálauk"
-    },
-    {
-      "date": "13/11/2026",
-      "cafeteria": "root",
-      "items": "Rauðrófu- og timjansúpa\nChili con carne\nTandoori-tófú með kókos og myntu\nHvítkáls- og gulrótarhrásalat með sellerífræjum"
-    },
     {
       "date": "16/11/2026",
       "cafeteria": "root",
@@ -649,6 +627,31 @@
       "date": "20/11/2026",
       "cafeteria": "root",
       "items": "Aspassúpa með estragoni og stökkum brauðteningum\nLíbanskt nauta-arayes í pítubrauði með toum, súrsuðum rauðlauk og sumac\nSteiktir sveppir og spínat á rjómalagaðri polentu með furuhnetum og gremolata\nSpergilkálssalat með granateplum og sinnepsvinaigrette"
+    },
+    {
+      "date": "23/11/2026",
+      "cafeteria": "root",
+      "items": "Sætkartöflusúpa með appelsínu, ancho-chili og graskersfræjakremi\nKjúklingur Alfredo með ristuðum kartöflum\nSteinbítur með sítrussósu, stökkum lauk og ristuðum kartöflum\nÍtalskt linsubauna-bolognese með hvítlauksbrauði og fersku salati\nPerlucouscous og ristuð paprika"
+    },
+    {
+      "date": "24/11/2026",
+      "cafeteria": "root",
+      "items": "Klassísk íslensk kjötsúpa\nTælenskar kjötbollur í kókossósu með thai-basil og steiktu eggi\nJollof-hrísgrjón með svörtum baunum\nJapanskt grænmetis-gyoza með kimchi\nSalat með bankabyggi"
+    },
+    {
+      "date": "25/11/2026",
+      "cafeteria": "root",
+      "items": "Gulrótar-, engifer- og svart-hvítlaukssúpa\nOfnbakaður kjúklingur með soja og engifer\nChili & Teriyaki Lax með hrísgrjónum\nBakaðir jarðskokkar og sætar kartöflur\nTamarindgljáðar rauðrófur með svörtum baunum og sesami"
+    },
+    {
+      "date": "26/11/2026",
+      "cafeteria": "root",
+      "items": "Ristuð rósakálssúpa með vorlauk\nÞakkargjörðar kalkúnn með mangógljáa\nHnetusteik með rósmarínkartöflum, ristuðu rótargrænmeti og villisveppasósu\nBlómkáls-couscous\nRistað grasker\nPekanbaka"
+    },
+    {
+      "date": "27/11/2026",
+      "cafeteria": "root",
+      "items": "Toscana-baunasúpa\nBao-bollur með rifnu nautakjöti\nGochujang-blómkál\nKaramellíserað hvítkál með perlubyggi"
     }
   ],
 

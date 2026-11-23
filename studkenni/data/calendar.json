@@ -578,10 +578,10 @@
       "showPresenterAvatar": true
     }
   ],
-  "presentationAvatarGraphics": [
+  "temporarilyHiddenPresentationAvatarGraphics": [
     "images/people/pixar_halli_kynnir.png"
   ],
-  "temporarilyHiddenPresentationAvatarGraphics": [
+  "presentationAvatarGraphics": [
     "images/people/stjorn/pixar_snorri_kynnir.png",
     "images/people/stjorn/pixar_erla_kynnir.png",
     "images/people/stjorn/pixar_klara_kynnir.png",

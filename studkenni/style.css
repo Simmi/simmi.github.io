@@ -586,6 +586,22 @@ body.mode-event {
   color: rgba(255, 255, 255, 0.85);
 }
 
+/* Next jólasveinn: the illustrations are on white, so give them a white stage */
+.jolasveinn-section {
+  background: linear-gradient(160deg, #3b4a6b 0%, #1f2840 100%);
+}
+
+.jolasveinn-graphic {
+  height: 32vh;
+  background: #fff;
+}
+
+.jolasveinn-graphic .event-minor-img {
+  object-fit: contain;
+  opacity: 1;
+  padding: 1.5vh 0;
+}
+
 /* Logo screen with a secondary panel beside it */
 .default-screen.split {
   flex: 1;

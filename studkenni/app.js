@@ -419,6 +419,42 @@ function secondaryHighlightHtml(highlight) {
     </div>`;
 }
 
+// The next Icelandic Yule Lad (jólasveinn) to arrive. Each comes to town
+// during the night before his date, so on the 11th Stekkjarstaur
+// "kemur í nótt". Shown when the next one is at most this many nights away.
+const JOLASVEINAR_NIGHTS_BEFORE = 7;
+
+function getNextJolasveinn(jolasveinar) {
+  const year = new Date().getFullYear();
+  return jolasveinar
+    .map(j => ({ ...j, nights: daysUntil(`${j.date}/${year}`) }))
+    .filter(j => j.nights >= 1 && j.nights <= JOLASVEINAR_NIGHTS_BEFORE)
+    .sort((a, b) => a.nights - b.nights)[0] ?? null;
+}
+
+function secondaryJolasveinnHtml(j) {
+  return `
+    <div class="event-minor-section jolasveinn-section">
+      <div class="event-minor-graphic jolasveinn-graphic">
+        <img class="event-minor-img" src="${j.image}" alt="${j.name}">
+      </div>
+      <div class="event-minor-info">
+        <div class="event-label">Næsti jólasveinn</div>
+        <div class="event-minor-title">${j.name}</div>
+        <div class="event-minor-countdown">${j.nights === 1 ? 'Kemur í nótt!' : `Kemur eftir ${j.nights} nætur`}</div>
+        ${j.text ? `<div class="event-minor-description">${nl2br(j.text)}</div>` : ''}
+      </div>
+    </div>`;
+}
+
+function secondaryPanelHtml(s) {
+  if (typeof s === 'string')  return s;
+  if (s.type === 'menu')      return secondaryMenuHtml(s.data);
+  if (s.type === 'highlight') return secondaryHighlightHtml(s.data);
+  if (s.type === 'jolasveinn') return secondaryJolasveinnHtml(s.data);
+  return secondaryEventHtml(s.data);
+}
+
 // Registration phase: shown as a coloured section in the secondary
 // panel rather than taking over the whole screen like the event itself
 function secondaryRegistrationHtml(event) {
@@ -531,12 +567,7 @@ function renderEvent(main, secondaries = [], avatarGraphics = []) {
   const showAvatar = main.showPresenterAvatar === true && avatarGraphics.length > 0;
   if (showAvatar) preloadImages(avatarGraphics);
 
-  const panels = secondaries.map(s =>
-    typeof s === 'string'  ? s :
-    s.type === 'menu'      ? secondaryMenuHtml(s.data) :
-    s.type === 'highlight' ? secondaryHighlightHtml(s.data) :
-                             secondaryEventHtml(s.data)
-  );
+  const panels = secondaries.map(secondaryPanelHtml);
   const hasSecondary = panels.length > 0;
 
   document.body.className = 'mode-event';
@@ -623,12 +654,7 @@ function renderBirthday(people, confetti, cakesSince, secondaries = []) {
   document.body.className = 'mode-birthday';
   confetti.start();
 
-  const panels = secondaries.map(s =>
-    typeof s === 'string'  ? s :
-    s.type === 'menu'      ? secondaryMenuHtml(s.data) :
-    s.type === 'highlight' ? secondaryHighlightHtml(s.data) :
-                             secondaryEventHtml(s.data)
-  );
+  const panels = secondaries.map(secondaryPanelHtml);
   const hasSecondary = panels.length > 0;
 
   const peopleContainer = `
@@ -702,12 +728,7 @@ function renderHighlight(highlight, secondaries = []) {
   const isPath = img && img.includes('/');
   const isEmoji = img && !isPath;
 
-  const panels = secondaries.map(s =>
-    typeof s === 'string'  ? s :
-    s.type === 'menu'      ? secondaryMenuHtml(s.data) :
-    s.type === 'highlight' ? secondaryHighlightHtml(s.data) :
-                             secondaryEventHtml(s.data)
-  );
+  const panels = secondaries.map(secondaryPanelHtml);
   const hasSecondary = panels.length > 0;
   const bodyHtml = highlight.isMenu ? highlightMenuHtml(highlight.text) : `<div class="highlight-text">${nl2br(highlight.text)}</div>`;
 
@@ -766,7 +787,7 @@ function renderHighlight(highlight, secondaries = []) {
 function renderDefault(secondaries = []) {
   document.body.style.background = '';
   document.body.className = 'mode-default';
-  const panels = secondaries.map(s => secondaryEventHtml(s.data));
+  const panels = secondaries.map(secondaryPanelHtml);
   const logo = `
     <div class="logo-screen">
       <img class="logo-img" src="images/logo_with_text.svg" alt="Auðkenni">
@@ -857,6 +878,9 @@ async function init() {
 
   try {
     const { people, events = [], highlights = [], cafeterias = [], menu = [], cakes_since: cakesSince = 2026, presentationAvatarGraphics = [] } = await fetch('data/calendar.json').then(r => r.json());
+    // Yule Lads live in their own file since they're the same every year;
+    // a missing or broken file just means no jólasveinn panel
+    const jolasveinar = await fetch('data/jolasveinar.json').then(r => r.json()).catch(() => []);
     const dates         = getRelevantDates();
     const celebrants    = people.filter(p => dates.includes(birthdayToMMDD(p.birthday)));
     const now    = new Date();
@@ -873,9 +897,14 @@ async function init() {
 
     const activeAll    = getActiveEvents(events);
     const activeEvents = activeAll.filter(e => e.phase !== 'registration');
-    const registrationPanels = activeAll
-      .filter(e => e.phase === 'registration')
-      .map(e => ({ type: 'event', data: e }));
+    const nextJolasveinn = getNextJolasveinn(jolasveinar);
+    // Panels added beside whatever is on the main screen
+    const sidePanels = [
+      ...activeAll
+        .filter(e => e.phase === 'registration')
+        .map(e => ({ type: 'event', data: e })),
+      ...(nextJolasveinn ? [{ type: 'jolasveinn', data: nextJolasveinn }] : []),
+    ];
     const wcStandings = SHOW_WORLDCUP ? await getWorldCupStandingsPanel() : null;
     const cafeteriaMap = Object.fromEntries(cafeterias.map(c => [c.id, c]));
     const todayMenuEntries = menu.filter(m => {
@@ -891,7 +920,7 @@ async function init() {
           birthdaySecondaries.push({ type: 'menu', data: { ...cafDef, items: entry.items } });
         });
       }
-      birthdaySecondaries.push(...registrationPanels);
+      birthdaySecondaries.push(...sidePanels);
       renderBirthday(celebrants, confetti, cakesSince, birthdaySecondaries);
     } else if (activeEvents.length > 0) {
       const secondaries = [];
@@ -903,7 +932,7 @@ async function init() {
           secondaries.push({ type: 'menu', data: { ...cafDef, items: entry.items } });
         });
       }
-      secondaries.push(...registrationPanels);
+      secondaries.push(...sidePanels);
       todayHighlights.forEach(h => secondaries.push({ type: 'highlight', data: h }));
       if (wcStandings) secondaries.push(wcStandings);
       renderEvent(activeEvents[0], secondaries, presentationAvatarGraphics);
@@ -911,14 +940,14 @@ async function init() {
       const entry = todayMenuEntries[0];
       const cafDef = cafeteriaMap[entry.cafeteria] ?? cafeterias[0] ?? {};
       const menuHighlight = { title: cafDef.title ?? 'Matseðill', text: entry.items, image: cafDef.graphic ?? '🍽️', headerGraphic: !!cafDef.graphic, isMenu: true };
-      const wcSecondaries = [...registrationPanels];
+      const wcSecondaries = [...sidePanels];
       todayHighlights.forEach(h => wcSecondaries.push({ type: 'highlight', data: h }));
       if (wcStandings) wcSecondaries.push(wcStandings);
       renderHighlight(menuHighlight, wcSecondaries);
     } else if (todayHighlights.length > 0) {
-      renderHighlight(todayHighlights[0], [...registrationPanels, ...(wcStandings ? [wcStandings] : [])]);
+      renderHighlight(todayHighlights[0], [...sidePanels, ...(wcStandings ? [wcStandings] : [])]);
     } else {
-      renderDefault(registrationPanels);
+      renderDefault(sidePanels);
     }
 
     renderUpcomingWidget(people);

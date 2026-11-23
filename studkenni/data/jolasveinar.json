@@ -1,0 +1,80 @@
+[
+  {
+    "name": "Stekkjastaur",
+    "date": "12/12",
+    "image": "images/jolasveinar/stekkjarstaur.jpg",
+    "text": "Stekkjarstaur kemur fyrstur jólasveinanna. Hann var sagður sjúga mjólk úr kindum en hafði staurfætur á báðum svo heldur gekk það brösuglega. Stekkur er gamalt heiti á sérstakri fjárrétt og þaðan dregur sveinninn nafn sitt."
+  },
+  {
+    "name": "Giljagaur",
+    "date": "13/12",
+    "image": "images/jolasveinar/giljagaur.jpg",
+    "text": "Giljagaur er annar í röð jólasveinanna. Hann faldi sig í fjósinu og fleytti froðuna ofan af mjólkurfötunum þegar enginn sá til. Í gömlum heimildum er getið um Froðusleiki og ekki er ólíklegt að þar sé sami sveinn á ferð."
+  },
+  {
+    "name": "Stúfur",
+    "date": "14/12",
+    "image": "images/jolasveinar/stufur.jpg",
+    "text": "Stúfur er þriðji í röð jólasveinanna og jafnframt sá minnsti, eins og nafnið gefur til kynna. Hann var sagður hnupla pönnum og hirða agnirnar sem brunnu fastar við barmana. Væntanlega eru því Pönnusleikir og Pönnuskuggi í gömlum heimildum sami sveinn og Stúfur."
+  },
+  {
+    "name": "Þvörusleikir",
+    "date": "15/12",
+    "image": "images/jolasveinar/thvorusleikir.jpg",
+    "text": "Þvörusleikir er sá fjórði, og er hann afskaplega mjór. Hann hafði yndi af því að sleikja þvörur og skaust í eldhúsið til að nappa þeim úr pottunum þegar eldabuskan vék sér frá. Þvara var nokkurs konar stöng með blaði sem notuð var til að hræra í pottum, líkt og sleifin sem við þekkjum í dag."
+  },
+  {
+    "name": "Pottaskefill",
+    "date": "16/12",
+    "image": "images/jolasveinar/pottaskefill.jpg",
+    "text": "Pottaskefill eða Pottasleikir er fimmti jólasveinninn. Hann skóf eða sleikti skófirnar úr pottunum. Í gömlum heimildum má jafnframt finna nöfn á borð við Skefil og Skófnasleiki. Af öðrum pottasveinum sem fólk trúði á fyrr á öldum má nefna Syrjusleiki, en syrja er botnfallið sem myndast í pottum við suðu, til dæmis á slátri."
+  },
+  {
+    "name": "Askasleikir",
+    "date": "17/12",
+    "image": "images/jolasveinar/askasleikir.jpg",
+    "text": "Askasleikir er jólasveinn númer sex í röðinni. Fyrr á öldum, þegar fólk mataðist enn úr öskum, faldi hann sig gjarnan undir rúmum. Þegar askarnir voru lagðir fyrir hunda og ketti til að leyfa þeim að sleikja, varð Askasleikir fyrri til, krækti í þá og hreinsaði innan úr þeim."
+  },
+  {
+    "name": "Hurðaskellir",
+    "date": "18/12",
+    "image": "images/jolasveinar/hurdaskellir.jpg",
+    "text": "Hurðaskellir er sjöundi jólasveinninn, hávaðabelgur sem skellir hurðum og truflar svefnfrið fólks. Sums staðar gengur hann enn undir nafninu Faldafeykir en hann á að hafa feykt til földum. Þótt margir tengi það við pilsfalda, var upphaflega átt við faldinn sem konur báru á höfðinu. Nafnið Pilsaþytur hefur því heyrst vegna þessa misskilnings, en ekki náð fótfestu og er hvergi getið í heimildum."
+  },
+  {
+    "name": "Skyrgámur",
+    "date": "19/12",
+    "image": "images/jolasveinar/skyrgamur.jpg",
+    "text": "Skyrgámur, sá áttundi, sem einnig gengur undir nafninu Skyrjarmur, er stór og sterklegur og sólginn í skyr. Hann leitaði uppi skyrtunnur og át, þar til hann stóð á blístri. Íslenskir jólasveinar hafa skiljanlega alltaf verið afskaplega hrifnir af mjólkurafurðum eins og eldri nöfn á borð við Smjörhák og Rjómasleiki bera með sér."
+  },
+  {
+    "name": "Bjúgnakrækir",
+    "date": "20/12",
+    "image": "images/jolasveinar/bjugnakraekir.jpg",
+    "text": "Bjúgnakrækir er níundi jólasveinninn og afskaplega fimur. Hann vatt sér upp í rjáfrin þar sem bjúgu héngu á eldhúsbitum, sat svo þar og gæddi sér á þeim. Eins og aðrir jólasveinar hefur hann þurft að sætta sig við breyttar aðstæður samfara minnkandi bjúgnagerð á heimilunum, en hefur sínar aðferðir til að verða sér úti um þau."
+  },
+  {
+    "name": "Gluggagægir",
+    "date": "21/12",
+    "image": "images/jolasveinar/gluggagaegir.jpg",
+    "text": "Gluggagægir er tíundi jólasveinninn. Hann er vanur að laumast að gluggum og gægjast inn. Oft girnist hann þá eitthvað sem hann sér og reynir seinna að komast yfir það. Náskyldur honum er sveinn sem í gömlum heimildum er nefndur Gangagægir og hefur trúlega gægst inn í bæjargöngin í svipuðum erindagjörðum."
+  },
+  {
+    "name": "Gáttaþefur",
+    "date": "22/12",
+    "image": "images/jolasveinar/gattathefur.jpg",
+    "text": "Gáttaþefur er ellefti jólasveinninn. Hann er með gríðarstórt nef og finnur lykt af laufabrauði langt upp á fjöll. Þá trítlar hann til bæja, enda veikur fyrir lyktinni, og stingur hausnum inn um gættina til að drekka hana í sig."
+  },
+  {
+    "name": "Ketkrókur",
+    "date": "23/12",
+    "image": "images/jolasveinar/ketkrokur.jpg",
+    "text": "Ketkrókur er tólfti jólasveinninn. Hann var vanur að stinga löngum krókstjaka niður um strompana og krækja sér í hangikjötslæri sem geymd voru upp undir rjáfri. Í gömlum sögnum er getið um svipaðan jólasvein, Reykjarsvelg, sem gapti yfir eldhússtrompnum en lét sér nægja að svelgja í sig reykinn af hangikjötinu."
+  },
+  {
+    "name": "Kertasníkir",
+    "date": "24/12",
+    "image": "images/jolasveinar/kertasnikir.jpg",
+    "text": "Kertasníkir er þrettándi jólasveinninn. Hann er gríðarlega veikur fyrir tólgarkertum og vill helst éta þau. Hins vegar finnst honum loginn af þeim líka afskaplega fallegur og er því oft tvístígandi. Í eldri heimildum er hann stundum kallaður Kertasleikir."
+  }
+]

@@ -419,17 +419,12 @@ function secondaryHighlightHtml(highlight) {
     </div>`;
 }
 
-// The next Icelandic Yule Lad (jólasveinn) to arrive. Each comes to town
-// during the night before his date, so on the 11th Stekkjarstaur
-// "kemur í nótt". Shown when the next one is at most this many nights away.
-const JOLASVEINAR_NIGHTS_BEFORE = 7;
-
+// The Icelandic Yule Lad (jólasveinn) arriving tonight. Each comes to town
+// during the night before his date, so he's shown the day before: on the
+// 11th Stekkjarstaur "kemur í nótt", through Kertasníkir on the 23rd.
 function getNextJolasveinn(jolasveinar) {
   const year = new Date().getFullYear();
-  return jolasveinar
-    .map(j => ({ ...j, nights: daysUntil(`${j.date}/${year}`) }))
-    .filter(j => j.nights >= 1 && j.nights <= JOLASVEINAR_NIGHTS_BEFORE)
-    .sort((a, b) => a.nights - b.nights)[0] ?? null;
+  return jolasveinar.find(j => daysUntil(`${j.date}/${year}`) === 1) ?? null;
 }
 
 function secondaryJolasveinnHtml(j) {
@@ -441,7 +436,7 @@ function secondaryJolasveinnHtml(j) {
       <div class="event-minor-info">
         <div class="event-label">Næsti jólasveinn</div>
         <div class="event-minor-title">${j.name}</div>
-        <div class="event-minor-countdown">${j.nights === 1 ? 'Kemur í nótt!' : `Kemur eftir ${j.nights} nætur`}</div>
+        <div class="event-minor-countdown">Kemur í nótt</div>
         ${j.text ? `<div class="event-minor-description">${nl2br(j.text)}</div>` : ''}
       </div>
     </div>`;
